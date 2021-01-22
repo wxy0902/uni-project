@@ -1,0 +1,64 @@
+
+.release-popup {
+	position: fixed;
+	right: 0;
+	left: 0;
+	bottom: 24rpx;
+}
+.item {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.item-icon {
+	width: 112rpx;
+	height: 112rpx;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+}
+.item-name {
+	font-size: 28rpx;
+	color: #8f8f94;
+	margin-top: 12rpx;
+}
+.list-flex2 {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	width: 60%;
+	margin: 0 auto;
+	padding-bottom: 112rpx;
+}
+.list-flex2 .item:nth-child(1) {
+	-webkit-animation: fly-in .4s;
+	        animation: fly-in .4s;
+	-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.list-flex2 .item:nth-child(2) {
+	-webkit-animation: fly-in .6s;
+	        animation: fly-in .6s;
+	-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.close {
+	display: block;
+	margin: 0 auto;
+	width: 56rpx;
+	height: 56rpx;
+	-webkit-animation: fly-in .6s;
+	        animation: fly-in .6s;
+	-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+

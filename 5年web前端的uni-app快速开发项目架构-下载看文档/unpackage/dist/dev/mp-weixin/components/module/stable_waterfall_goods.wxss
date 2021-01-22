@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.flow-box.data-v-2eb25cbd {
+  position: relative;
+  color: #1a1a1a;
+  padding: 0 20rpx 0rpx 20rpx;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+.flow-box .left.data-v-2eb25cbd {
+  left: 20rpx;
+}
+.flow-box .right.data-v-2eb25cbd {
+  right: 20rpx;
+}
+.flow-box .good_item.data-v-2eb25cbd {
+  position: absolute;
+  width: 345rpx;
+  border: 2rpx solid #f9f9f9;
+  background: #fff;
+  -webkit-border-radius: 20rpx;
+          border-radius: 20rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+}
+.flow-box .good_item.noMargin.data-v-2eb25cbd {
+  margin-right: 0;
+}
+.flow-box .good_item .goods_img image.data-v-2eb25cbd {
+  width: 100%;
+  height: 345rpx;
+}
+.flow-box .good_item .title.data-v-2eb25cbd {
+  margin: 20rpx 20rpx;
+  color: #333333;
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.flow-box .good_item .sell_well.data-v-2eb25cbd {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0rpx 20rpx 20rpx 20rpx;
+}
+.flow-box .good_item .sell_well text.data-v-2eb25cbd {
+  height: 32rpx;
+  -webkit-border-radius: 4rpx;
+          border-radius: 4rpx;
+  border: solid 2rpx #ea552d;
+  line-height: 28rpx;
+  padding: 0 15rpx;
+  font-size: 24rpx;
+  color: #ea552d;
+}
+.flow-box .good_item .info.data-v-2eb25cbd {
+  width: 100%;
+  padding: 0rpx 20rpx 30rpx 20rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.flow-box .good_item .info .money.data-v-2eb25cbd {
+  font-size: 26rpx;
+  color: #ff3d3d;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.flow-box .good_item .info .money text.data-v-2eb25cbd {
+  font-size: 36rpx;
+}
+.flow-box .good_item .info .count.data-v-2eb25cbd {
+  font-size: 24rpx;
+  color: #999;
+}
+

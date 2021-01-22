@@ -1,0 +1,154 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*视频播放封面*/
+.video-cover {
+  width: 100%;
+  height: 450rpx;
+  display: block;
+}
+/*视频播放icon位置大小*/
+.video-play {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  width: 100rpx;
+  height: 100rpx;
+}
+/*视频播放时长*/
+.video-time {
+  position: absolute;
+  bottom: 18rpx;
+  right: 18rpx;
+  z-index: 10;
+  background: rgba(0, 0, 0, .4);
+  color: #FFFFFF;
+  font-size: 28rpx;
+  padding: 8rpx 18rpx;
+  -webkit-border-radius: 4rpx;
+          border-radius: 4rpx;
+}
+

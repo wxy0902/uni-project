@@ -1,0 +1,1 @@
+{"version":3,"sources":["uni-app:///main.js"],"names":["createPage","Page"],"mappings":";;;;;;;;;;kDAAA;AACA;AACA,kO;AACAA,UAAU,CAACC,mBAAD,CAAV,C","file":"pages/news/news-remind/news-remind.js","sourcesContent":["import 'uni-pages';\nimport Vue from 'vue'\nimport Page from './pages/news/news-remind/news-remind.vue'\ncreatePage(Page)"],"sourceRoot":""}

@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.video_box.data-v-042e01d0 {
+  position: relative;
+}
+.video_file.data-v-042e01d0 {
+  width: 750rpx;
+  height: calc(100vh - 0px);
+}
+.play_schedule.data-v-042e01d0 {
+  position: absolute;
+  bottom: 6rpx;
+  left: 0;
+  height: 2rpx;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 3;
+}
+.schedule.data-v-042e01d0 {
+  background-color: #fff;
+  height: 2rpx;
+  width: 0%;
+  position: relative;
+}
+.progress_drag_dot.data-v-042e01d0 {
+  position: absolute;
+  right: -8rpx;
+  top: -6rpx;
+  width: 16rpx;
+  height: 16rpx;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #fff;
+}
+.play_btn.data-v-042e01d0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.icon_play.data-v-042e01d0 {
+  width: 90rpx;
+  height: 90rpx;
+}
+

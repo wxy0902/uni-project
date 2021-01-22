@@ -1,0 +1,14 @@
+{
+  "component": true,
+  "usingComponents": {
+    "mescroll-uni": "/components/mescroll-uni/mescroll-uni",
+    "huiba-card": "/components/huiba-card/huiba-card",
+    "i-icon": "/components/i-icon/i-icon",
+    "album-card": "/components/album-card/album-card",
+    "video-card": "/components/video-card/video-card",
+    "topic-card": "/components/topic-card/topic-card",
+    "word-card": "/components/word-card/word-card",
+    "org-card": "/components/org-card/org-card",
+    "org-province-state-picker": "/components/org-province-state-picker/org-province-state-picker"
+  }
+}

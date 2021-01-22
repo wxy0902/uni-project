@@ -1,0 +1,87 @@
+
+page {
+	background-color: #f5f5f5;
+}
+.head {
+	padding: 20rpx;
+	background-color: #fff;
+	margin: 20rpx;
+	-webkit-border-radius: 10rpx;
+	        border-radius: 10rpx;
+}
+.userinfo {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	padding: 20rpx;
+	margin: 40rpx 0;
+}
+.userinfo .username {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+}
+.grid-text {
+	color: #999;
+	font-size: 12px;
+}
+.userinfo u-avatar {
+	margin-right: 20rpx;
+}
+.userinfo .icon-right {
+	margin-left: auto;
+}
+.btn-login {
+	margin: 40rpx 0;
+}
+.grid {
+	margin: 20rpx;
+	padding: 20rpx;
+	background-color: #fff;
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+}
+.gn-icon {
+	width: 60rpx;
+	height: 60rpx;
+	margin-bottom: 20rpx;
+}
+
+/*服务按钮*/
+.btn-wrap {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	margin-top: 30rpx;
+}
+.btn-wrap .btn-contact {
+	background-color: #fff;
+	margin-left: 15rpx;
+	margin-right: 15rpx;
+	padding: 20rpx;
+	line-height: unset;
+	font-size: 12px;
+	color: #999;
+}
+.btn-wrap .btn-contact:active {
+	background-color: #f5f5f5;
+}
+.btn-wrap .btn-contact .txt {
+	margin-top: 20rpx;
+}
+.btn-wrap .btn-contact::after {
+	border: unset;
+	position: unset;
+}
+.icon-size {
+	font-size: 50rpx;
+}
+
+

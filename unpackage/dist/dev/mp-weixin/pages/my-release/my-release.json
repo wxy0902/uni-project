@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "post-waterfall": "/components/post-waterfall/post-waterfall"
+  }
+}

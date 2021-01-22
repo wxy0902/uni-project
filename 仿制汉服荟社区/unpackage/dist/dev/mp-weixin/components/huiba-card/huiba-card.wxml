@@ -1,0 +1,1 @@
+<view data-event-opts="{{[['tap',[['$emit',['click','$0'],['infoData']]]]]}}" class="flexc-jsc flex-aic bgf8 br8r ptb28r" bindtap="__e"><image class="hw128r br18r" src="{{calHuibaFaceUrl}}" mode="aspectFit"></image><view class="f28r c555 fcenter ellipsis mt18r mb8r plr8r">{{infoData.Name||'#'}}</view><view class="f24r cgray">{{(infoData.TrendCount||0)+" 条动态"}}</view></view>

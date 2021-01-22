@@ -1,0 +1,44 @@
+@charset "UTF-8";
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.addresTitle.data-v-61b718aa {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-bottom: 2rpx solid #ebebeb;
+  padding: 0 20rpx;
+  background-color: #FFF;
+}
+.addresTitle view.data-v-61b718aa {
+  font-size: 32rpx;
+}
+.addresTitle text.data-v-61b718aa {
+  width: 80rpx;
+  -webkit-flex-shrink: 0;
+          flex-shrink: 0;
+  text-align: center;
+}
+.addresTitle text.data-v-61b718aa {
+  font-size: 28rpx;
+  color: #999;
+}
+.addresTitle text.data-v-61b718aa:last-child {
+  color: #ea552d;
+}
+

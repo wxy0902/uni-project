@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/*封面图*/
+.word-cover {
+  height: 300rpx;
+  width: 100%;
+  -webkit-border-radius: 4rpx;
+          border-radius: 4rpx;
+  display: block;
+}
+/*展示卡*/
+.word-card {
+  -webkit-border-radius: 8rpx;
+          border-radius: 8rpx;
+  background: #FFFFFF;
+  margin: 24rpx;
+  /*标题*/
+  /*内容*/
+  /*信息*/
+}
+.word-card .title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #333333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  padding: 18rpx 24rpx;
+}
+.word-card .content {
+  font-size: 28rpx;
+  color: #999999;
+  height: 80rpx;
+  padding: 0 24rpx;
+  overflow: hidden;
+}
+.word-card .info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  padding: 24rpx 24rpx;
+}
+.word-card .info-user {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.word-card .info-user .avatar {
+  height: 48rpx;
+  width: 48rpx;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+.word-card .info-user .nickname {
+  margin-left: 12rpx;
+  font-size: 28rpx;
+  color: #666666;
+}
+.word-card .info-date {
+  font-size: 24rpx;
+  color: #999999;
+}
+

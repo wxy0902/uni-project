@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "活动详情",
+  "disableScroll": true,
+  "usingComponents": {
+    "mescroll-uni": "/components/mescroll-uni/mescroll-uni",
+    "i-icon": "/components/i-icon/i-icon",
+    "user-avatar": "/components/user-avatar/user-avatar",
+    "u-parse": "/components/gaoyia-parse/parse"
+  }
+}

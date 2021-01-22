@@ -1,0 +1,8 @@
+
+page {
+  background: #FFFFFF;
+}
+.ml128r {
+  margin-left: 128rpx;
+}
+

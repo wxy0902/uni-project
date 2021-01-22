@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "滑动操作",
+  "usingComponents": {
+    "swipe-action": "/components/common/swipe-action/index",
+    "nav-bar": "/components/common/zhouWei-navBar/index"
+  }
+}

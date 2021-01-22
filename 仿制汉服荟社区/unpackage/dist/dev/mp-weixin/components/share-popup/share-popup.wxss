@@ -1,0 +1,17 @@
+
+.share-icon {
+  width: 72rpx;
+  height: 72rpx;
+  text-align: center;
+  vertical-align: middle;
+  border: 2rpx #F4F4F4 solid;
+  -webkit-border-radius: 8rpx;
+          border-radius: 8rpx;
+  padding: 12rpx;
+}
+.share-name {
+  font-size: 24rpx;
+  color: #8F8F94;
+  margin-top: 12rpx;
+} 
+

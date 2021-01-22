@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "信息编辑",
+  "usingComponents": {
+    "i-icon": "/components/i-icon/i-icon",
+    "city-picker": "/components/city-picker/city-picker"
+  }
+}

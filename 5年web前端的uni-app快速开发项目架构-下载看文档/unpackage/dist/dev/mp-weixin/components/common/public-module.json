@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "z-loading": "/components/common/loading",
+    "applets-login": "/components/common/applets-login"
+  }
+}

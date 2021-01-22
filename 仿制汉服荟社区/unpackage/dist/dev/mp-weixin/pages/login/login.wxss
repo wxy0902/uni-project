@@ -1,0 +1,29 @@
+
+page {
+  background: #FFFFFF;
+}
+
+/*社交账号区域*/
+.social {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  bottom: 5%;
+}
+
+/* 线条 */
+.line-gr-ctheme {
+  height: 4rpx;
+  min-width: 56rpx;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 102, 153, 0)), to(#ff6699));
+  background: -webkit-linear-gradient(left, rgba(255, 102, 153, 0), #ff6699);
+  background: linear-gradient(to right, rgba(255, 102, 153, 0), #ff6699);
+}
+.line-gl-ctheme {
+  height: 4rpx;
+  min-width: 56rpx;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(255, 102, 153, 0)), to(#ff6699));
+  background: -webkit-linear-gradient(right, rgba(255, 102, 153, 0), #ff6699);
+  background: linear-gradient(to left, rgba(255, 102, 153, 0), #ff6699);
+}
+

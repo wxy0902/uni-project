@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "新增功能",
+  "usingComponents": {
+    "z-navigation": "/components/module/navigation"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "富文本预览",
+  "usingComponents": {
+    "jyf-parser": "/components/common/jyf-parser/jyf-parser"
+  }
+}

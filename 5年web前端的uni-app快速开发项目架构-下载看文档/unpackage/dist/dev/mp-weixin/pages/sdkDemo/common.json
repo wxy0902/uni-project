@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "API示例",
+  "usingComponents": {
+    "z-navigation": "/components/module/navigation"
+  }
+}

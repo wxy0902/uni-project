@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "user-avatar": "/components/user-avatar/user-avatar",
+    "i-icon": "/components/i-icon/i-icon"
+  },
+  "component": true
+}

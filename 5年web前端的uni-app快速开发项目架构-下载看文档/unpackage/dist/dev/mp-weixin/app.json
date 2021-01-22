@@ -1,0 +1,110 @@
+{
+  "pages": [
+    "pages/template/addTemplate",
+    "pages/demo/common",
+    "pages/demo/list",
+    "pages/demo/areaSelect",
+    "pages/demo/popup",
+    "pages/demo/prompt",
+    "pages/demo/swipeAction",
+    "pages/demo/parser",
+    "pages/demo/formDemo",
+    "pages/demo/themeColor",
+    "pages/demo/navBarMemo/index",
+    "pages/demo/navBarMemo/demo",
+    "pages/demo/navBarMemo/demo1",
+    "pages/demo/navBarMemo/demo2",
+    "pages/demo/navBarMemo/demo3",
+    "pages/demo/navBarMemo/demo4",
+    "pages/demo/navBarMemo/demo5",
+    "pages/demo/navBarMemo/demo6",
+    "pages/demo/navBarMemo/demo7",
+    "pages/demo/navBarMemo/demo8",
+    "pages/demo/navBarMemo/demo9",
+    "pages/demo/navBarMemo/demo10",
+    "pages/demo/navBarMemo/demo11",
+    "pages/demo/waterfall/common",
+    "pages/demo/waterfall/stableWaterfall",
+    "pages/demo/waterfall/completeWaterfall",
+    "pages/template/webView",
+    "pages/template/common",
+    "pages/user/bindPhone",
+    "pages/user/forget",
+    "pages/user/protocol",
+    "pages/user/register",
+    "pages/user/login",
+    "pages/sdkDemo/common",
+    "pages/sdkDemo/uploadFile",
+    "pages/sdkDemo/quUploadFile",
+    "pages/sdkDemo/appletsLogin",
+    "pages/sdkDemo/appUpdate",
+    "pages/sdkDemo/location",
+    "pages/sdkDemo/pay",
+    "pages/sdkDemo/permission",
+    "pages/sdkDemo/publicLogin",
+    "pages/sdkDemo/publicSdk",
+    "pages/sdkDemo/request",
+    "pages/sdkDemo/saveImg",
+    "pages/sdkDemo/share",
+    "pages/sdkDemo/socket",
+    "pages/sdkDemo/loginIntercept",
+    "pages/sdkDemo/utils",
+    "pages/template/pay",
+    "pages/demo/shortVideo",
+    "pages/template/home",
+    "pages/template/editInfo",
+    "pages/template/poster/goodsPoster",
+    "pages/template/poster/scanCode"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#FFFFFF",
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "color": "#444444",
+    "selectedColor": "#FF80AB",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/template/addTemplate",
+        "iconPath": "static/icon/tab/icon_home.png",
+        "selectedIconPath": "static/icon/tab/icon_home_c.png",
+        "text": "新增功能"
+      },
+      {
+        "pagePath": "pages/demo/common",
+        "iconPath": "static/icon/tab/icon_wode.png",
+        "selectedIconPath": "static/icon/tab/icon_wode_c.png",
+        "text": "组件示例"
+      },
+      {
+        "pagePath": "pages/sdkDemo/common",
+        "iconPath": "static/icon/tab/icon_xiaoxi.png",
+        "selectedIconPath": "static/icon/tab/icon_xiaoxi_c.png",
+        "text": "SDK示例"
+      },
+      {
+        "pagePath": "pages/template/common",
+        "iconPath": "static/icon/tab/icon_xiaoxi.png",
+        "selectedIconPath": "static/icon/tab/icon_xiaoxi_c.png",
+        "text": "模板页面"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "usingComponents": {
+    "nav-bar": "/components/common/zhouWei-navBar/index",
+    "public-module": "/components/common/public-module",
+    "mescroll-body": "/components/common/mescroll-uni/mescroll-body"
+  },
+  "sitemapLocation": "sitemap.json"
+}

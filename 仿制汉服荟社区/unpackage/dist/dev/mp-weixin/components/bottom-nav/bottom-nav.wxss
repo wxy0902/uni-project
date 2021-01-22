@@ -1,0 +1,115 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 我的消息气泡 */
+.my-bubble {
+  display: block;
+  position: absolute;
+  top: 8rpx;
+  right: 20rpx;
+  font-size: 24rpx;
+  text-align: center;
+  padding: 4rpx 12rpx;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  overflow: hidden;
+  color: #FFFFFF;
+  background-color: #FF6699;
+}
+

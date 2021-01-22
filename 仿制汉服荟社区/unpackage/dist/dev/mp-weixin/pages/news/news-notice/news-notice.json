@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "公告",
+  "disableScroll": true,
+  "usingComponents": {
+    "mescroll-uni": "/components/mescroll-uni/mescroll-uni"
+  }
+}

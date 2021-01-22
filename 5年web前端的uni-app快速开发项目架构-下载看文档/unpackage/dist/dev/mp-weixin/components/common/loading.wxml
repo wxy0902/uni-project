@@ -1,0 +1,1 @@
+<block wx:if="{{loadingShow}}"><view data-event-opts="{{[['touchmove',[['preventTouchMove',['$event']]]]]}}" class="mask mask-show" catchtouchmove="__e"><view class="preloader"><view class="loader"></view></view><view class="title">加载中...</view></view></block>

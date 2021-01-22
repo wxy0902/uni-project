@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "i-icon": "/components/i-icon/i-icon",
+    "mescroll-uni": "/components/mescroll-uni/mescroll-uni",
+    "shop-card": "/components/shop-card/shop-card"
+  }
+}

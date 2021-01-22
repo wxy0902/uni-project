@@ -1,0 +1,73 @@
+{
+  "description": "项目配置文件。",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": false,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": false,
+    "coverView": true,
+    "nodeModules": false,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "",
+  "appid": "touristappid",
+  "projectname": "%E4%BB%BF%E5%88%B6%E6%B1%89%E6%9C%8D%E8%8D%9F%E7%A4%BE%E5%8C%BA",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "index",
+          "id": 0,
+          "pathName": "pages/index/index"
+        },
+        {
+          "name": "trend-details",
+          "query": "id=2638118&fromPage=home&current=0",
+          "id": 1,
+          "pathName": "pages/trend-details/trend-details"
+        }
+      ]
+    }
+  }
+}

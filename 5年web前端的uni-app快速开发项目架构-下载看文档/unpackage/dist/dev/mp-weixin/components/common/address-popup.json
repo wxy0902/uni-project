@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "popup": "/components/common/popup",
+    "z-address": "/components/common/address"
+  }
+}

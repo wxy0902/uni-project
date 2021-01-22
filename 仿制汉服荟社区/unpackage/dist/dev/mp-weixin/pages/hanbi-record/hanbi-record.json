@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "汉币兑换记录",
+  "disableScroll": true,
+  "usingComponents": {
+    "mescroll-uni": "/components/mescroll-uni/mescroll-uni"
+  }
+}

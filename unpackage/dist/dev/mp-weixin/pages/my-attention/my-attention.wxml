@@ -1,0 +1,1 @@
+<view class="data-v-9d4119b4"><user-list vue-id="7a8f72a0-1" list="{{userList}}" class="data-v-9d4119b4" bind:__l="__l"></user-list></view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "弹窗输入框",
+  "usingComponents": {
+    "z-prompt": "/components/common/prompt"
+  }
+}

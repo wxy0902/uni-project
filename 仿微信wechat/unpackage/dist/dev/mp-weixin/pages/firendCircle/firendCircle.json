@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": " ",
+  "navigationStyle": "custom",
+  "transparentTitle": "auto",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "u-navbar": "/node-modules/uview-ui/components/u-navbar/u-navbar",
+    "u-icon": "/node-modules/uview-ui/components/u-icon/u-icon",
+    "u-action-sheet": "/node-modules/uview-ui/components/u-action-sheet/u-action-sheet"
+  }
+}
