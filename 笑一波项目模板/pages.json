@@ -1,0 +1,97 @@
+{
+	"pages": [{
+			"path": "pages/new/new",
+			"style": {
+				"navigationBarTitleText": "笑一波",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/hot/hot",
+			"style": {
+				"navigationBarTitleText": "大家都在看",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/tougao/tougao",
+			"style": {
+				"navigationBarTitleText": "分享你的趣事"
+			}
+		},
+		{
+			"path": "pages/like/like",
+			"style": {
+				"navigationBarTitleText": "我喜欢的",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/center/center",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "我的投稿"
+			}
+		},
+		{
+			"path": "platforms/app-plus/login/login",
+			"style": {
+				"navigationBarTitleText": "登录&注册"
+			}
+		},
+		{
+			"path": "platforms/mp-weixin/login/login",
+			"style": {
+				"navigationBarTitleText": "绑定app帐号"
+			}
+		},
+		{
+			"path": "pages/detail/detail",
+			"style": {
+				"navigationBarTitleText": "网友评论"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "笑一波",
+		"navigationBarBackgroundColor": "#f44336",
+		"backgroundColor": "#ffffff"
+	},
+	"tabBar": {
+		"color": "#777777",
+		"selectedColor": "#f44336",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/new/new",
+				"iconPath": "static/index-0.png",
+				"selectedIconPath": "static/index-1.png",
+				"text": "最新"
+			},
+			{
+				"pagePath": "pages/hot/hot",
+				"iconPath": "static/hot-0.png",
+				"selectedIconPath": "static/hot-1.png",
+				"text": "最热"
+			},
+			{
+				"pagePath": "pages/tougao/tougao",
+				"iconPath": "static/tag-0.png",
+				"selectedIconPath": "static/tag-1.png",
+				"text": "投稿"
+			},
+			{
+				"pagePath": "pages/center/center",
+				"iconPath": "static/center-0.png",
+				"selectedIconPath": "static/center-1.png",
+				"text": "我的"
+			}
+		]
+	}
+}

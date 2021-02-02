@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "时间线",
+  "usingComponents": {
+    "y-empty": "/components/y-Empty/y-Empty"
+  }
+}

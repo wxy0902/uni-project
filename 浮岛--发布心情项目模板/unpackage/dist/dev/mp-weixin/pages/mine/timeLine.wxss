@@ -1,0 +1,25 @@
+.line-box.data-v-b8188f18 {
+  min-height: 100vh;
+}
+.line-box .cu-timeline .content.data-v-b8188f18 {
+  background-color: #f5f8f9;
+}
+.line-box .cu-timeline .cu-time.data-v-b8188f18 {
+  color: var(--mainColor);
+}
+.line-box .cu-timeline .line-text.data-v-b8188f18 {
+  color: var(--mainColor);
+}
+.line-box .cu-timeline .img-info .img-box.data-v-b8188f18 {
+  width: 144rpx;
+  height: 144rpx;
+  overflow: hidden;
+  display: inline-block;
+  margin-right: 20rpx;
+  -webkit-border-radius: 16rpx;
+          border-radius: 16rpx;
+}
+.line-box .cu-timeline .img-info .img-box .img.data-v-b8188f18 {
+  height: 100%;
+}
+

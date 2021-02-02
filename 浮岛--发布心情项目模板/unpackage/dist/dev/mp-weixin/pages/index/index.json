@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "浮岛",
+  "usingComponents": {
+    "y-refresh": "/components/y-Refresh/y-Refresh",
+    "y-diary-item": "/components/y-DiaryItem/y-DiaryItem",
+    "y-load-more": "/components/y-LoadMore/y-LoadMore",
+    "y-fab": "/components/y-Fab/y-Fab"
+  }
+}

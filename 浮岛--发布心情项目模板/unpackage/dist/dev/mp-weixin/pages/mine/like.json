@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "y-diary-item": "/components/y-DiaryItem/y-DiaryItem",
+    "y-empty": "/components/y-Empty/y-Empty"
+  }
+}

@@ -78,6 +78,10 @@
 		// 	}
 		// },
 		{
+			"path": "pages/post-detail/post-detail",
+			"style": {}
+		},
+		{
 			"path": "pages/my-collect/my-collect",
 			"style": {}
 		}, {

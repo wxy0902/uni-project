@@ -5,6 +5,7 @@
     "pages/release/release",
     "pages/news/news",
     "pages/my/my",
+    "pages/post-detail/post-detail",
     "pages/my-collect/my-collect",
     "pages/my-history/my-history",
     "pages/my-attention/my-attention",

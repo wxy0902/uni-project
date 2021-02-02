@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "详情",
+  "usingComponents": {
+    "five-mul-commentlist": "/components/five-mul-commentlist/five-mul-commentlist",
+    "five-comment": "/components/five-comment/five-comment"
+  }
+}

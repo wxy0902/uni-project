@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/news/list",
+    "pages/news/detail",
+    "pages/news/publish",
+    "pages/index/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7a7e83",
+    "selectedColor": "#0faeff",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/news/list",
+        "text": "新闻",
+        "iconPath": "static/img/faxian.png",
+        "selectedIconPath": "static/img/faxianHL.png"
+      },
+      {
+        "pagePath": "pages/news/publish",
+        "text": "发布",
+        "iconPath": "static/img/fabu.png",
+        "selectedIconPath": "static/img/fabuHL.png"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

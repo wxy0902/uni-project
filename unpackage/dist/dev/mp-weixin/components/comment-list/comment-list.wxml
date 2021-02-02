@@ -1,0 +1,1 @@
+<view class="view-content-comment" style="margin-bottom:100rpx;"><block><u-empty vue-id="35524efc-1" text="暂无评论" mode="message" bind:__l="__l"></u-empty></block></view>

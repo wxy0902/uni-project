@@ -142,15 +142,15 @@
 		},
 		methods: {
 			jump(item) {
-				if (item.type == 1) {
+				// if (item.type == 1) {
 					uni.navigateTo({
-						url: "/pages/post-detail/post-detail?id=" + item.id
+						url: "/pages/post-detail/post-detail"
 					})
-				} else {
-					uni.navigateTo({
-						url: "/pages/video-detail/video-detail?id=" + item.id
-					})
-				}
+				// } else {
+				// 	uni.navigateTo({
+				// 		url: "/pages/video-detail/video-detail?id=" + item.id
+				// 	})
+				// }
 			},
 			clear() {
 				this.$refs.uWaterfall.clear();
