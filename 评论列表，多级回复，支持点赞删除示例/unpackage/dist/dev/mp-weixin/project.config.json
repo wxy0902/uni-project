@@ -10,21 +10,19 @@
   "libVersion": "",
   "appid": "touristappid",
   "projectname": "评论列表，多级回复，支持点赞删除示例",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
   "condition": {
     "search": {
-      "current": -1,
       "list": []
     },
     "conversation": {
-      "current": -1,
       "list": []
     },
     "game": {
-      "current": -1,
       "list": []
     },
     "miniprogram": {
-      "current": -1,
       "list": []
     }
   }

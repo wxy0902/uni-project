@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "u-swiper": "/uview-ui/components/u-swiper/u-swiper",
+    "comment-list": "/components/comment-list/comment-list",
+    "u-toast": "/uview-ui/components/u-toast/u-toast"
+  }
+}

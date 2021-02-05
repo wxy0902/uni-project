@@ -1,0 +1,288 @@
+
+.search-wrap{
+	padding: 20rpx;
+	background-color: #FFFFFF;
+}
+/* 滑动scroll导航条 */
+.scroll-bar-find {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  white-space: nowrap;
+  -webkit-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  overflow: hidden;
+  /* background: #FF6699; */
+}
+/* 滑动scroll导航条项*/
+.scroll-bar-finditem {
+  display: inline-block;
+  width: 20%;
+  height: 86rpx;
+  line-height: 86rpx;
+  text-align: center;
+  font-size: 32rpx;
+  /* color: rgba(255, 255, 255, 0.6); */
+  border-bottom: 4rpx transparent solid;
+}
+.scroll-bar-finditemsh {
+  color: #FFFFFF;
+  border-bottom: 4rpx #FFFFFF solid;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+
+page {
+	background-color: #f5f5f5;
+}
+.head {
+	padding: 20rpx;
+	background-color: #fff;
+	margin: 20rpx;
+	-webkit-border-radius: 10rpx;
+	        border-radius: 10rpx;
+}
+.userinfo {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	padding: 20rpx;
+	margin: 40rpx 0;
+}
+.userinfo .username {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+}
+.grid-text {
+	color: #999;
+	font-size: 12px;
+}
+.userinfo u-avatar {
+	margin-right: 20rpx;
+}
+.userinfo .icon-right {
+	margin-left: auto;
+}
+.btn-login {
+	margin: 40rpx 0;
+}
+.grid {
+	margin: 20rpx;
+	padding: 20rpx;
+	background-color: #fff;
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+}
+.gn-icon {
+	width: 60rpx;
+	height: 60rpx;
+	margin-bottom: 20rpx;
+}
+
+/*服务按钮*/
+.btn-wrap {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	margin-top: 30rpx;
+}
+.btn-wrap .btn-contact {
+	background-color: #fff;
+	margin-left: 15rpx;
+	margin-right: 15rpx;
+	padding: 20rpx;
+	line-height: unset;
+	font-size: 12px;
+	color: #999;
+}
+.btn-wrap .btn-contact:active {
+	background-color: #f5f5f5;
+}
+.btn-wrap .btn-contact .txt {
+	margin-top: 20rpx;
+}
+.btn-wrap .btn-contact::after {
+	border: unset;
+	position: unset;
+}
+.icon-size {
+	font-size: 50rpx;
+}
+
+
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* uni.scss */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+page.data-v-c454de34 {
+  background-color: #f5f5f5;
+}
+.nav-icon.data-v-c454de34 {
+  width: 90rpx;
+  height: 90rpx;
+  margin-bottom: 10rpx;
+}
+.msg-wrap.data-v-c454de34 {
+  background-color: #FFFFFF;
+  margin-top: 20rpx;
+}
+.msg-wrap .title.data-v-c454de34 {
+  margin: 20rpx;
+}
+.msg-wrap .msg-item.data-v-c454de34 {
+  padding: 20rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.msg-wrap .msg-item .avatar-box.data-v-c454de34 {
+  position: relative;
+}
+.msg-wrap .msg-item .avatar-box .avatar.data-v-c454de34 {
+  margin-right: 20rpx;
+}
+.msg-wrap .msg-item .right.data-v-c454de34 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+          flex: 1;
+}
+.msg-wrap .msg-item .right .desc.data-v-c454de34 {
+  font-size: 24rpx;
+  color: #999;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.msg-wrap .msg-item .right .desc .time.data-v-c454de34 {
+  margin-left: auto;
+}
+.msg-empty.data-v-c454de34 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  min-height: 800rpx;
+}
+.msg-empty .img.data-v-c454de34 {
+  width: 200rpx;
+  margin-top: 100rpx;
+}
+.msg-empty .txt.data-v-c454de34 {
+  color: #999;
+  font-size: 20rpx;
+  margin-top: 20rpx;
+}
+
+
+.release-popup {
+	position: fixed;
+	right: 0;
+	left: 0;
+	bottom: 24rpx;
+}
+.item {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.item-icon {
+	width: 112rpx;
+	height: 112rpx;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+}
+.item-name {
+	font-size: 28rpx;
+	color: #8f8f94;
+	margin-top: 12rpx;
+}
+.list-flex2 {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	width: 60%;
+	margin: 0 auto;
+	padding-bottom: 112rpx;
+}
+.list-flex2 .item:nth-child(1) {
+	-webkit-animation: fly-in .4s;
+	        animation: fly-in .4s;
+	-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.list-flex2 .item:nth-child(2) {
+	-webkit-animation: fly-in .6s;
+	        animation: fly-in .6s;
+	-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.close {
+	display: block;
+	margin: 0 auto;
+	width: 56rpx;
+	height: 56rpx;
+	-webkit-animation: fly-in .6s;
+	        animation: fly-in .6s;
+	-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+

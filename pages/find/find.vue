@@ -1,16 +1,18 @@
 <template>
 	<view>
 		<scroll-view>
-			<post-list :list="postList" :loadStatus="loadStatus"></post-list>
+			<!-- <post-list :list="postList" :loadStatus="loadStatus"></post-list> -->
+			<find-list ref="waterfall" :list="postList" :loadStatus="loadStatus"></find-list>
 		</scroll-view>
 	</view>
 </template>
 
 <script>
-	import postList from '../../components/post-list/post-list.vue'
+	import findList from '../../components/find-list/find-list.vue'
+	// import postWaterfall from '../../components/post-waterfall/post-waterfall.vue'
 	export default {
 		components: {
-			postList
+			findList
 		},
 		data() {
 			return {

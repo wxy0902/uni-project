@@ -32,13 +32,13 @@
 	   </view>
 	   <scroll-view scroll-y="true">
 	    <post-waterfall v-if="current==0"></post-waterfall>
-	   <post-list v-if="current==1"></post-list>
+	   <find-list v-if="current==1"></find-list>
 	   </scroll-view>
 	</view>
 </template>
 
 <script>
-	import postList from '../../components/post-list/post-list.vue'
+	import findList from '../../components/find-list/find-list.vue'
 	import postWaterfall from '../../components/post-waterfall/post-waterfall.vue'
 	export default {
 		data() {
@@ -61,7 +61,7 @@
 			}
 		},
 		components: {
-			postList,
+			findList,
 			postWaterfall
 		},
 		methods: {

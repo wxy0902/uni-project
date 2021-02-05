@@ -40,12 +40,6 @@
           align-items: center;
   padding: 30rpx;
 }
-.view-content-comment .title {
-  width: 100%;
-  color: #333;
-  font-weight: bold;
-  font-size: 34rpx;
-}
 .praise-icon {
   height: 40rpx;
   width: 40rpx;
@@ -55,35 +49,6 @@
 .praise-num {
   font-size: 26rpx;
   color: #999;
-}
-.view-conmment-note {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-          align-items: center;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-          flex: 1;
-  padding-bottom: 20rpx;
-}
-.icon-none {
-  width: 200rpx;
-  height: 200rpx;
-  color: #bbbbbb;
-}
-.text-conmment-note {
-  color: #808080;
-  font-size: 32rpx;
-  margin-top: 30rpx;
 }
 .border-line {
   border-bottom: 1px solid #f6f6f6;

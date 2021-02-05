@@ -1,5 +1,9 @@
 {
   "usingComponents": {
-    "item": "/pages/components/dl-review/item"
+    "u-form": "/uview-ui/components/u-form/u-form",
+    "u-form-item": "/uview-ui/components/u-form-item/u-form-item",
+    "u-avatar": "/uview-ui/components/u-avatar/u-avatar",
+    "u-select": "/uview-ui/components/u-select/u-select",
+    "u-button": "/uview-ui/components/u-button/u-button"
   }
 }

@@ -23,19 +23,6 @@
 			<rich-text class="post-text" :nodes="postDetail.content"></rich-text>
 			<!-- 图片 -->
 			<block v-if="postDetail.type == 1">
-				<!--一张图片-->
-				<!-- <block v-if="postDetail.media.length == 1">
-					<image class="img-style-1" @tap.stop="previewImage" mode="aspectFill" :data-current="postDetail.media[0]"
-					 :data-image="postDetail.media" :src="postDetail.media[0]"></image>
-				</block> -->
-				<!--二张图片-->
-				<!-- <block v-if="postDetail.media.length == 2">
-					<view class="img-style-2">
-						<image v-for="(mediaItem, index2) in postDetail.media" :key="index2" @tap.stop="previewImage" mode="aspectFill"
-						 :data-current="mediaItem" :data-image="postDetail.media" :src="mediaItem"></image>
-					</view>
-				</block> -->
-				<!--三张以上图片-->
 				<block>
 					<view>
 						<image v-for="(mediaItem, index2) in postDetail.media" :key="index2" @tap.stop="previewImage" mode="aspectFill"
@@ -47,8 +34,63 @@
 				<video :controls="false" :autoplay="true" :src="postDetail.media[0]"></video>
 			</block> -->
 			<!--按钮-->
+			<!-- <view class="p-footer"> -->
+				<!-- <view @click.stop="jumpTopic(postDetail.topic_info.id)" class="topic-name">{{postDetail.topic_info.topic_name}}</view> -->
+				<!-- <block v-if="postDetail.is_collection">
+					<view class="btn m-left-auto m-right-20" @click="cancelCollection">
+						<text class="iconfont icon-lujing" style="color: #d81e06;"></text>
+						<text>收藏</text>
+					</view>
+				</block>
+				<block v-else>
+					<view class="btn m-left-auto m-right-20" @click="addCollection">
+						<text class="iconfont icon-shoucang"></text>
+						<text>收藏</text>
+					</view>
+				</block>
+				<block v-if="postDetail.is_thumb">
+					<view class="btn" @click="cancelThumb" type="default">
+						<text class="iconfont icon-dianzan" style="color: #d81e06;"></text>
+						<text>点赞</text>
+					</view>
+				</block>
+				<block v-else>
+					<view class="btn" @click="addThumb" type="default">
+						<text class="iconfont icon-dianzan1"></text>
+						<text>点赞</text>
+					</view>
+				</block>
+			</view> -->
+		</view>
+		<view class="comment-box">
+			<view class="title">评论（{{postDetail.comment_list.length}}）</view>
+			<comment-list :commentList="postDetail.comment_list" @clickPraise="clickPraiseComment" @clickDelete="clickDeleteComment"
+			 @clickDeleteChild="clickDeleteCommentChild" @clickRecomment="clickRecomment" @clickRecommentChild="clickRecommentChild"></comment-list>
+			<!-- <block v-if="postDetail.comment_list.data.length> 0">
+				<view class="comment-item" v-for="(item, index) in postDetail.comment_list.data" :key="index">
+					<image class="avatar" :src="item.userInfo.avatar"></image>
+					<view class="c-content">
+						<text>{{item.userInfo.username}}</text>
+						<text class="c-txt">{{item.content}}</text>
+					</view>
+					<text class="time">{{item.create_time|timeFrom}}</text>
+				</view>
+			</block> -->
+			<!-- <block v-else>
+				<u-empty text="暂无评论" mode="message"></u-empty>
+			</block> -->
+		</view>
+		<view style="height: 100rpx;"></view>
+		<!-- 评论输入框 -->
+		<view class="comment-tool">
 			<view class="p-footer">
 				<!-- <view @click.stop="jumpTopic(postDetail.topic_info.id)" class="topic-name">{{postDetail.topic_info.topic_name}}</view> -->
+				<block>
+					<view class="btn m-left-auto m-right-20" @click="clickComment()">
+						<text class="iconfont icon-dianzan1" style="color: #d81e06;"></text>
+						<text>评论</text>
+					</view>
+				</block>
 				<block v-if="postDetail.is_collection">
 					<view class="btn m-left-auto m-right-20" @click="cancelCollection">
 						<text class="iconfont icon-lujing" style="color: #d81e06;"></text>
@@ -75,37 +117,21 @@
 				</block>
 			</view>
 		</view>
-		<view class="comment-box">
-			<view class="title">评论（{{postDetail.comment_list.data.length}}）</view>
-			<comment-list :commentList="postDetail.comment_list" @clickPraise="clickPraiseComment" @clickDelete="clickDeleteComment"
-			 @clickDeleteChild="clickDeleteCommentChild" @clickRecomment="clickRecomment" @clickRecommentChild="clickRecommentChild"></comment-list>
-			<!-- <block v-if="postDetail.comment_list.data.length> 0">
-				<view class="comment-item" v-for="(item, index) in postDetail.comment_list.data" :key="index">
-					<image class="avatar" :src="item.userInfo.avatar"></image>
-					<view class="c-content">
-						<text>{{item.userInfo.username}}</text>
-						<text class="c-txt">{{item.content}}</text>
-					</view>
-					<text class="time">{{item.create_time|timeFrom}}</text>
-				</view>
-			</block> -->
-			<!-- <block v-else>
-				<u-empty text="暂无评论" mode="message"></u-empty>
-			</block> -->
-		</view>
-		<view style="height: 100rpx;"></view>
 		<!-- 评论输入框 -->
-		<view class="comment-tool">
+		<!-- view class="comment-tool" v-if="sendComment">
 			<textarea placeholder="吐个槽..." fixed="true" cursor-spacing="10" v-model="cTxt" auto-height="true" placeholder-class="txt-placeholder"></textarea>
 			<u-button type="error" @click="addComment" :disabled="isSubmitD" style="border-radius: 0;">发布</u-button>
-		</view>
+		</view> -->
 		<!-- 提示弹窗 -->
+		<Comment ref="detailComment" @sendComment="sendComment" :placeholder="placeholder"></Comment>
+		
 		<u-toast ref="uToast" />
 	</view>
 </template>
 
 <script>
 	import commentList from '../../components/comment-list/comment-list.vue'
+	import Comment from '../../components/comment/comment.vue'
 	export default {
 		data() {
 			return {
@@ -118,40 +144,54 @@
 						'https://t7.baidu.com/it/u=2397542458,3133539061&fm=193&f=GIF',
 						// 'https://t7.baidu.com/it/u=2397542458,3133539061&fm=193&f=GIF'
 					],
-					comment_list: {
-						data: [
-							// {
-							// 	userInfo: {
-							// 		avatar: 'https://t7.baidu.com/it/u=2397542458,3133539061&fm=193&f=GIF',
-							// 		username: '小王',
-							// 	},
-							// 	content: "这个宝贝好棒",
-							// 	create_time: "1分钟前",
-							// },
-							// {
-							// 	userInfo: {
-							// 		avatar: 'https://t7.baidu.com/it/u=2397542458,3133539061&fm=193&f=GIF',
-							// 		username: '小王',
-							// 	},
-							// 	content: "这个宝贝好棒",
-							// 	create_time: "1分钟前",
-							// }
-						]
+					userInfo:{
+						avatar:'https://t7.baidu.com/it/u=2397542458,3133539061&fm=193&f=GIF',
+						username:'老王',
+						intro:'这就是我，哈哈哈'
 					},
-					userInfo: {
-						avatar: 'https://t7.baidu.com/it/u=2397542458,3133539061&fm=193&f=GIF',
-						username: '小王',
-						intro: "哈哈，这就是我"
-					},
-					create_time: "1天前",
-					content: "啦啦啦啦啦",
+					create_time: "1分钟前",
+					comment_list: [
+						{
+							avatar: 'https://t7.baidu.com/it/u=2397542458,3133539061&fm=193&f=GIF',
+							username: '小王',
+							content: "这个宝贝好棒",
+							create_time: "1分钟前",
+							self: 1,
+							child_comment_list:[
+								{
+									username:"小王",
+									other_username:"lala",
+									content: "确实很好看",
+									self: 1,
+								},
+								{
+									username:"lala",
+									// other_username:"lala",
+									content: "确实很好看",
+									// create_time: "1分钟前",
+									// self: 1,
+								}
+							]
+						},
+						{
+							avatar: 'https://t7.baidu.com/it/u=2397542458,3133539061&fm=193&f=GIF',
+							username: '小明',
+							content: "666",
+							create_time: "1分钟前",
+						}
+					],
 				},
 				cTxt: "",
-				isSubmitD: false
+				isSubmitD: false,
+				sendComment:false,
+				//评论组件相关
+				placeholder: '请输入评论内容…',
+				commentParam: {},
 			};
 		},
 		components: {
-			commentList
+			commentList,
+			Comment
 		},
 		onLoad(options) {
 			this.postId = options.id;
@@ -187,6 +227,10 @@
 			}
 		},
 		methods: {
+			Comment(){
+				console.log(11111)
+				this.sendComment = true
+			},
 			addComment() {
 				this.isSubmitD = true;
 				if (this.cTxt == "") {
@@ -244,13 +288,13 @@
 				});
 			},
 			cancelCollection() {
-				this.$H.post('post/cancelCollection', {
-					id: this.postId
-				}).then(res => {
-					if (res.code === 200) {
-						this.postDetail.is_collection = false;
-					}
-				})
+				// this.$H.post('post/cancelCollection', {
+				// 	id: this.postId
+				// }).then(res => {
+				// 	if (res.code === 200) {
+				// 		this.postDetail.is_collection = false;
+				// 	}
+				// })
 			},
 			addCollection() {
 				this.$H.post('post/addCollection', {
@@ -314,8 +358,83 @@
 				uni.navigateTo({
 					url: "/pages/topic-detail/topic-detail?id=" + id
 				})
-			}
-		}
+			},
+			/**
+			 * 点赞多级评论
+			 * @param {Object} item
+			 */
+			clickPraiseComment(item) {
+				console.log(11111)
+				//只能点赞不能取消
+				// if (item.IS_PRAISE == '1') {
+				// 	return;
+				// }
+				// item.IS_PRAISE = '1';
+				// item.PRAISE_NUM++;
+			},
+			/**
+			 * 删除多级评论
+			 */
+			clickDeleteComment(item) {
+				console.log(12233)
+				uni.showModal({
+					title: '提示',
+					content: '确定要删除评论吗？',
+					confirmColor: '#12B368',
+					success: function(res) {
+						/* 调用接口删除 */
+					}
+				});
+			},
+			/**
+			 * 删除多级子评论
+			 */
+			clickDeleteCommentChild(item) {
+				uni.showModal({
+					title: '提示',
+					content: '确定要删除评论吗？',
+					confirmColor: '#12B368',
+					success: function(res) {
+						/* 调用接口删除 */
+					}
+				});
+			},
+			/**
+			 * 回复 评论
+			 * @param {Object} item
+			 */
+			clickRecomment(item) {
+				// this.commentParam = {};
+				// this.$refs.detailComment.open();
+				// this.placeholder = '回复' + item.FIRSTNICKNAME + ':';
+			},
+			/**
+			 * 回复评论的评论
+			 * @param {Object} item
+			 */
+			clickRecommentChild(item) {
+				// this.commentParam = {};
+				// this.$refs.detailComment.open();
+				// this.placeholder = '回复' + item.FIRSTNICKNAME + ':';
+			},
+			/**
+			 * 回复问题
+			 */
+			clickComment() {
+				this.commentParam = {
+					COMMENT_TIME: '2020-07-07 14:30:01',
+					FIRSTNICKNAME: '网友45454545',
+					CHILD_ANWSER_LIST: [],
+					IS_PRAISE: null,
+					PRAISE_NUM: 0,
+					CANDELETE: 1,
+					HEADIMGURL: 'http://img4.imgtn.bdimg.com/it/u=2858424520,3197172862&fm=11&gp=0.jpg',
+					SECONDNICKNAME: null
+				};
+				this.$refs.detailComment.open();
+			},
+		},
+		
 	}
 </script>
 
@@ -482,7 +601,7 @@
 		background-color: #fff;
 		padding: 20rpx;
 		display: flex;
-		z-index: 999;
+		/* z-index: 999; */
 	}
 
 	.comment-tool textarea {

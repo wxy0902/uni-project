@@ -1,14 +1,14 @@
 <template>
 	<view>
-       <post-list></post-list>
+       <find-list></find-list>
 	</view>
 </template>
 
 <script>
-	import postList from '../../components/post-list/post-list.vue'
+	import findList from '../../components/find-list/find-list.vue'
 	export default {
 		components: {
-			postList
+			findList
 		},
 	}
 </script>

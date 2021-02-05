@@ -1,7 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "uniicon": "/pages/components/uni-icons/uni-icons",
-    "dn-icon": "/pages/components/dn-icon/dn-icon"
-  }
-}

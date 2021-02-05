@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "bottom-nav": "/components/bottom-nav/bottom-nav",
+    "home": "/pages/home/home",
+    "find": "/pages/find/find",
+    "news": "/pages/news/news",
+    "my": "/pages/my/my",
+    "release": "/pages/release/release"
+  }
+}

@@ -58,7 +58,7 @@
           // 文字颜色
           "color": "#8E8E8E",
           // 选中文字颜色
-          "selectedColor": "#FF6699",
+          "selectedColor": "#000000",
           // 背景颜色
           "backgroundColor": "#FFFFFF",
           // 底部上边线颜色
@@ -81,8 +81,8 @@
             },
             {
               "text": "消息",
-              "icon": "/static/icon-bottom-nav/shop_normal.png",
-              "selectedIcon": "/static/icon-bottom-nav/shop_select.png"
+              "icon": "/static/icon-bottom-nav/news_normal.png",
+              "selectedIcon": "/static/icon-bottom-nav/news_select.png"
             },
             {
               "text": "我的",

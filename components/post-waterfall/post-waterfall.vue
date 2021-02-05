@@ -19,8 +19,8 @@
 							<u-avatar size="35" :src="item.userInfo.avatar"></u-avatar>
 							<text class="username">{{item.userInfo.username}}</text>
 							<view class="distance">
-								<u-icon name="map"></u-icon>
-								<text>{{item.distance}}km</text>
+								<!-- <u-icon name="map"></u-icon> -->
+								<text>{{item.distance}}人收藏</text>
 							</view>
 						</view>
 					</view>
@@ -43,8 +43,8 @@
 							<u-avatar size="35" :src="item.userInfo.avatar"></u-avatar>
 							<text class="username">{{item.userInfo.username}}</text>
 							<view class="distance">
-								<u-icon name="map"></u-icon>
-								<text>{{item.distance}}km</text>
+								<!-- <u-icon name="map"></u-icon> -->
+								<text>{{item.distance}}人收藏</text>
 							</view>
 						</view>
 					</view>
@@ -79,7 +79,7 @@
 					},
 					{
 						type:1,
-						image:'http://pic.sc.chinaz.com/Files/pic/pic9/202002/zzpic23327_s.jpg',
+						image:'https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF',
 						content:'真的是太帅了！',
 						userInfo:{
 							avator:'http://pic.sc.chinaz.com/Files/pic/pic9/202002/zzpic23327_s.jpg',
@@ -89,7 +89,7 @@
 					},
 					{
 						type:1,
-						image:'http://pic.sc.chinaz.com/Files/pic/pic9/202002/zzpic23327_s.jpg',
+						image:'https://t7.baidu.com/it/u=2498175162,1338032693&fm=193&f=GIF',
 						content:'真的是太帅了！',
 						userInfo:{
 							avator:'http://pic.sc.chinaz.com/Files/pic/pic9/202002/zzpic23327_s.jpg',
@@ -99,7 +99,7 @@
 					},
 					{
 						type:1,
-						image:'http://pic.sc.chinaz.com/Files/pic/pic9/202002/zzpic23327_s.jpg',
+						image:'https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF',
 						content:'真的是太帅了！',
 						userInfo:{
 							avator:'http://pic.sc.chinaz.com/Files/pic/pic9/202002/zzpic23327_s.jpg',
@@ -109,7 +109,7 @@
 					},
 					{
 						type:1,
-						image:'http://pic.sc.chinaz.com/Files/pic/pic9/202002/zzpic23327_s.jpg',
+						image:'https://t7.baidu.com/it/u=1595072465,3644073269&fm=193&f=GIF',
 						content:'真的是太帅了！',
 						userInfo:{
 							avator:'http://pic.sc.chinaz.com/Files/pic/pic9/202002/zzpic23327_s.jpg',

@@ -10110,7 +10110,122 @@ type2icon;exports.default = _default;
 
 /***/ }),
 
-/***/ 275:
+/***/ 28:
+/*!**************************************************************************************************!*\
+  !*** /Users/wangxinyao/Documents/HBuilderProjects/project/uview-ui/libs/function/randomArray.js ***!
+  \**************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; // 打乱数组
+function randomArray() {var array = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  // 原理是sort排序,Math.random()产生0<= x < 1之间的数,会导致x-0.05大于或者小于0
+  return array.sort(function () {return Math.random() - 0.5;});
+}var _default =
+
+randomArray;exports.default = _default;
+
+/***/ }),
+
+/***/ 29:
+/*!**********************************************************************************************!*\
+  !*** /Users/wangxinyao/Documents/HBuilderProjects/project/uview-ui/libs/function/addUnit.js ***!
+  \**********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = addUnit;var _test = _interopRequireDefault(__webpack_require__(/*! ./test.js */ 16));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+
+// 添加单位，如果有rpx，%，px等单位结尾或者值为auto，直接返回，否则加上rpx单位结尾
+function addUnit() {var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'auto';var unit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'rpx';
+  value = String(value);
+  // 用uView内置验证规则中的number判断是否为数值
+  return _test.default.number(value) ? "".concat(value).concat(unit) : value;
+}
+
+/***/ }),
+
+/***/ 3:
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+
+/***/ 30:
+/*!*********************************************************************************************!*\
+  !*** /Users/wangxinyao/Documents/HBuilderProjects/project/uview-ui/libs/function/random.js ***!
+  \*********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function random(min, max) {
+  if (min >= 0 && max > 0 && max >= min) {
+    var gab = max - min + 1;
+    return Math.floor(Math.random() * gab + min);
+  } else {
+    return 0;
+  }
+}var _default =
+
+random;exports.default = _default;
+
+/***/ }),
+
+/***/ 31:
+/*!*******************************************************************************************!*\
+  !*** /Users/wangxinyao/Documents/HBuilderProjects/project/uview-ui/libs/function/trim.js ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function trim(str) {var pos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'both';
+  if (pos == 'both') {
+    return str.replace(/^\s+|\s+$/g, "");
+  } else if (pos == "left") {
+    return str.replace(/^\s*/, '');
+  } else if (pos == 'right') {
+    return str.replace(/(\s*$)/g, "");
+  } else if (pos == 'all') {
+    return str.replace(/\s+/g, "");
+  } else {
+    return str;
+  }
+}var _default =
+
+trim;exports.default = _default;
+
+/***/ }),
+
+/***/ 311:
 /*!******************************************************************************************!*\
   !*** /Users/wangxinyao/Documents/HBuilderProjects/project/uview-ui/libs/util/emitter.js ***!
   \******************************************************************************************/
@@ -10170,7 +10285,7 @@ function _broadcast(componentName, eventName, params) {
 
 /***/ }),
 
-/***/ 276:
+/***/ 312:
 /*!**************************************************************************************************!*\
   !*** /Users/wangxinyao/Documents/HBuilderProjects/project/uview-ui/libs/util/async-validator.js ***!
   \**************************************************************************************************/
@@ -11533,11 +11648,11 @@ Schema.warning = warning;
 Schema.messages = messages;var _default =
 
 Schema;exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 277)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/node_modules/node-libs-browser/mock/process.js */ 313)))
 
 /***/ }),
 
-/***/ 277:
+/***/ 313:
 /*!********************************************************!*\
   !*** ./node_modules/node-libs-browser/mock/process.js ***!
   \********************************************************/
@@ -11568,7 +11683,7 @@ exports.binding = function (name) {
     var path;
     exports.cwd = function () { return cwd };
     exports.chdir = function (dir) {
-        if (!path) path = __webpack_require__(/*! path */ 278);
+        if (!path) path = __webpack_require__(/*! path */ 314);
         cwd = path.resolve(dir, cwd);
     };
 })();
@@ -11582,7 +11697,7 @@ exports.features = {};
 
 /***/ }),
 
-/***/ 278:
+/***/ 314:
 /*!***********************************************!*\
   !*** ./node_modules/path-browserify/index.js ***!
   \***********************************************/
@@ -11892,122 +12007,7 @@ var substr = 'ab'.substr(-1) === 'b'
     }
 ;
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 277)))
-
-/***/ }),
-
-/***/ 28:
-/*!**************************************************************************************************!*\
-  !*** /Users/wangxinyao/Documents/HBuilderProjects/project/uview-ui/libs/function/randomArray.js ***!
-  \**************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; // 打乱数组
-function randomArray() {var array = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  // 原理是sort排序,Math.random()产生0<= x < 1之间的数,会导致x-0.05大于或者小于0
-  return array.sort(function () {return Math.random() - 0.5;});
-}var _default =
-
-randomArray;exports.default = _default;
-
-/***/ }),
-
-/***/ 29:
-/*!**********************************************************************************************!*\
-  !*** /Users/wangxinyao/Documents/HBuilderProjects/project/uview-ui/libs/function/addUnit.js ***!
-  \**********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = addUnit;var _test = _interopRequireDefault(__webpack_require__(/*! ./test.js */ 16));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-
-// 添加单位，如果有rpx，%，px等单位结尾或者值为auto，直接返回，否则加上rpx单位结尾
-function addUnit() {var value = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'auto';var unit = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'rpx';
-  value = String(value);
-  // 用uView内置验证规则中的number判断是否为数值
-  return _test.default.number(value) ? "".concat(value).concat(unit) : value;
-}
-
-/***/ }),
-
-/***/ 3:
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || new Function("return this")();
-} catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-
-/***/ 30:
-/*!*********************************************************************************************!*\
-  !*** /Users/wangxinyao/Documents/HBuilderProjects/project/uview-ui/libs/function/random.js ***!
-  \*********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function random(min, max) {
-  if (min >= 0 && max > 0 && max >= min) {
-    var gab = max - min + 1;
-    return Math.floor(Math.random() * gab + min);
-  } else {
-    return 0;
-  }
-}var _default =
-
-random;exports.default = _default;
-
-/***/ }),
-
-/***/ 31:
-/*!*******************************************************************************************!*\
-  !*** /Users/wangxinyao/Documents/HBuilderProjects/project/uview-ui/libs/function/trim.js ***!
-  \*******************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;function trim(str) {var pos = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'both';
-  if (pos == 'both') {
-    return str.replace(/^\s+|\s+$/g, "");
-  } else if (pos == "left") {
-    return str.replace(/^\s*/, '');
-  } else if (pos == 'right') {
-    return str.replace(/(\s*$)/g, "");
-  } else if (pos == 'all') {
-    return str.replace(/\s+/g, "");
-  } else {
-    return str;
-  }
-}var _default =
-
-trim;exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node-libs-browser/mock/process.js */ 313)))
 
 /***/ }),
 
@@ -12286,7 +12286,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 /***/ }),
 
-/***/ 46:
+/***/ 51:
 /*!***************************************************************************!*\
   !*** /Users/wangxinyao/Documents/HBuilderProjects/project/utils/utils.js ***!
   \***************************************************************************/
@@ -12307,6 +12307,134 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.debounce =
     if (callNow) func.apply(context, args);
   };
 }
+
+/***/ }),
+
+/***/ 80:
+/*!*********************************************************************************!*\
+  !*** /Users/wangxinyao/Documents/HBuilderProjects/project/api/MessageServer.js ***!
+  \*********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.getMessageNoReadCount = getMessageNoReadCount;exports.getMessageNoticeList = getMessageNoticeList;exports.getMessageListByType = getMessageListByType;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ 19));var _request = _interopRequireDefault(__webpack_require__(/*! @/api/request.js */ 81));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}
+/**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             * ===========
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             * 消息服务接口
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             * ===========
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             */
+
+
+/**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 * 获取未读消息数
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 */function
+getMessageNoReadCount() {return _getMessageNoReadCount.apply(this, arguments);}
+
+
+
+/**
+                                                                                 * 获取用户公告消息列表
+                                                                                 */function _getMessageNoReadCount() {_getMessageNoReadCount = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:_context.next = 2;return (0, _request.default)('/message/GetMessageNoRead');case 2:return _context.abrupt("return", _context.sent);case 3:case "end":return _context.stop();}}}, _callee);}));return _getMessageNoReadCount.apply(this, arguments);}function
+getMessageNoticeList() {return _getMessageNoticeList.apply(this, arguments);}
+
+
+
+/**
+                                                                               * 获取用户点赞、评论、提醒消息列表
+                                                                               * @param {Object} params 参数 {page,count,type }
+                                                                               * 类型 top 点赞、comment 评论、remind 提醒、
+                                                                               */function _getMessageNoticeList() {_getMessageNoticeList = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee2() {return _regenerator.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (0, _request.default)('/message/GetNoticeListAndClear');case 2:return _context2.abrupt("return", _context2.sent);case 3:case "end":return _context2.stop();}}}, _callee2);}));return _getMessageNoticeList.apply(this, arguments);}function
+getMessageListByType() {return _getMessageListByType.apply(this, arguments);}function _getMessageListByType() {_getMessageListByType = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee3() {var params,_args3 = arguments;return _regenerator.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:params = _args3.length > 0 && _args3[0] !== undefined ? _args3[0] : {
+              page: 1,
+              count: 20,
+              type: 'comment' };_context3.next = 3;return (
+
+              (0, _request.default)('/message/GetMessageList', 'get', params));case 3:return _context3.abrupt("return", _context3.sent);case 4:case "end":return _context3.stop();}}}, _callee3);}));return _getMessageListByType.apply(this, arguments);}
+
+/***/ }),
+
+/***/ 81:
+/*!***************************************************************************!*\
+  !*** /Users/wangxinyao/Documents/HBuilderProjects/project/api/request.js ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = request; /**
+                                                                                                       * ===========
+                                                                                                       * 统一请求发送
+                                                                                                       * ===========
+                                                                                                       */
+function request(route) {var method = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'get';var data = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  return new Promise(function (resolve, reject) {
+    uni.request({
+      // url: 'http://api5.laosha.net' + route,
+      url: 'http://easy-mock.liuup.com/mock/5df764250a2f9f42cfec1a50/api5.hanfugou.com' + route,
+      method: method,
+      data: data,
+      header: {
+        'hanfuhui_version': 3,
+        'hanfuhui_token': uni.getStorageSync('TOKEN') || '',
+        'hanfuhui_fromclient': 'android',
+        'content-type': 'application/x-www-form-urlencoded' },
+
+      success: function success(res) {
+        // console.log('请求结果', res);
+        // token失效
+        if (res.statusCode == 401 || res.data.ErrorMessage == '登录过期') {
+          reject({
+            data: 401,
+            status: res.statusCode });
+
+          uni.redirectTo({
+            url: '/pages/login/login' });
+
+          return;
+        }
+        // 服务器错误
+        if (res.statusCode == 500) {
+          reject({
+            data: {},
+            status: res.statusCode });
+
+          uni.showToast({
+            title: '服务器错误',
+            icon: 'none' });
+
+          return;
+        }
+        // 含有错误
+        if (res.data.ErrorMessage != '成功') {
+          reject({
+            data: res.data,
+            status: res.statusCode });
+
+          uni.showToast({
+            title: res.data.ErrorMessage,
+            icon: 'none' });
+
+          return;
+        }
+        // 正常
+        resolve({
+          data: res.data,
+          status: res.statusCode });
+
+      },
+      fail: function fail(err) {
+        // console.log(err)
+        reject(err);
+        uni.showToast({
+          title: '网络连接异常',
+          icon: 'none' });
+
+      } });
+
+  });
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ })
 

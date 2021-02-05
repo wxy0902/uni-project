@@ -26,7 +26,7 @@
 			</u-form>
 		</view>
 		<!-- 分类选择器 -->
-		<u-select v-model="show" value-name='cate_id' label-name='cate_name' mode="single-column" :list="cateList" @confirm="confirm"></u-select>
+		<u-select v-model="show" mode="single-column" :list="cateList" @confirm="confirm"></u-select>
 		<!-- 提交按钮 -->
 		<view style="height: 120rpx;"></view>
 		<view class="f-fixed">

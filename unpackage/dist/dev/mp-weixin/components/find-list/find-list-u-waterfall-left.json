@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "find-list-u-waterfall-left": "/components/find-list/find-list-u-waterfall-left",
+    "find-list-u-waterfall-right": "/components/find-list/find-list-u-waterfall-right",
+    "u-waterfall": "/uview-ui/components/u-waterfall/u-waterfall",
+    "u-lazy-load": "/uview-ui/components/u-lazy-load/u-lazy-load",
+    "u-icon": "/uview-ui/components/u-icon/u-icon",
+    "u-avatar": "/uview-ui/components/u-avatar/u-avatar",
+    "u-loadmore": "/uview-ui/components/u-loadmore/u-loadmore"
+  }
+}

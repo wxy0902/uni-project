@@ -5,6 +5,6 @@
     "u-icon": "/uview-ui/components/u-icon/u-icon",
     "u-tabs": "/uview-ui/components/u-tabs/u-tabs",
     "post-waterfall": "/components/post-waterfall/post-waterfall",
-    "post-list": "/components/post-list/post-list"
+    "find-list": "/components/find-list/find-list"
   }
 }
