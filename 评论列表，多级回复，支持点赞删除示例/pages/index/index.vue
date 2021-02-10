@@ -39,7 +39,8 @@
 				</view>
 				<view class="bottom-item" style="	justify-content: center;">
 					<view class="iconfont msg bottom-item-image"></view>
-					<text class="bottom-item-text">{{ detailInfo.COMMENT_NUM }}</text>
+					<view style="align-items: flex-end">12</view>
+					<!-- <text class="bottom-item-text">{{ detailInfo.COMMENT_NUM }}</text> -->
 				</view>
 				<view class="bottom-item" style="	justify-content: flex-end;" @click="clickPraise(detailInfo.IS_PRAISE)">
 					<view class="iconfont praised bottom-item-image" style="color:#d81e07" v-if="detailInfo.IS_PRAISE == '1'"></view>
@@ -297,6 +298,8 @@ page,
 	flex: 1;
 	display: flex;
 	flex-direction: row;
+	// justify-content:space-between;
+	flex-direction: column;
 	align-items: center;
 	height: 80rpx;
 	.bottom-item-image {
@@ -305,7 +308,8 @@ page,
 	}
 	.bottom-item-text {
 		font-size: $uni-font-size-sm;
-		margin-left: 20rpx;
+		// margin-left: 20rpx;
+		// align-items: flex-end;
 		color: $uni-text-color;
 	}
 }

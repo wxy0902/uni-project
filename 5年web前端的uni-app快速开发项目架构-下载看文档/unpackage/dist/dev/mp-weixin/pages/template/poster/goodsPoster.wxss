@@ -34,8 +34,7 @@
   width: 100%;
 }
 .poster_swiper swiper-item.data-v-128cdd4d {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -201,8 +200,7 @@
           justify-content: center;
   position: absolute;
   padding: 5rpx 30rpx;
-  -webkit-border-radius: 40rpx;
-          border-radius: 40rpx;
+  border-radius: 40rpx;
   bottom: 30rpx;
   left: 50%;
   -webkit-transform: translateX(-50%);

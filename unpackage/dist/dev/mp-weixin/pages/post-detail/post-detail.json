@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "comment-list": "/components/comment-list/comment-list",
+    "u-button": "/uview-ui/components/u-button/u-button",
     "u-toast": "/uview-ui/components/u-toast/u-toast",
     "comment": "/components/comment/comment"
   }

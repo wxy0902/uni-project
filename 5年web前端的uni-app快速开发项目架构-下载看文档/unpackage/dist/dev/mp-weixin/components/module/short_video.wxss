@@ -40,8 +40,7 @@
   top: -6rpx;
   width: 16rpx;
   height: 16rpx;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   background-color: #fff;
 }
 .play_btn.data-v-042e01d0 {

@@ -15,8 +15,7 @@
 .addres_select_val.data-v-70ca6dcb {
   padding: 0rpx 10rpx;
   border-bottom: 1rpx solid #ebebeb;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   background-color: #fff;
 }
 .addres_select_val > view.data-v-70ca6dcb {
@@ -32,8 +31,7 @@
   height: 72rpx;
   line-height: 72rpx;
   border-bottom: 2rpx solid #fff;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 28rpx;
 }
 .addres_select_val > view > view.data-v-70ca6dcb:first-child {

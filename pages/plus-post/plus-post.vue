@@ -11,10 +11,13 @@
 			</block>
 		</view>
 		<u-form :model="form" ref="uForm">
-			<u-form-item>
+			<u-form-item label="描述" label-position="top">
 				<u-input type="textarea" v-model="form.content" placeholder="请填写详细描述" />
-			<!-- <textarea placeholder="这一刻的想法..." :auto-height="true" maxlength="-1" v-model="form.content" class="post-txt"></textarea> -->
 			</u-form-item>
+		<!-- 	<u-form-item>
+				<u-input type="textarea" v-model="form.content" placeholder="请填写详细描述" /> -->
+			<!-- <textarea placeholder="这一刻的想法..." :auto-height="true" maxlength="-1" v-model="form.content" class="post-txt"></textarea> -->
+			<!-- </u-form-item> -->
 			<!-- <upload :form="form"></upload> -->
 		</u-form>
 		

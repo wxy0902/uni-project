@@ -23,8 +23,7 @@
 .item-icon {
 	width: 112rpx;
 	height: 112rpx;
-	-webkit-border-radius: 50%;
-	        border-radius: 50%;
+	border-radius: 50%;
 }
 .item-name {
 	font-size: 28rpx;

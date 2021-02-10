@@ -27,8 +27,7 @@
 .bindAccountBox > image.data-v-59138fb4 {
   width: 95rpx;
   height: 95rpx;
-  -webkit-border-radius: 15rpx;
-          border-radius: 15rpx;
+  border-radius: 15rpx;
 }
 .bindAccountBox > view.data-v-59138fb4 {
   width: 95rpx;
@@ -54,8 +53,7 @@
 }
 .registeredBut button.data-v-59138fb4 {
   font-size: 36rpx;
-  -webkit-border-radius: 3rpx;
-          border-radius: 3rpx;
+  border-radius: 3rpx;
   text-align: center;
   line-height: 90rpx;
   height: 90rpx;

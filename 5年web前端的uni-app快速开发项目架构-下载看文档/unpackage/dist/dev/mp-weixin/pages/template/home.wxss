@@ -78,8 +78,7 @@
   height: 315rpx;
 }
 .banner_swiper_box .banner_swiper swiper-item.data-v-057107ab {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -102,9 +101,7 @@
 .banner_swiper_box .banner_swiper swiper-item .banner_img image.data-v-057107ab {
   width: 100%;
   height: 100%;
-  -webkit-box-shadow: 0rpx 20rpx 30rpx 0rpx rgba(0, 0, 0, 0.1);
-          box-shadow: 0rpx 20rpx 30rpx 0rpx rgba(0, 0, 0, 0.1);
-  -webkit-border-radius: 20rpx;
-          border-radius: 20rpx;
+  box-shadow: 0rpx 20rpx 30rpx 0rpx rgba(0, 0, 0, 0.1);
+  border-radius: 20rpx;
 }
 

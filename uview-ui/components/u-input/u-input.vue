@@ -212,7 +212,7 @@ export default {
 		// 是否显示键盘上方带有”完成“按钮那一栏
 		showConfirmbar:{
 			type:Boolean,
-			default:true
+			default:false
 		}
 	},
 	data() {

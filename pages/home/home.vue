@@ -1,17 +1,19 @@
 <template>
 	<view>
-	<view class="search-wrap">
-		<u-search placeholder="搜索圈子" v-model="keyword" @search="search" :show-action="false"></u-search>
+	<view class="search-classify">
+		<!-- <u-search placeholder="搜索" v-model="keyword" @search="search" :show-action="false"></u-search> -->
+		<u-search placeholder="搜索" :show-action="false" disabled @click="toSearch"></u-search>
+		<!-- 导航条 -->
+		<scroll-view class="scroll-bar-find" :scroll-x="true" :show-scrollbar="false" :scroll-into-view="scrollInto" 
+		  :scroll-with-animation="true">
+		  <view v-for="tab in tabBars" :key="tab.id" class="scroll-bar-finditem" :class="{'scroll-bar-finditemsh':current == tab.current}"
+		    :id="tab.id" :data-current="tab.current" @click="fnBarClick(tab)">
+		    {{tab.name}}
+		  </view>
+		</scroll-view>
 	</view>
-	<!-- 导航条 -->
-	<scroll-view class="scroll-bar-find" :scroll-x="true" :show-scrollbar="false" :scroll-into-view="scrollInto" 
-	  :scroll-with-animation="true">
-	  <view v-for="tab in tabBars" :key="tab.id" class="scroll-bar-finditem" :class="{'scroll-bar-finditemsh':current == tab.current}"
-	    :id="tab.id" :data-current="tab.current" @click="fnBarClick(tab)">
-	    {{tab.name}}
-	  </view>
-	</scroll-view>
 	
+	<!-- <view style="width: 100%; height: 126rpx;"></view> -->
 	<view class="post-waterfall">
 		<post-waterfall ref="waterfall" :list="postList" :loadStatus="loadStatus"></post-waterfall>
 	</view>
@@ -25,7 +27,7 @@
 	export default {
 		data() {
 			return {
-				keyword: "",
+				// keyword: "",
 				// 导航项滑动初始id
 				scrollInto: "recommend",
 				// 导航项列表
@@ -137,6 +139,11 @@
 			postWaterfall
 		},
 		methods:{
+			toSearch() {
+				uni.navigateTo({
+					url:'/pages/search/search'
+				})
+			},
 			// toJSON(){
 				
 			// },
@@ -195,10 +202,21 @@
 </script>
 
 <style>
-	.search-wrap{
-		padding: 20rpx;
+	.search-classify{
+		/* padding: 0 20rpx; */
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+		/* padding: 20rpx; */
+		/* display: flex; */
 		background-color: #FFFFFF;
 	}
+	
+	/* .search-classify u-search{
+		margin: 0 20rpx;
+	} */
+	
 	/* 滑动scroll导航条 */
 	.scroll-bar-find {
 	  display: flex;
@@ -226,5 +244,10 @@
 	  border-bottom: 4rpx #FFFFFF solid;
 	  font-size: 36rpx;
 	  font-weight: bold;
+	}
+	
+	/*  */
+	.post-waterfall {
+		margin-top: 160rpx;
 	}
 </style>

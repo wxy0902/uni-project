@@ -55,11 +55,9 @@
 }
 .page .btn_box button.data-v-f11a6d84 {
   height: 86rpx;
-  background-image: -webkit-gradient(linear, left top, right top, from(#ea552d), to(#f19837));
   background-image: -webkit-linear-gradient(left, #ea552d 0%, #f19837 100%);
   background-image: linear-gradient(90deg, #ea552d 0%, #f19837 100%);
-  -webkit-border-radius: 43rpx;
-          border-radius: 43rpx;
+  border-radius: 43rpx;
   font-size: 36rpx;
   color: #ffffff;
 }

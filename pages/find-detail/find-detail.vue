@@ -99,39 +99,40 @@
 			<view class="p-footer">
 				<!-- <view @click.stop="jumpTopic(postDetail.topic_info.id)" class="topic-name">{{postDetail.topic_info.topic_name}}</view> -->
 				<block>
-					<view class="btn m-left-auto m-right-20" @click="cancelCollection">
-						<text class="iconfont icon-dianzan1" style="color: #d81e06;"></text>
-						<text>评论</text>
+					<view class="btn m-left-auto m-right-20" @click="clickComment()">
+						<text class="iconfont icon-pinglun"></text>
+						<text>12</text>
 					</view>
 				</block>
 				<block v-if="postDetail.is_collection">
 					<view class="btn m-left-auto m-right-20" @click="cancelCollection">
 						<text class="iconfont icon-lujing" style="color: #d81e06;"></text>
-						<text>收藏</text>
+						<text>123</text>
 					</view>
 				</block>
 				<block v-else>
 					<view class="btn m-left-auto m-right-20" @click="addCollection">
-						<text class="iconfont icon-shoucang"></text>
-						<text>收藏</text>
+						<text class="iconfont icon-icon-test"></text>
+						<text>123</text>
 					</view>
 				</block>
 				<block v-if="postDetail.is_thumb">
 					<view class="btn" @click="cancelThumb" type="default">
 						<text class="iconfont icon-dianzan" style="color: #d81e06;"></text>
-						<text>点赞</text>
+						<text>123</text>
 					</view>
 				</block>
 				<block v-else>
 					<view class="btn" @click="addThumb" type="default">
-						<text class="iconfont icon-dianzan1"></text>
-						<text>点赞</text>
+						<text class="iconfont icon-dianzan2"></text>
+						<text>122</text>
 					</view>
 				</block>
 			</view>
 			<!-- <textarea placeholder="吐个槽..." fixed="true" cursor-spacing="10" v-model="cTxt" auto-height="true" placeholder-class="txt-placeholder"></textarea>
 			<u-button type="error" @click="addComment" :disabled="isSubmitD" style="border-radius: 0;">发布</u-button> -->
 		</view>
+		<Comment ref="detailComment" @sendComment="sendComment" :placeholder="placeholder"></Comment>
 		<!-- 提示弹窗 -->
 		<u-toast ref="uToast" />
 	</view>
@@ -139,6 +140,7 @@
 
 <script>
 	import commentList from '../../components/comment-list/comment-list.vue'
+	import Comment from '../../components/comment/comment.vue'
 	export default {
 		data() {
 			return {
@@ -188,12 +190,15 @@
 						}
 					],
 				},
+				//评论组件相关
+				placeholder: '请输入评论内容…',
 				cTxt: "",
 				isSubmitD: false
 			};
 		},
 		components: {
-			commentList
+			commentList,
+			Comment
 		},
 		onLoad(options) {
 			this.postId = options.id;
@@ -402,18 +407,34 @@
 			 * @param {Object} item
 			 */
 			clickRecomment(item) {
-				// this.commentParam = {};
-				// this.$refs.detailComment.open();
-				// this.placeholder = '回复' + item.FIRSTNICKNAME + ':';
+				this.commentParam = {};
+				this.$refs.detailComment.open();
+				this.placeholder = '回复' + item.username + ':';
 			},
 			/**
 			 * 回复评论的评论
 			 * @param {Object} item
 			 */
 			clickRecommentChild(item) {
-				// this.commentParam = {};
-				// this.$refs.detailComment.open();
-				// this.placeholder = '回复' + item.FIRSTNICKNAME + ':';
+				this.commentParam = {};
+				this.$refs.detailComment.open();
+				this.placeholder = '回复' + item.username + ':';
+			},
+			/**
+			 * 回复问题
+			 */
+			clickComment() {
+				this.commentParam = {
+					COMMENT_TIME: '2020-07-07 14:30:01',
+					FIRSTNICKNAME: '网友45454545',
+					CHILD_ANWSER_LIST: [],
+					IS_PRAISE: null,
+					PRAISE_NUM: 0,
+					CANDELETE: 1,
+					HEADIMGURL: 'http://img4.imgtn.bdimg.com/it/u=2858424520,3197172862&fm=11&gp=0.jpg',
+					SECONDNICKNAME: null
+				};
+				this.$refs.detailComment.open();
 			},
 		},
 		
@@ -499,8 +520,13 @@
 
 	/*底部操作*/
 	.p-footer {
-		margin-top: 20rpx;
 		display: flex;
+		margin-top: 20rpx;
+	}
+	
+	.p-footer {
+		display: flex;
+		margin-top: 20rpx;
 	}
 
 	.p-footer .topic-name {
@@ -583,7 +609,6 @@
 		background-color: #fff;
 		padding: 20rpx;
 		display: flex;
-		z-index: 999;
 	}
 
 	.comment-tool textarea {

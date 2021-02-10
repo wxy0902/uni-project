@@ -1,5 +1,6 @@
 
 view,
+label,
 swiper-item,
 scroll-view {
   display:-webkit-box;
@@ -33,11 +34,13 @@ textarea,
 video {
   position: relative;
   border: 0px solid #000000;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 swiper-item {
   position: absolute;
+}
+button {
+  margin: 0;
 }
 
 @charset "UTF-8";
@@ -80,7 +83,6 @@ swiper-item {
   bottom: 0rpx;
   width: 750rpx;
   padding: 0 0rpx 40rpx 0rpx;
-  background-image: -webkit-gradient(linear, , from(transparent), to(rgba(0, 0, 0, 0.4)));
   background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.4));
   background-image: linear-gradient(to, transparent, rgba(0, 0, 0, 0.4));
   -webkit-box-align: start;
@@ -136,8 +138,7 @@ swiper-item {
   width: 120rpx;
   height: 120rpx;
   border: solid 2rpx #ffffff;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
 }
 .suspended_user_info_icon.data-v-75c2573c {
   width: 40rpx;
@@ -174,8 +175,7 @@ swiper-item {
           transform: translateX(50%);
   height: 24rpx;
   background-color: #ff3682;
-  -webkit-border-radius: 12rpx;
-          border-radius: 12rpx;
+  border-radius: 12rpx;
   line-height: 24rpx;
   padding: 0 9rpx;
 }

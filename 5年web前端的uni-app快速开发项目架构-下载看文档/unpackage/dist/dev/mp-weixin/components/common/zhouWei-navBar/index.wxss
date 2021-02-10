@@ -17,8 +17,7 @@
   display: -webkit-flex;
   display: flex;
   padding-right: 190rpx;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 750rpx;
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
@@ -37,8 +36,7 @@
   height: 88rpx;
 }
 .header_shadow {
-  -webkit-box-shadow: 0 0 6rpx 0 #ddd;
-          box-shadow: 0 0 6rpx 0 #ddd;
+  box-shadow: 0 0 6rpx 0 #ddd;
 }
 .header_fixed {
   position: fixed;
@@ -167,14 +165,12 @@
           align-items: center;
 }
 .header_btnMongol {
-  -webkit-border-radius: 33rpx;
-          border-radius: 33rpx;
+  border-radius: 33rpx;
   border-style: solid;
   border-width: 2rpx;
   border-color: rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.7);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .header_btnMongol_left_back,
 .header_btnMongol_left_home {
@@ -190,10 +186,8 @@
   border-width: 2rpx;
   border-color: rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.7);
-  -webkit-border-radius: 33rpx;
-          border-radius: 33rpx;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  border-radius: 33rpx;
+  box-sizing: border-box;
 }
 .header_transparentFixed_colorWhite_left_info {
   border-style: solid;

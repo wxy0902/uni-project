@@ -83,5 +83,20 @@
 </script>
 
 <style scoped>
+.upload-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 180rpx;
+	height: 180rpx;
+	background-color: #F5F5F5;
+	margin-top: 30rpx;
+	border-radius: 10rpx;
+}
 
+.upload-video{
+	width: 180rpx;
+	height: 180rpx;
+	margin-top: 30rpx;
+}
 </style>

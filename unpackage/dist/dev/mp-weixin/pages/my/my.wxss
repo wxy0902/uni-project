@@ -6,8 +6,7 @@ page {
 	padding: 20rpx;
 	background-color: #fff;
 	margin: 20rpx;
-	-webkit-border-radius: 10rpx;
-	        border-radius: 10rpx;
+	border-radius: 10rpx;
 }
 .userinfo {
 	display: -webkit-box;
@@ -45,13 +44,7 @@ page {
 	margin: 20rpx;
 	padding: 20rpx;
 	background-color: #fff;
-	-webkit-border-radius: 5px;
-	        border-radius: 5px;
-}
-.gn-icon {
-	width: 60rpx;
-	height: 60rpx;
-	margin-bottom: 20rpx;
+	border-radius: 5px;
 }
 
 /*服务按钮*/
@@ -83,5 +76,4 @@ page {
 .icon-size {
 	font-size: 50rpx;
 }
-
 

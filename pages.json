@@ -79,6 +79,10 @@
 		// 	}
 		// },
 		{
+			"path": "pages/search/search",
+			"style": {}
+		},
+		{
 			"path": "pages/post-detail/post-detail",
 			"style": {}
 		},

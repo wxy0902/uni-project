@@ -55,14 +55,12 @@
 }
 .popupContentBox .popupContent .input.data-v-3fe44646 {
   width: 100%;
-  -webkit-border-radius: 10rpx;
-          border-radius: 10rpx;
+  border-radius: 10rpx;
   border: 1px solid #eee;
   height: 80rpx;
   font-size: 30rpx;
   padding: 0 20rpx;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .popupContentBox .popupContent .introduce.data-v-3fe44646 {
   font-size: 28rpx;

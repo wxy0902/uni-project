@@ -29,8 +29,7 @@
           transform: translateX(-50%) translateY(-50%);
   width: 500rpx;
   background-color: #fff;
-  -webkit-border-radius: 20rpx;
-          border-radius: 20rpx;
+  border-radius: 20rpx;
   overflow: hidden;
   z-index: 11;
 }
@@ -50,8 +49,7 @@
 .loginPopup .loginBox .logo.data-v-b4d583e8 {
   width: 160rpx;
   height: 160rpx;
-  -webkit-border-radius: 20%;
-          border-radius: 20%;
+  border-radius: 20%;
 }
 .loginPopup .loginBox .platformName.data-v-b4d583e8 {
   font-size: 24rpx;
@@ -64,8 +62,7 @@
   color: #333;
 }
 .loginPopup button.data-v-b4d583e8 {
-  -webkit-border-radius: 0rpx;
-          border-radius: 0rpx;
+  border-radius: 0rpx;
   background-color: #ea552d;
 }
 .loginPopup .active.data-v-b4d583e8 {

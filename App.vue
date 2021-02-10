@@ -24,4 +24,9 @@
 	page {
 	  background: #F8F8F8;
 	}
+	
+	.container {
+		padding: 20rpx;
+		background-color: #FFFFFF;
+	}
 </style>

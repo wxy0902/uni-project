@@ -37,8 +37,7 @@
   display: block;
   width: 120rpx;
   height: 120rpx;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   border: 3rpx solid transparent;
   border-top-color: #9370db;
   -webkit-animation: spin 2s linear infinite;
@@ -51,8 +50,7 @@
   left: 5rpx;
   right: 5rpx;
   bottom: 5rpx;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   border: 3rpx solid transparent;
   border-top-color: #ba55d3;
   -webkit-animation: spin 3s linear infinite;
@@ -65,8 +63,7 @@
   left: 15rpx;
   right: 15rpx;
   bottom: 15rpx;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   border: 3rpx solid transparent;
   border-top-color: #ff00ff;
   -webkit-animation: spin 1.5s linear infinite;

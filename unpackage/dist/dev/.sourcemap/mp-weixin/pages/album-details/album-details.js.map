@@ -1,1 +1,0 @@
-{"version":3,"sources":["uni-app:///main.js"],"names":["createPage","Page"],"mappings":";;;;;;;;;;kDAAA;AACA;AACA,mO;AACAA,UAAU,CAACC,qBAAD,CAAV,C","file":"pages/album-details/album-details.js","sourcesContent":["import 'uni-pages';\nimport Vue from 'vue'\nimport Page from './pages/album-details/album-details.vue'\ncreatePage(Page)"],"sourceRoot":""}

@@ -48,8 +48,7 @@
   margin: 10rpx;
   background: #f4f5f6;
   position: relative;
-  -webkit-border-radius: 10rpx;
-          border-radius: 10rpx;
+  border-radius: 10rpx;
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -82,8 +81,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  -webkit-border-radius: 10rpx;
-          border-radius: 10rpx;
+  border-radius: 10rpx;
 }
 .u-delete-icon.data-v-0d33af60 {
   position: absolute;
@@ -91,8 +89,7 @@
   right: 10rpx;
   z-index: 10;
   background-color: #fa3534;
-  -webkit-border-radius: 100rpx;
-          border-radius: 100rpx;
+  border-radius: 100rpx;
   width: 44rpx;
   height: 44rpx;
 

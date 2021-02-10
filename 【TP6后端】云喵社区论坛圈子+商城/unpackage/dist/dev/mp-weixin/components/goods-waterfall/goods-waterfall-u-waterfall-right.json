@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "goods-waterfall-u-waterfall-left": "/components/goods-waterfall/goods-waterfall-u-waterfall-left",
+    "goods-waterfall-u-waterfall-right": "/components/goods-waterfall/goods-waterfall-u-waterfall-right",
+    "u-waterfall": "/uview-ui/components/u-waterfall/u-waterfall",
+    "u-lazy-load": "/uview-ui/components/u-lazy-load/u-lazy-load",
+    "u-loadmore": "/uview-ui/components/u-loadmore/u-loadmore"
+  }
+}

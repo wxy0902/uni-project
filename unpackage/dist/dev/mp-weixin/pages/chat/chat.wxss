@@ -137,8 +137,7 @@ page {
 .popup-layer .more-layer .list .box {
   width: 18vw;
   height: 18vw;
-  -webkit-border-radius: 20rpx;
-          border-radius: 20rpx;
+  border-radius: 20rpx;
   background-color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
@@ -215,12 +214,10 @@ page {
   -webkit-box-align: center;
   -webkit-align-items: center;
           align-items: center;
-  background: -webkit-gradient(linear, left top, right top, from(#f09b37), to(#eb632c));
   background: -webkit-linear-gradient(left, #f09b37, #eb632c);
   background: linear-gradient(to right, #f09b37, #eb632c);
   color: #fff;
-  -webkit-border-radius: 6rpx;
-          border-radius: 6rpx;
+  border-radius: 6rpx;
   font-size: 24rpx;
 }
 .input-box .textbox {
@@ -231,8 +228,7 @@ page {
 .input-box .textbox .voice-mode {
   width: calc(100% - 2rpx);
   height: 68rpx;
-  -webkit-border-radius: 70rpx;
-          border-radius: 70rpx;
+  border-radius: 70rpx;
   border: solid 1rpx #cdcdcd;
   display: -webkit-box;
   display: -webkit-flex;
@@ -257,8 +253,7 @@ page {
   display: -webkit-flex;
   display: flex;
   background-color: #fff;
-  -webkit-border-radius: 40rpx;
-          border-radius: 40rpx;
+  border-radius: 40rpx;
 }
 .input-box .textbox .text-mode .box {
   width: 100%;
@@ -297,8 +292,7 @@ page {
   top: 55%;
   left: 30%;
   background-color: rgba(0, 0, 0, 0.6);
-  -webkit-border-radius: 20rpx;
-          border-radius: 20rpx;
+  border-radius: 20rpx;
 }
 .record .ing {
   width: 100%;
@@ -372,7 +366,6 @@ page {
 }
 }
 .record .ing .icon {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f09b37), color-stop(50%, #fff));
   background-image: -webkit-linear-gradient(top, #f09b37, #fff 50%);
   background-image: linear-gradient(to bottom, #f09b37, #fff 50%);
   background-size: 100% 200%;
@@ -471,8 +464,7 @@ page {
   background-color: #f06c7a;
   height: 50rpx;
   width: 6rpx;
-  -webkit-border-radius: 6rpx;
-          border-radius: 6rpx;
+  border-radius: 6rpx;
   -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
           animation: stretchdelay 1.2s infinite ease-in-out;
 }
@@ -518,8 +510,7 @@ page {
   background-color: #c9c9c9;
   color: #fff;
   font-size: 24rpx;
-  -webkit-border-radius: 40rpx;
-          border-radius: 40rpx;
+  border-radius: 40rpx;
 }
 .content .msg-list .row:first-child {
   margin-top: 20rpx;
@@ -533,8 +524,7 @@ page {
 .content .msg-list .row .my .left .bubble, .content .msg-list .row .other .right .bubble {
   max-width: 70%;
   min-height: 50rpx;
-  -webkit-border-radius: 10rpx;
-          border-radius: 10rpx;
+  border-radius: 10rpx;
   padding: 15rpx 20rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -567,11 +557,9 @@ page {
   content: " ";
   width: 53rpx;
   height: 53rpx;
-  -webkit-border-radius: 100%;
-          border-radius: 100%;
+  border-radius: 100%;
   position: absolute;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 .content .msg-list .row .my .left .bubble.voice .length, .content .msg-list .row .other .right .bubble.voice .length {
   font-size: 28rpx;
@@ -585,8 +573,7 @@ page {
 .content .msg-list .row .my .right image, .content .msg-list .row .other .left image {
   width: 80rpx;
   height: 80rpx;
-  -webkit-border-radius: 10rpx;
-          border-radius: 10rpx;
+  border-radius: 10rpx;
 }
 .content .msg-list .row .my {
   width: 100%;
@@ -721,10 +708,8 @@ page {
           justify-content: center;
   -webkit-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-border-radius: 0 0 100% 100%;
-          border-radius: 0 0 100% 100%;
-  -webkit-box-shadow: inset 0 -20rpx 0 #9c1712;
-          box-shadow: inset 0 -20rpx 0 #9c1712;
+  border-radius: 0 0 100% 100%;
+  box-shadow: inset 0 -20rpx 0 #9c1712;
   margin-bottom: 65rpx;
 }
 .open-redenvelope .top .close-btn {
@@ -747,8 +732,7 @@ page {
   width: 130rpx;
   height: 130rpx;
   border: solid 12rpx #cf3c35;
-  -webkit-border-radius: 100%;
-          border-radius: 100%;
+  border-radius: 100%;
   margin-bottom: -65rpx;
 }
 .open-redenvelope .from, .open-redenvelope .money, .open-redenvelope .showDetails {

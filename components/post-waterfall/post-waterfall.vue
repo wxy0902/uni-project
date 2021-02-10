@@ -15,6 +15,7 @@
 					</block>
 					<view class="footer-wrap">
 						<view class="p-title">{{item.content}}</view>
+						<view class="money">￥{{item.money}}</view>
 						<view class="p-user">
 							<u-avatar size="35" :src="item.userInfo.avatar"></u-avatar>
 							<text class="username">{{item.userInfo.username}}</text>
@@ -39,6 +40,7 @@
 					</block>
 					<view class="footer-wrap">
 						<view class="p-title">{{item.content}}</view>
+						<view class="money">￥{{item.money}}</view>
 						<view class="p-user">
 							<u-avatar size="35" :src="item.userInfo.avatar"></u-avatar>
 							<text class="username">{{item.userInfo.username}}</text>
@@ -70,12 +72,13 @@
 					{
 						type:1,
 						image:'http://pic.sc.chinaz.com/Files/pic/pic9/202002/zzpic23327_s.jpg',
-						content:'真的是太帅了！',
+						content:'真的是太帅了,啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦！',
 						userInfo:{
 							avator:'http://pic.sc.chinaz.com/Files/pic/pic9/202002/zzpic23327_s.jpg',
 							username: 'haha',
 						},
-						distance:'2'
+						money:999.00,
+						distance:'2',
 					},
 					{
 						type:1,
@@ -85,6 +88,7 @@
 							avator:'http://pic.sc.chinaz.com/Files/pic/pic9/202002/zzpic23327_s.jpg',
 							username: 'haha',
 						},
+						money:999.00,
 						distance:'2'
 					},
 					{
@@ -95,6 +99,7 @@
 							avator:'http://pic.sc.chinaz.com/Files/pic/pic9/202002/zzpic23327_s.jpg',
 							username: 'haha',
 						},
+						money:999.00,
 						distance:'2'
 					},
 					{
@@ -105,6 +110,7 @@
 							avator:'http://pic.sc.chinaz.com/Files/pic/pic9/202002/zzpic23327_s.jpg',
 							username: 'haha',
 						},
+						money:999.00,
 						distance:'2'
 					},
 					{
@@ -115,6 +121,7 @@
 							avator:'http://pic.sc.chinaz.com/Files/pic/pic9/202002/zzpic23327_s.jpg',
 							username: 'haha',
 						},
+						money:999.00,
 						distance:'2'
 					},
 					{
@@ -125,6 +132,7 @@
 							avator:'http://pic.sc.chinaz.com/Files/pic/pic9/202002/zzpic23327_s.jpg',
 							username: 'haha',
 						},
+						money:999.00,
 						distance:'2'
 					},
 					{
@@ -135,6 +143,7 @@
 							avator:'http://pic.sc.chinaz.com/Files/pic/pic9/202002/zzpic23327_s.jpg',
 							username: 'haha',
 						},
+						money:999.00,
 						distance:'2'
 					},
 				]
@@ -210,20 +219,29 @@
 	.footer-wrap .p-user {
 		display: flex;
 		align-items: center;
-		line-height: 20rpx;
 		font-size: 22rpx;
+		line-height: 20rpx;
 		margin-top: 20rpx;
 	}
 
-	.footer-wrap .p-user .username {
-		font-size: 20rpx;
-		margin-left: 10rpx;
+	.footer-wrap .money {
+		color: #FF0000;
 	}
 
 	.footer-wrap .p-user .distance {
 		display: flex;
 		align-items: center;
+		margin-left: 10rpx;
+		/* font-size: 22rpx; */
 		margin-left: auto;
+	}
+	
+	.footer-wrap .p-user .username {
+		/* display: flex; */
+		/* align-items: center; */
+		margin-left: 10rpx;
+		/* font-size: 22rpx; */
+		/* margin-left: auto; */
 	}
 
 	.post-video {

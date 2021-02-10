@@ -174,8 +174,7 @@ page {
 
 
 .demo-warter.data-v-c366edac {
-	-webkit-border-radius: 8px;
-	        border-radius: 8px;
+	border-radius: 8px;
 	margin: 5px;
 	background-color: #ffffff;
 	position: relative;
@@ -187,8 +186,7 @@ page {
 	top: 30%;
 	background-color: rgba(0, 0, 0, 0.4);
 	padding: 20rpx;
-	-webkit-border-radius: 50%;
-	        border-radius: 50%;
+	border-radius: 50%;
 	width: 100rpx;
 	height: 100rpx;
 	display: -webkit-box;
@@ -225,7 +223,7 @@ page {
 	-webkit-align-items: center;
 	        align-items: center;
 	line-height: 20rpx;
-	font-size: 22rpx;
+	font-size: 28rpx;
 	margin-top: 20rpx;
 }
 .footer-wrap .p-user .username.data-v-c366edac {
@@ -240,6 +238,12 @@ page {
 	-webkit-align-items: center;
 	        align-items: center;
 	margin-left: auto;
+	border: 1px solid #F5F5F5;
+	padding: 5rpx 10rpx;
+	border-radius: 20rpx;
+}
+.footer-wrap .p-user .thumb text.data-v-c366edac{
+	margin: 0 0 2rpx 10rpx;
 }
 .post-video.data-v-c366edac {
 	width: 100%;

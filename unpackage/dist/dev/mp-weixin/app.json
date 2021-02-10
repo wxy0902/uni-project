@@ -6,6 +6,7 @@
     "pages/release/release",
     "pages/news/news",
     "pages/my/my",
+    "pages/search/search",
     "pages/post-detail/post-detail",
     "pages/find-detail/find-detail",
     "pages/my-collect/my-collect",

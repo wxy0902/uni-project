@@ -16,8 +16,7 @@
   position: relative;
   color: #1a1a1a;
   padding: 0 20rpx 0rpx 20rpx;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
 }
 .flow-box .left.data-v-a0cdb08a {
   left: 20rpx;
@@ -30,8 +29,7 @@
   width: 345rpx;
   border: 2rpx solid #f9f9f9;
   background: #fff;
-  -webkit-border-radius: 20rpx;
-          border-radius: 20rpx;
+  border-radius: 20rpx;
   overflow: hidden;
   margin-bottom: 20rpx;
 }
@@ -54,8 +52,7 @@
 }
 .flow-box .good_item .sell_well text.data-v-a0cdb08a {
   height: 32rpx;
-  -webkit-border-radius: 4rpx;
-          border-radius: 4rpx;
+  border-radius: 4rpx;
   border: solid 2rpx #ea552d;
   line-height: 28rpx;
   padding: 0 15rpx;

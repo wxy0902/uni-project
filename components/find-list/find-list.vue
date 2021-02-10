@@ -219,7 +219,7 @@
 		display: flex;
 		align-items: center;
 		line-height: 20rpx;
-		font-size: 22rpx;
+		font-size: 28rpx;
 		margin-top: 20rpx;
 	}
 
@@ -232,6 +232,13 @@
 		display: flex;
 		align-items: center;
 		margin-left: auto;
+		border: 1px solid #F5F5F5;
+		padding: 5rpx 10rpx;
+		border-radius: 20rpx;
+	}
+	
+	.footer-wrap .p-user .thumb text{
+		margin: 0 0 2rpx 10rpx;
 	}
 
 	.post-video {

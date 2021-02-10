@@ -2,8 +2,7 @@
 	position: relative; /* 下拉刷新区域相对自身定位 */
 	height: auto; /* 不可固定高度,否则overflow:hidden导致无法滑动; 同时使设置的最小高生效,实现列表不满屏仍可下拉*/
 	overflow: hidden; /* 遮住顶部下拉刷新区域 */
-	-webkit-box-sizing: border-box;
-	        box-sizing: border-box; /* 避免设置padding出现双滚动条的问题 */
+	box-sizing: border-box; /* 避免设置padding出现双滚动条的问题 */
 }
 
 /* 适配 iPhoneX */
@@ -49,8 +48,7 @@
 	display: inline-block;
 	width: 32rpx;
 	height: 32rpx;
-	-webkit-border-radius: 50%;
-	        border-radius: 50%;
+	border-radius: 50%;
 	border: 2rpx solid gray;
 	border-bottom-color: transparent !important; /*已在style设置border-color,此处需加 !important*/
 	vertical-align: middle;
@@ -107,8 +105,7 @@
 	display: inline-block;
 	width: 32rpx;
 	height: 32rpx;
-	-webkit-border-radius: 50%;
-	        border-radius: 50%;
+	border-radius: 50%;
 	border: 2rpx solid gray;
 	border-bottom-color: transparent !important; /*已在style设置border-color,此处需加 !important*/
 	vertical-align: middle;

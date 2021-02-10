@@ -1,10 +1,22 @@
 <template>
 	<view v-if="isShow" class="comment ">
 		<view class="mask" @click="clickCancle()"></view>
-		<view class="comment-bottom">
+		<!-- 评论输入框 -->
+		<!-- <view class="comment-tool">
+			<textarea placeholder="吐个槽..." fixed="true" cursor-spacing="10" v-model="cTxt" auto-height="true" placeholder-class="txt-placeholder"></textarea>
+			<u-button type="error" @click="addComment" :disabled="isSubmitD" style="border-radius: 0;">发布</u-button>
+		</view> -->
+		
+		<view class="comment-tool">
+			<textarea :cursor-spacing="setHight()" focus fixed="true" v-model="content" auto-height="true" placeholder-style="color:#666666" :placeholder="placeholder" :show-confirm-bar=false></textarea>
+			<u-button type="error" @click="clickSend()" :disabled="isSubmitD" style="border-radius: 0;">发布</u-button>
+		</view>
+		
+		
+		<!-- <view class="comment-bottom">
 			<textarea class="bottom-textarea" :cursor-spacing="setHight()" v-model="content" focus placeholder-style="color:#666666" :placeholder="placeholder" />
 			<view class="bottom-view" id="bottomView"><view class="send-btn" @click="clickSend()">发送</view></view>
-		</view>
+		</view> -->
 	</view>
 </template>
 
@@ -25,7 +37,10 @@ export default {
 	},
 	watch: {},
 	mounted() {
-		
+		uni.onKeyboardHeightChange(res => {
+		  console.log(res.height)
+		  this.isShow = res.height > 0
+		})
 	},
 	methods: {
 		setHight() {

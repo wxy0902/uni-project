@@ -1,0 +1,23 @@
+
+.upload-wrap.data-v-33ebcd24 {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	width: 180rpx;
+	height: 180rpx;
+	background-color: #F5F5F5;
+	margin-top: 30rpx;
+	border-radius: 10rpx;
+}
+.upload-video.data-v-33ebcd24{
+	width: 180rpx;
+	height: 180rpx;
+	margin-top: 30rpx;
+}
+

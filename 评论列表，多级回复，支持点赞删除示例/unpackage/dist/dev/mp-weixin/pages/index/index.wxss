@@ -89,6 +89,7 @@ page,
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
           flex-direction: row;
+  flex-direction: column;
   -webkit-box-align: center;
   -webkit-align-items: center;
           align-items: center;
@@ -100,7 +101,6 @@ page,
 }
 .bottom-item .bottom-item-text {
   font-size: 26rpx;
-  margin-left: 20rpx;
   color: #333;
 }
 .view-content-content {

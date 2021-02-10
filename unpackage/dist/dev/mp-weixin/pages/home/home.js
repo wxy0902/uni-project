@@ -76,12 +76,31 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-var components = {
-  uSearch: function() {
-    return __webpack_require__.e(/*! import() | uview-ui/components/u-search/u-search */ "uview-ui/components/u-search/u-search").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-search/u-search.vue */ 190))
-  },
-  postWaterfall: function() {
-    return __webpack_require__.e(/*! import() | components/post-waterfall/post-waterfall */ "components/post-waterfall/post-waterfall").then(__webpack_require__.bind(null, /*! @/components/post-waterfall/post-waterfall.vue */ 197))
+var components
+try {
+  components = {
+    uSearch: function() {
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-search/u-search */ "uview-ui/components/u-search/u-search").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-search/u-search.vue */ 198))
+    },
+    postWaterfall: function() {
+      return __webpack_require__.e(/*! import() | components/post-waterfall/post-waterfall */ "components/post-waterfall/post-waterfall").then(__webpack_require__.bind(null, /*! @/components/post-waterfall/post-waterfall.vue */ 205))
+    }
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
   }
 }
 var render = function() {
@@ -121,7 +140,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
 
@@ -144,11 +163,13 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-var _utils = __webpack_require__(/*! ../../utils/utils.js */ 51);var postWaterfall = function postWaterfall() {__webpack_require__.e(/*! require.ensure | components/post-waterfall/post-waterfall */ "components/post-waterfall/post-waterfall").then((function () {return resolve(__webpack_require__(/*! ../../components/post-waterfall/post-waterfall.vue */ 197));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+var _utils = __webpack_require__(/*! ../../utils/utils.js */ 51);var postWaterfall = function postWaterfall() {__webpack_require__.e(/*! require.ensure | components/post-waterfall/post-waterfall */ "components/post-waterfall/post-waterfall").then((function () {return resolve(__webpack_require__(/*! ../../components/post-waterfall/post-waterfall.vue */ 205));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 {
   data: function data() {
     return {
-      keyword: "",
+      // keyword: "",
       // 导航项滑动初始id
       scrollInto: "recommend",
       // 导航项列表
@@ -260,6 +281,11 @@ var _utils = __webpack_require__(/*! ../../utils/utils.js */ 51);var postWaterfa
     postWaterfall: postWaterfall },
 
   methods: {
+    toSearch: function toSearch() {
+      uni.navigateTo({
+        url: '/pages/search/search' });
+
+    },
     // toJSON(){
 
     // },
@@ -311,6 +337,7 @@ var _utils = __webpack_require__(/*! ../../utils/utils.js */ 51);var postWaterfa
         this.clickRefresh = false;
       }
     } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

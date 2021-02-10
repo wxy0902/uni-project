@@ -106,8 +106,7 @@
   font-size: 24rpx;
   text-align: center;
   padding: 4rpx 12rpx;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   overflow: hidden;
   color: #FFFFFF;
   background-color: #FF6699;

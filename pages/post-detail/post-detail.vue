@@ -85,36 +85,40 @@
 		<view class="comment-tool">
 			<view class="p-footer">
 				<!-- <view @click.stop="jumpTopic(postDetail.topic_info.id)" class="topic-name">{{postDetail.topic_info.topic_name}}</view> -->
-				<block>
-					<view class="btn m-left-auto m-right-20" @click="clickComment()">
-						<text class="iconfont icon-dianzan1" style="color: #d81e06;"></text>
+				<!-- <block> -->
+					<view class="btn m-right-30" @click="clickComment()">
+						<text class="iconfont icon-pinglun"></text>
 						<text>评论</text>
 					</view>
-				</block>
+				<!-- </block> -->
 				<block v-if="postDetail.is_collection">
-					<view class="btn m-left-auto m-right-20" @click="cancelCollection">
-						<text class="iconfont icon-lujing" style="color: #d81e06;"></text>
+					<view class="btn m-right-30" @click="cancelCollection">
+						<text class="iconfont icon-shoucang" style="color: #d81e06;"></text>
 						<text>收藏</text>
 					</view>
 				</block>
 				<block v-else>
-					<view class="btn m-left-auto m-right-20" @click="addCollection">
-						<text class="iconfont icon-shoucang"></text>
+					<view class="btn m-right-30" @click="addCollection">
+						<text class="iconfont icon-icon-test"></text>
 						<text>收藏</text>
 					</view>
 				</block>
 				<block v-if="postDetail.is_thumb">
 					<view class="btn" @click="cancelThumb" type="default">
-						<text class="iconfont icon-dianzan" style="color: #d81e06;"></text>
+						<text class="iconfont icon-dianzan3" style="color: #d81e06;"></text>
 						<text>点赞</text>
 					</view>
 				</block>
 				<block v-else>
 					<view class="btn" @click="addThumb" type="default">
-						<text class="iconfont icon-dianzan1"></text>
+						<text class="iconfont icon-dianzan2"></text>
 						<text>点赞</text>
 					</view>
 				</block>
+				<!-- <block> -->
+				  <u-button style="margin: 5rpx 0 0 20rpx;" type="success">获取微信</u-button>
+				  <u-button style="margin: 5rpx 0 0 20rpx;" type="warning" @click="makephonecall">拨打电话</u-button>
+				<!-- </block> -->
 			</view>
 		</view>
 		<!-- 评论输入框 -->
@@ -122,9 +126,8 @@
 			<textarea placeholder="吐个槽..." fixed="true" cursor-spacing="10" v-model="cTxt" auto-height="true" placeholder-class="txt-placeholder"></textarea>
 			<u-button type="error" @click="addComment" :disabled="isSubmitD" style="border-radius: 0;">发布</u-button>
 		</view> -->
-		<!-- 提示弹窗 -->
 		<Comment ref="detailComment" @sendComment="sendComment" :placeholder="placeholder"></Comment>
-		
+		<!-- 提示弹窗 -->
 		<u-toast ref="uToast" />
 	</view>
 </template>
@@ -180,6 +183,8 @@
 							create_time: "1分钟前",
 						}
 					],
+					is_thumb:false,
+					is_collection:false
 				},
 				cTxt: "",
 				isSubmitD: false,
@@ -288,6 +293,7 @@
 				});
 			},
 			cancelCollection() {
+				this.is_collection = false
 				// this.$H.post('post/cancelCollection', {
 				// 	id: this.postId
 				// }).then(res => {
@@ -297,33 +303,36 @@
 				// })
 			},
 			addCollection() {
-				this.$H.post('post/addCollection', {
-					id: this.postId,
-					uid: this.postDetail.uid
-				}).then(res => {
-					if (res.code === 200) {
-						this.postDetail.is_collection = true;
-					}
-				})
+				this.is_collection = true
+				// this.$H.post('post/addCollection', {
+				// 	id: this.postId,
+				// 	uid: this.postDetail.uid
+				// }).then(res => {
+				// 	if (res.code === 200) {
+				// 		this.postDetail.is_collection = true;
+				// 	}
+				// })
 			},
 			addThumb() {
-				this.$H.post('post/addThumb', {
-					id: this.postId
-				}).then(res => {
-					if (res.code === 200) {
-						this.postDetail.is_thumb = true;
-					}
-				})
+				this.postDetail.is_thumb = true
+				// this.$H.post('post/addThumb', {
+				// 	id: this.postId
+				// }).then(res => {
+				// 	if (res.code === 200) {
+				// 		this.postDetail.is_thumb = true;
+				// 	}
+				// })
 			},
 			cancelThumb() {
-				this.$H.post('post/cancelThumb', {
-					id: this.postId,
-					uid: this.postDetail.uid
-				}).then(res => {
-					if (res.code === 200) {
-						this.postDetail.is_thumb = false;
-					}
-				})
+				this.postDetail.is_thumb = false
+				// this.$H.post('post/cancelThumb', {
+				// 	id: this.postId,
+				// 	uid: this.postDetail.uid
+				// }).then(res => {
+				// 	if (res.code === 200) {
+				// 		this.postDetail.is_thumb = false;
+				// 	}
+				// })
 			},
 			follow() {
 				this.$H.post('user/addFollow', {
@@ -404,18 +413,18 @@
 			 * @param {Object} item
 			 */
 			clickRecomment(item) {
-				// this.commentParam = {};
-				// this.$refs.detailComment.open();
-				// this.placeholder = '回复' + item.FIRSTNICKNAME + ':';
+				this.commentParam = {};
+				this.$refs.detailComment.open();
+				this.placeholder = '回复' + item.username + ':';
 			},
 			/**
 			 * 回复评论的评论
 			 * @param {Object} item
 			 */
 			clickRecommentChild(item) {
-				// this.commentParam = {};
-				// this.$refs.detailComment.open();
-				// this.placeholder = '回复' + item.FIRSTNICKNAME + ':';
+				this.commentParam = {};
+				this.$refs.detailComment.open();
+				this.placeholder = '回复' + item.username + ':';
 			},
 			/**
 			 * 回复问题
@@ -433,6 +442,20 @@
 				};
 				this.$refs.detailComment.open();
 			},
+			/**
+			 * 发送评论
+			 * @param {Object} result
+			 */
+			sendComment(result) {
+				this.commentParam.COMMENT = result;
+				this.commentList.push(this.commentParam);
+			},
+			// 拨打电话
+			makephonecall(){
+				uni.makePhoneCall({
+				    phoneNumber: '114' //仅为示例
+				});
+			}
 		},
 		
 	}
@@ -533,21 +556,23 @@
 	}
 
 	.p-footer .btn {
-		border: 1px solid #F5F5F5;
-		padding: 10rpx 20rpx;
+		display: flex;
+		flex-direction: column;
+		padding: 5rpx 10rpx;
 		border-radius: 20rpx;
 	}
 
-	.p-footer .btn text {
-		margin: 0 5rpx;
+	.p-footer .btn text:nth-child(1) {
+		font-size: 20px;
+		margin: auto;
+	}
+	
+	.p-footer .btn text:nth-child(2) {
+		font-size: 10px;
 	}
 
-	.m-left-auto {
-		margin-left: auto;
-	}
-
-	.m-right-20 {
-		margin-right: 20rpx;
+	.m-right-30 {
+		margin-right: 30rpx;
 	}
 
 	/*评论*/

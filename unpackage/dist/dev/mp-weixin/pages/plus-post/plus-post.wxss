@@ -55,8 +55,7 @@
   height: 180rpx;
   background-color: #F5F5F5;
   margin-top: 30rpx;
-  -webkit-border-radius: 10rpx;
-          border-radius: 10rpx;
+  border-radius: 10rpx;
 }
 .upload-video {
   width: 180rpx;

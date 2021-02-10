@@ -9,7 +9,7 @@
 						<text>{{userInfo.username}}</text>
 						<text>{{userInfo.intro}}</text>
 					</view>
-					<text class="iconfont icon-right"></text>
+					<!-- <text class="iconfont icon-right"></text> -->
 				</view>
 				<!-- </navigator> -->
 			</block>
@@ -42,22 +42,17 @@
 		</view>
 		<!-- 个人中心 -->
 		<view class="grid">
-			<view>个人中心</view>
-			<u-grid :col="4" :border="false" style="margin: 20rpx 0;" @click="toNav">
-				<u-grid-item index="/pages/my-release/my-release">
-					<u-badge count="9" :offset="[20, 20]"></u-badge>
-					<u-icon name="photo" :size="46"></u-icon>
-					<!-- <image class="gn-icon" src="/static/m_1.png"></image> -->
-					<view class="grid-text">咨询</view>
-				</u-grid-item>
-			
-				<u-grid-item index="/pages/my-contact/my-contact">
-					<u-badge count="9" :offset="[20, 20]"></u-badge>
-					<u-icon name="photo" :size="46"></u-icon>
-					<!-- <image class="gn-icon" src="/static/m_2.png"></image> -->
-					<view class="grid-text">日常</view>
-				</u-grid-item>
-			</u-grid>
+			<u-form ref="uForm" label-width="auto">
+				<u-form-item right-icon="arrow-right">
+					<view @click="toUserEdit">我的资料</view>
+				</u-form-item>
+				<u-form-item right-icon="arrow-right">
+					<view @click="toMyRelease">我的咨询</view>
+				</u-form-item>
+				<u-form-item right-icon="arrow-right" :border-bottom=false>
+					<view @click="toMyCircle">我的有圈</view>
+				</u-form-item>
+			</u-form>
 		</view>
 	</view>
 </template>
@@ -66,19 +61,29 @@
 	export default {
 		data() {
 			return {
-				hasLogin:true
+				hasLogin: true
 			}
 		},
-		methods:{
+		methods: {
 			toNav(url) {
 				// console.log("url",url)
 				uni.navigateTo({
 					url: url
 				})
 			},
-			toUcenter() {
+			toUserEdit() {
 				uni.navigateTo({
 					url: "/pages/user-edit/user-edit"
+				})
+			},
+			toMyRelease() {
+				uni.navigateTo({
+					url: "/pages/my-release/my-release"
+				})
+			},
+			toMyCircle() {
+				uni.navigateTo({
+					url: "/pages/my-contact/my-contact"
 				})
 			},
 		}
@@ -89,62 +94,56 @@
 	page {
 		background-color: #f5f5f5;
 	}
-	
+
 	.head {
 		padding: 20rpx;
 		background-color: #fff;
 		margin: 20rpx;
 		border-radius: 10rpx;
 	}
-	
+
 	.userinfo {
 		display: flex;
 		align-items: center;
 		padding: 20rpx;
 		margin: 40rpx 0;
 	}
-	
+
 	.userinfo .username {
 		display: flex;
 		flex-direction: column;
 	}
-	
+
 	.grid-text {
 		color: #999;
 		font-size: 12px;
 	}
-	
+
 	.userinfo u-avatar {
 		margin-right: 20rpx;
 	}
-	
+
 	.userinfo .icon-right {
 		margin-left: auto;
 	}
-	
+
 	.btn-login {
 		margin: 40rpx 0;
 	}
-	
+
 	.grid {
 		margin: 20rpx;
 		padding: 20rpx;
 		background-color: #fff;
 		border-radius: 5px;
 	}
-	
-	.gn-icon {
-		width: 60rpx;
-		height: 60rpx;
-		margin-bottom: 20rpx;
-	}
-	
+
 	/*服务按钮*/
 	.btn-wrap {
 		display: flex;
 		margin-top: 30rpx;
 	}
-	
+
 	.btn-wrap .btn-contact {
 		background-color: #fff;
 		margin-left: 15rpx;
@@ -154,22 +153,21 @@
 		font-size: 12px;
 		color: #999;
 	}
-	
+
 	.btn-wrap .btn-contact:active {
 		background-color: #f5f5f5;
 	}
-	
+
 	.btn-wrap .btn-contact .txt {
 		margin-top: 20rpx;
 	}
-	
+
 	.btn-wrap .btn-contact::after {
 		border: unset;
 		position: unset;
 	}
-	
+
 	.icon-size {
 		font-size: 50rpx;
 	}
-	
 </style>
