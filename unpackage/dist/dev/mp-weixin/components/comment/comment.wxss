@@ -25,7 +25,23 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.comment {
+.tool.data-v-49203ec4 {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 10rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.tool textarea.data-v-49203ec4 {
+  background-color: #f5f5f5;
+  padding: 20rpx;
+  border-radius: 10rpx;
+  min-height: 40rpx;
+}
+.comment.data-v-49203ec4 {
   z-index: 2;
   width: 100%;
   height: 100%;
@@ -40,17 +56,17 @@
   -webkit-flex-direction: column;
           flex-direction: column;
 }
-.mask {
+.mask.data-v-49203ec4 {
   width: 100%;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
           flex: 1;
   background: rgba(0, 0, 0, 0.3);
 }
-.mask-hidden {
+.mask-hidden.data-v-49203ec4 {
   display: none;
 }
-.comment-bottom {
+.comment-bottom.data-v-49203ec4 {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
@@ -63,14 +79,14 @@
   position: absolute;
   bottom: 0;
 }
-.comment-bottom .bottom-textarea {
+.comment-bottom .bottom-textarea.data-v-49203ec4 {
   margin: 0 auto;
   width: 92%;
   margin-top: 20rpx;
   height: 210rpx;
   border-bottom: 1px solid #f6f6f6;
 }
-.comment-bottom .bottom-view {
+.comment-bottom .bottom-view.data-v-49203ec4 {
   margin: 0rpx 30rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -87,7 +103,7 @@
   -webkit-flex-direction: row;
           flex-direction: row;
 }
-.comment-bottom .bottom-view .send-btn {
+.comment-bottom .bottom-view .send-btn.data-v-49203ec4 {
   width: 100rpx;
   text-align: end;
   font-size: 30rpx;

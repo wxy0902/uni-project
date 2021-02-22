@@ -2,16 +2,13 @@
 	<view>
 		<view class="head">
 			<block v-if="hasLogin">
-				<!-- <navigator class="userinfo" url="/pages/user-edit/user-edit"></navigator> -->
 				<view class="userinfo" @click="toUcenter">
 					<u-avatar :src="userInfo.avatar"></u-avatar>
 					<view class="username">
 						<text>{{userInfo.username}}</text>
 						<text>{{userInfo.intro}}</text>
 					</view>
-					<!-- <text class="iconfont icon-right"></text> -->
 				</view>
-				<!-- </navigator> -->
 			</block>
 			<block v-else>
 				<view class="btn-login">
@@ -31,11 +28,11 @@
 					<view class="grid-text">历史浏览</view>
 				</u-grid-item>
 				<u-grid-item index="/pages/my-attention/my-attention">
-					<text>{{userInfo.post_num}}</text>
+					<text>{{userInfo.follow}}</text>
 					<view class="grid-text">关注</view>
 				</u-grid-item>
 				<u-grid-item index="/pages/my-fans/my-fans">
-					<text>{{userInfo.integral}}</text>
+					<text>{{userInfo.fans}}</text>
 					<view class="grid-text">粉丝</view>
 				</u-grid-item>
 			</u-grid>
@@ -61,12 +58,16 @@
 	export default {
 		data() {
 			return {
-				hasLogin: true
+				hasLogin: false
 			}
 		},
 		methods: {
+			toLogin() {
+				uni.navigateTo({
+					url: "/pages/login/login"
+				})
+			},
 			toNav(url) {
-				// console.log("url",url)
 				uni.navigateTo({
 					url: url
 				})

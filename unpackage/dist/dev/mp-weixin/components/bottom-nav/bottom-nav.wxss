@@ -1,114 +1,61 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.tabbar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 112rpx;
+	background: #FFFFFF;
+	color: #000000;
+	border-top: 2rpx #EEEEEE solid;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	z-index: 2;
+}
+.tabbar-item {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+}
+.hw64r {
+	height: 64rpx;
+	width: 64rpx;
+}
+.hw96r {
+	height: 96rpx;
+	width: 96rpx;
+}
+.text {
+	font-size: 24rpx;
+	color: #8f8f94;
+}
 
 /* 我的消息气泡 */
 .my-bubble {
-  display: block;
-  position: absolute;
-  top: 8rpx;
-  right: 20rpx;
-  font-size: 24rpx;
-  text-align: center;
-  padding: 4rpx 12rpx;
-  border-radius: 50%;
-  overflow: hidden;
-  color: #FFFFFF;
-  background-color: #FF6699;
+	display: block;
+	position: absolute;
+	top: 8rpx;
+	right: 20rpx;
+	font-size: 24rpx;
+	text-align: center;
+	padding: 4rpx 12rpx;
+	border-radius: 50%;
+	overflow: hidden;
+	color: #FFFFFF;
+	background-color: #FF6699;
 }
 

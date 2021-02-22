@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "案例",
-  "usingComponents": {
-    "nav-bar": "/components/common/zhouWei-navBar/index"
-  }
-}

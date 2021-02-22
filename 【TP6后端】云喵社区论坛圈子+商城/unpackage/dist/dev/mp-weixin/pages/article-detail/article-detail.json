@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "",
-  "enablePullDownRefresh": false,
-  "usingComponents": {
-    "u-parse": "/uview-ui/components/u-parse/u-parse"
-  }
-}

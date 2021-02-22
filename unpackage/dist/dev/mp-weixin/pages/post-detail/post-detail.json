@@ -2,6 +2,8 @@
   "usingComponents": {
     "comment-list": "/components/comment-list/comment-list",
     "u-button": "/uview-ui/components/u-button/u-button",
+    "u-popup": "/uview-ui/components/u-popup/u-popup",
+    "go-home": "/components/go-home/go-home",
     "u-toast": "/uview-ui/components/u-toast/u-toast",
     "comment": "/components/comment/comment"
   }

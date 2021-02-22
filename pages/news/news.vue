@@ -1,30 +1,13 @@
 <template>
 	<view>
-		<!-- <u-grid :col="3" :border="false" @click="toNav">
-			<u-grid-item index="1">
-				<u-badge :count="msgNum.thumb_collect" :offset="[10, 50]"></u-badge>
-				<image class="nav-icon" src="/static/images/icon/souc.png"></image>
-				<view class="grid-text">赞和收藏</view>
-			</u-grid-item>
-			<u-grid-item index="2">
-				<u-badge :count="msgNum.follow" :offset="[10, 50]"></u-badge>
-				<image class="nav-icon" src="/static/images/icon/gz.png"></image>
-				<view class="grid-text">新增关注</view>
-			</u-grid-item>
-			<u-grid-item index="3">
-				<u-badge :count="msgNum.comment" :offset="[10, 50]"></u-badge>
-				<image class="nav-icon" src="/static/images/icon/pl.png"></image>
-				<view class="grid-text">评论</view>
-			</u-grid-item>
-		</u-grid> -->
 		<view class="msg-wrap">
 			<view class="title">
 				<view class="left">私信</view>
 			</view>
 			<!-- 图文消息 -->
-			<block v-if="msgNum.article_msg_list.length > 0">
+			<block v-if="msgList.article_msg_list.length > 0">
 				<navigator @longpress="onPressArticle(item.m_id,index)" :url="'/pages/article-detail/article-detail?id='+item.post_id+'&time='+item.create_time"
-				 class="msg-item" v-for="(item,index) in msgNum.article_msg_list" :key="index">
+				 class="msg-item" v-for="(item,index) in msgList.article_msg_list" :key="index">
 					<view class="avatar-box">
 						<u-badge v-if="item.status == 0" :is-dot="true" :offset="[5,10]" type="error"></u-badge>
 						<u-avatar class="avatar" :src="item.user_info.avatar"></u-avatar>
@@ -41,9 +24,9 @@
 					</view>
 				</navigator>
 			</block>
-			<block v-if="msgNum.chat_msg_list.length > 0">
-				<navigator @longpress="onPressArticle(item.m_id,index)" url='/pages/chat/chat'
-				 class="msg-item" v-for="(item,index) in msgNum.chat_msg_list" :key="index">
+			<block v-if="msgList.chat_msg_list.length > 0">
+				<navigator @longpress="onPressArticle(item.m_id,index)" url='/pages/chat/chat' class="msg-item" v-for="(item,index) in msgList.chat_msg_list"
+				 :key="index">
 					<view class="avatar-box">
 						<u-badge :count="item.count" :offset="[5,10]" type="error"></u-badge>
 						<u-avatar class="avatar" :src="item.user_info.avatar"></u-avatar>
@@ -59,7 +42,7 @@
 					</view>
 				</navigator>
 			</block>
-			<block v-if="msgNum.chat_msg_list.length == 0 && msgNum.article_msg_list.length == 0">
+			<block v-if="msgList.chat_msg_list.length == 0 && msgList.article_msg_list.length == 0">
 				<view class="msg-empty">
 					<image class="img" mode="widthFix" src="/static/empty.png"></image>
 					<text class="txt">暂无新消息</text>
@@ -80,10 +63,7 @@
 					text: '删除',
 					color: 'red'
 				}],
-				msgNum: {
-					thumb_collect: 0,
-					follow: 0,
-					comment: 0,
+				msgList: {
 					article_msg_list: [{
 							m_id: 1,
 							status: 0,
@@ -91,49 +71,48 @@
 								username: 'haha',
 								avatar: 'http://pic2.sc.chinaz.com/Files/pic/pic9/202002/zzpic23369_s.jpg'
 							},
-							msg:{
-								content:'这是文章信息'
+							msg: {
+								content: '这是文章信息'
 							},
 							create_time: '1天前'
 						},
 						{
-								m_id: 1,
-								status: 0,
-								user_info: {
-									username: 'haha',
-									avatar: 'http://pic2.sc.chinaz.com/Files/pic/pic9/202002/zzpic23369_s.jpg'
-								},
-								msg:{
-									content:'这是文章信息'
-								},
-								create_time: '1天前'
+							m_id: 1,
+							status: 0,
+							user_info: {
+								username: 'haha',
+								avatar: 'http://pic2.sc.chinaz.com/Files/pic/pic9/202002/zzpic23369_s.jpg'
 							},
+							msg: {
+								content: '这是文章信息'
+							},
+							create_time: '1天前'
+						},
 					],
-					chat_msg_list: [
-                        {
-                        		m_id: 1,
-                        		user_info: {
-                        			username: '小明',
-                        			avatar: 'http://pic2.sc.chinaz.com/Files/pic/pic9/202002/zzpic23369_s.jpg'
-                        		},
-                        		msg:{
-                        			content:'这是文章信息'
-                        		},
-                        		create_time: '1天前',
-								count:9
-                        	},
-							{
-									m_id: 1,
-									user_info: {
-										username: '小红',
-										avatar: 'http://pic2.sc.chinaz.com/Files/pic/pic9/202002/zzpic23369_s.jpg'
-									},
-									msg:{
-										content:'这是文章信息'
-									},
-									create_time: '1天前',
-									count:100
-								},
+					chat_msg_list: [{
+							m_id: 1,
+							user_info: {
+								username: '小明',
+								avatar: 'http://pic2.sc.chinaz.com/Files/pic/pic9/202002/zzpic23369_s.jpg'
+							},
+							msg: {
+								content: '这是文章信息'
+							},
+							create_time: '1天前',
+							count: 9
+						},
+						{
+							m_id: 1,
+							user_info: {
+								username: '小红',
+								avatar: 'http://pic2.sc.chinaz.com/Files/pic/pic9/202002/zzpic23369_s.jpg'
+							},
+							msg: {
+								content: '这是文章信息'
+							},
+							create_time: '1天前',
+							count: 100
+						},
 					]
 				},
 				checkedMsgId: "",
@@ -141,7 +120,7 @@
 			};
 		},
 		onShow() {
-			this.getMsgNum();
+			this.getMsgList();
 		},
 		methods: {
 			onPressArticle(id, index) {
@@ -155,15 +134,15 @@
 					// 	id: this.checkedMsgId
 					// }).then(res => {
 					// 	if (res.code == 200) {
-					// 		this.msgNum.article_msg_list.splice(this.checkedIndex, 1)
+					// 		this.msgList.article_msg_list.splice(this.checkedIndex, 1)
 					// 	}
 					// })
 				}
 			},
-			getMsgNum() {
+			getMsgList() {
 				// this.$H.post("message/num").then(res => {
 
-				// 	this.msgNum = res.result;
+				// 	this.msgList = res.result;
 
 				// 	let num = res.result;
 				// 	if (num.all_count > 0) {
@@ -178,11 +157,6 @@
 				// 	}
 				// })
 			},
-			// toNav(e) {
-			// 	uni.navigateTo({
-			// 		url: "/pages/message-list/message-list?type=" + e
-			// 	})
-			// }
 		}
 	}
 </script>

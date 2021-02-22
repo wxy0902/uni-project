@@ -1,7 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "mescroll-uni": "/components/mescroll-uni/mescroll-uni",
-    "trend-card": "/components/trend-card/trend-card"
-  }
-}

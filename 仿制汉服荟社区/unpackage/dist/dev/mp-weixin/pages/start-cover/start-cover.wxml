@@ -1,1 +1,0 @@
-<view class="posia posi-all0 z999 bgwhite anima-punch-in3"><image class="cover" src="{{starCover.ImgSrc}}" mode="aspectFill"></image><block wx:if="{{starCover.Title}}"><text class="cover-publisher posif br8r f32r cwhite bgblack-a3">{{"©"+starCover.Title}}</text></block><image class="cover-logo" src="/static/default_brand.png" mode="aspectFit"></image></view>

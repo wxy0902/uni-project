@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "稳定版瀑布流",
-  "usingComponents": {
-    "waterfall-goods": "/components/module/stable_waterfall_goods"
-  }
-}

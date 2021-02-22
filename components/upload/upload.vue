@@ -68,15 +68,15 @@
 					this.form.media = mediaList;
 				}
 			
-				this.$H.post("post/addPost", this.form).then(res => {
-					if (res.code == 200) {
-						uni.redirectTo({
-							url: "/pages/post-detail/post-detail?id=" + res.result.id
-						})
-					}
-					this.btnDisabled = false;
-					this.btnLoading = false;
-				})
+				// this.$H.post("post/addPost", this.form).then(res => {
+				// 	if (res.code == 200) {
+				// 		uni.redirectTo({
+				// 			url: "/pages/post-detail/post-detail?id=" + res.result.id
+				// 		})
+				// 	}
+				// 	this.btnDisabled = false;
+				// 	this.btnLoading = false;
+				// })
 			}
 		},
 	}

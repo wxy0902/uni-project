@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "我的收藏",
-  "disableScroll": true,
-  "usingComponents": {
-    "mescroll-uni": "/components/mescroll-uni/mescroll-uni",
-    "trend-card": "/components/trend-card/trend-card"
-  }
-}

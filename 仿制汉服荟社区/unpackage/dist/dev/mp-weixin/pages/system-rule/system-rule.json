@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "软件规则",
-  "disableScroll": true,
-  "usingComponents": {
-    "mescroll-uni": "/components/mescroll-uni/mescroll-uni",
-    "u-parse": "/components/gaoyia-parse/parse"
-  }
-}

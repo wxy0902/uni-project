@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "摄影榜单",
-  "disableScroll": true,
-  "usingComponents": {
-    "mescroll-uni": "/components/mescroll-uni/mescroll-uni",
-    "album-card": "/components/album-card/album-card"
-  }
-}

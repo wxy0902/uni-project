@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "签到",
-  "disableScroll": true,
-  "usingComponents": {
-    "mescroll-uni": "/components/mescroll-uni/mescroll-uni",
-    "signin-calendar": "/components/signin-calendar/signin-calendar"
-  }
-}

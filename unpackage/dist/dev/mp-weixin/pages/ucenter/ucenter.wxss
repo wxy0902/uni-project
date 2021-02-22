@@ -13,7 +13,7 @@ page {
 .con-c.data-v-4883731c {
 	padding: 30rpx;
 	position: absolute;
-	top: 300rpx;
+	top: 100rpx;
 	width: 100%;
 }
 .user-info.data-v-4883731c {
@@ -33,8 +33,6 @@ page {
 .avatar.data-v-4883731c {
 	width: 130rpx;
 	height: 130rpx;
-	border-radius: 50%;
-	border: 2px solid #FFFFFF;
 	z-index: 999;
 }
 .user-info .user-c.data-v-4883731c {
@@ -71,7 +69,7 @@ page {
 	margin-left: 5rpx;
 }
 .user-info .user-c .num-box text.data-v-4883731c {
-	margin-right: 30rpx;
+	margin-right: 5rpx;
 }
 .user-info .user-c .desc.data-v-4883731c {
 	font-size: 22rpx;

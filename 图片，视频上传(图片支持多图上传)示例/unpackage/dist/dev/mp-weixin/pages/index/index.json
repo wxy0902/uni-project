@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "uni-app",
-  "usingComponents": {
-    "easy-upload": "/components/easy-upload/easy-upload"
-  }
-}

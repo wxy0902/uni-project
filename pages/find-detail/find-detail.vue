@@ -9,6 +9,8 @@
 					<text class="user-name">{{postDetail.userInfo.username}}</text>
 					<view class="cxplain">{{postDetail.userInfo.intro}}</view>
 				</view>
+				
+				<view class="iconfont icon-gengduo more-item" @click="show = true;"></view>
 				<!-- <block v-if="postDetail.is_follow">
 					<u-button size="mini" style="float:right;font-size: 14px;" @click="cancelFollow">已关注</u-button>
 				</block>
@@ -30,7 +32,7 @@
 				</block>
 				<!--二张及以上图片-->
 				<block v-if="postDetail.media.length == 2">
-					<u-swiper :list="postDetail.media" autoplay=false mode="dot" height="500"></u-swiper>
+					<u-swiper :list="postDetail.media" :autoplay=false mode="dot" height="500"></u-swiper>
 					<!-- <view class="img-style-2">
 						<image v-for="(mediaItem, index2) in postDetail.media" :key="index2" @tap.stop="previewImage" mode="aspectFill"
 						 :data-current="mediaItem" :data-image="postDetail.media" :src="mediaItem"></image>
@@ -76,63 +78,80 @@
 			</view> -->
 		</view>
 		<view class="comment-box">
-			<view class="title">评论（{{postDetail.comment_list.length}}）</view>
+			<view>评论（{{postDetail.comment_list.length}}）</view>
 			<comment-list :commentList="postDetail.comment_list" @clickPraise="clickPraiseComment" @clickDelete="clickDeleteComment"
 			 @clickDeleteChild="clickDeleteCommentChild" @clickRecomment="clickRecomment" @clickRecommentChild="clickRecommentChild"></comment-list>
-			<!-- <block v-if="postDetail.comment_list.data.length> 0">
-				<view class="comment-item" v-for="(item, index) in postDetail.comment_list.data" :key="index">
-					<image class="avatar" :src="item.userInfo.avatar"></image>
-					<view class="c-content">
-						<text>{{item.userInfo.username}}</text>
-						<text class="c-txt">{{item.content}}</text>
-					</view>
-					<text class="time">{{item.create_time|timeFrom}}</text>
-				</view>
-			</block> -->
-			<!-- <block v-else>
-				<u-empty text="暂无评论" mode="message"></u-empty>
-			</block> -->
 		</view>
 		<view style="height: 100rpx;"></view>
 		<!-- 评论输入框 -->
-		<view class="comment-tool">
-			<view class="p-footer">
+		<view class="tool">
+			<!-- <view class="p-footer"> -->
 				<!-- <view @click.stop="jumpTopic(postDetail.topic_info.id)" class="topic-name">{{postDetail.topic_info.topic_name}}</view> -->
 				<block>
-					<view class="btn m-left-auto m-right-20" @click="clickComment()">
+					<view class="icon-btn m-left-auto m-right-20" @click="clickComment()">
 						<text class="iconfont icon-pinglun"></text>
-						<text>12</text>
+						<text>评论</text>
 					</view>
 				</block>
 				<block v-if="postDetail.is_collection">
-					<view class="btn m-left-auto m-right-20" @click="cancelCollection">
+					<view class="icon-btn m-left-auto m-right-20" @click="cancelCollection">
 						<text class="iconfont icon-lujing" style="color: #d81e06;"></text>
-						<text>123</text>
+						<text>收藏</text>
 					</view>
 				</block>
 				<block v-else>
-					<view class="btn m-left-auto m-right-20" @click="addCollection">
+					<view class="icon-btn m-left-auto m-right-20" @click="addCollection">
 						<text class="iconfont icon-icon-test"></text>
-						<text>123</text>
+						<text>收藏</text>
 					</view>
 				</block>
 				<block v-if="postDetail.is_thumb">
-					<view class="btn" @click="cancelThumb" type="default">
+					<view class="icon-btn" @click="cancelThumb" type="default">
 						<text class="iconfont icon-dianzan" style="color: #d81e06;"></text>
-						<text>123</text>
+						<text>点赞</text>
 					</view>
 				</block>
 				<block v-else>
-					<view class="btn" @click="addThumb" type="default">
+					<view class="icon-btn" @click="addThumb" type="default">
 						<text class="iconfont icon-dianzan2"></text>
-						<text>122</text>
+						<text>点赞</text>
 					</view>
 				</block>
-			</view>
+			<!-- </view> -->
 			<!-- <textarea placeholder="吐个槽..." fixed="true" cursor-spacing="10" v-model="cTxt" auto-height="true" placeholder-class="txt-placeholder"></textarea>
 			<u-button type="error" @click="addComment" :disabled="isSubmitD" style="border-radius: 0;">发布</u-button> -->
 		</view>
 		<Comment ref="detailComment" @sendComment="sendComment" :placeholder="placeholder"></Comment>
+		
+		<u-popup v-model="show" mode="bottom" border-radius="14" length="15%" safe-area-inset-bottom closeable>
+			<!-- <view class="uni-share-content-box">
+				<view class="uni-share-content-item" @click.stop="select(item,index)">
+					<image class="uni-share-image" src="../../static/icon-bottom-nav/find_normal.png" mode="aspectFill"></image>
+					<text class="uni-share-text">微信分享</text>
+				</view>
+				<view class="uni-share-content-item" @click.stop="select(item,index)">
+					<image class="uni-share-image" src="../../static/icon-bottom-nav/find_normal.png" mode="aspectFill"></image>
+					<text class="uni-share-text">生成海报</text>
+				</view>
+			    <view class="uni-share-content-item" @click.stop="select(item,index)">
+			    	<image class="uni-share-image" src="../../static/icon-bottom-nav/find_normal.png" mode="aspectFill"></image>
+			    	<text class="uni-share-text">举报</text>
+			    </view>
+			</view> -->
+			<view class="uni-share-content-box">
+				<button open-type="share" plain>
+					<image src="../../static/icon-bottom-nav/find_normal.png" mode="aspectFit"></image>
+					<text>微信分享</text>
+				</button>
+	
+				<button class="onSave" @click="toTipOff" plain>
+					<image src="../../static/icon-bottom-nav/find_normal.png" mode="aspectFit"></image>
+					<text>举报</text>
+				</button>
+			</view>
+		</u-popup>
+		
+		<go-home></go-home>
 		<!-- 提示弹窗 -->
 		<u-toast ref="uToast" />
 	</view>
@@ -145,6 +164,7 @@
 		data() {
 			return {
 				postId: 0,
+				show: false,
 				postDetail: {
 					type: 1,
 					comment: [],
@@ -291,42 +311,42 @@
 				});
 			},
 			cancelCollection() {
-				this.$H.post('post/cancelCollection', {
-					id: this.postId
-				}).then(res => {
-					if (res.code === 200) {
-						this.postDetail.is_collection = false;
-					}
-				})
+				// this.$H.post('post/cancelCollection', {
+				// 	id: this.postId
+				// }).then(res => {
+				// 	if (res.code === 200) {
+				// 		this.postDetail.is_collection = false;
+				// 	}
+				// })
 			},
 			addCollection() {
-				this.$H.post('post/addCollection', {
-					id: this.postId,
-					uid: this.postDetail.uid
-				}).then(res => {
-					if (res.code === 200) {
-						this.postDetail.is_collection = true;
-					}
-				})
+				// this.$H.post('post/addCollection', {
+				// 	id: this.postId,
+				// 	uid: this.postDetail.uid
+				// }).then(res => {
+				// 	if (res.code === 200) {
+				// 		this.postDetail.is_collection = true;
+				// 	}
+				// })
 			},
 			addThumb() {
-				this.$H.post('post/addThumb', {
-					id: this.postId
-				}).then(res => {
-					if (res.code === 200) {
-						this.postDetail.is_thumb = true;
-					}
-				})
+				// this.$H.post('post/addThumb', {
+				// 	id: this.postId
+				// }).then(res => {
+				// 	if (res.code === 200) {
+				// 		this.postDetail.is_thumb = true;
+				// 	}
+				// })
 			},
 			cancelThumb() {
-				this.$H.post('post/cancelThumb', {
-					id: this.postId,
-					uid: this.postDetail.uid
-				}).then(res => {
-					if (res.code === 200) {
-						this.postDetail.is_thumb = false;
-					}
-				})
+				// this.$H.post('post/cancelThumb', {
+				// 	id: this.postId,
+				// 	uid: this.postDetail.uid
+				// }).then(res => {
+				// 	if (res.code === 200) {
+				// 		this.postDetail.is_thumb = false;
+				// 	}
+				// })
 			},
 			follow() {
 				this.$H.post('user/addFollow', {
@@ -441,7 +461,7 @@
 	}
 </script>
 
-<style>
+<style lang="scss" scoped>
 	page {
 		background-color: #F5F5F5;
 	}
@@ -482,41 +502,11 @@
 		color: #999;
 		line-height: 100%;
 	}
-
-	/*评论列表*/
-	.divider {
-		margin: 40rpx;
-	}
-
-	.comment-item {
+	
+	.more-item {
 		display: flex;
-		margin-bottom: 40rpx;
+		justify-content: flex-end;
 	}
-
-	.comment-item .c-content {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.comment-item .c-content .c-txt {
-		font-size: 12px;
-		color: #616161;
-	}
-
-	.comment-item .time {
-		margin-left: auto;
-		color: #999;
-		font-size: 10px;
-	}
-
-	.comment-item .avatar {
-		width: 100rpx;
-		height: 100rpx;
-		border-radius: 50%;
-		border: 1px solid #DD524D;
-		margin-right: 20rpx;
-	}
-
 
 	/*底部操作*/
 	.p-footer {
@@ -550,23 +540,11 @@
 		margin: 0 5rpx;
 	}
 
-	.m-left-auto {
-		margin-left: auto;
-	}
-
-	.m-right-20 {
-		margin-right: 20rpx;
-	}
-
 	/*评论*/
 	.comment-box {
 		padding: 20rpx;
 		background-color: #FFFFFF;
 		margin-top: 20rpx;
-	}
-
-	.comment-box>.title {
-		margin-bottom: 20rpx;
 	}
 
 	/*文章图片*/
@@ -602,26 +580,29 @@
 	}
 
 	/* 评论tool */
-	.comment-tool {
+	.tool {
 		position: fixed;
 		bottom: 0;
 		width: 100%;
 		background-color: #fff;
-		padding: 20rpx;
+		padding: 10rpx;
 		display: flex;
 	}
-
-	.comment-tool textarea {
-		background-color: #f5f5f5;
-		padding: 20rpx;
-		border-radius: 10rpx;
-		min-height: 40rpx;
+	
+	.tool .icon-btn {
+		display: flex;
+		flex-direction: column;
+		padding: 5rpx 30rpx;
+		color: #666;
 	}
-
-	.comment-tool .u-btn {
-		margin-left: 10rpx;
+	
+	.tool .icon-btn text:nth-child(1) {
+		font-size: 20px;
 	}
-
+	
+	.tool .icon-btn text:nth-child(2) {
+		font-size: 10px;
+	}
 
 	video {
 		width: 100%;
@@ -629,5 +610,33 @@
 
 	.post-text {
 		white-space: pre-wrap;
+	}
+	
+	.uni-share-content-box {
+		height: 100%;
+		display: flex;
+		justify-content: space-around;
+		background-color: #f5f5f5;
+	
+		button {
+			border: none;
+			outline: 0 none !important;
+			// height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: transparent;
+	
+			image {
+				width: 60rpx;
+				height: 60rpx;
+			}
+	
+			text {
+				font-size: 24rpx;
+				color: #333333;
+			}
+		}
 	}
 </style>

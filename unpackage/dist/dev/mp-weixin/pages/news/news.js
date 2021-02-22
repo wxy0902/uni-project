@@ -80,16 +80,16 @@ var components
 try {
   components = {
     uBadge: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-badge/u-badge */ "uview-ui/components/u-badge/u-badge").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-badge/u-badge.vue */ 269))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-badge/u-badge */ "uview-ui/components/u-badge/u-badge").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-badge/u-badge.vue */ 309))
     },
     uAvatar: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-avatar/u-avatar */ "uview-ui/components/u-avatar/u-avatar").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-avatar/u-avatar.vue */ 223))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-avatar/u-avatar */ "uview-ui/components/u-avatar/u-avatar").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-avatar/u-avatar.vue */ 263))
     },
     uTag: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-tag/u-tag */ "uview-ui/components/u-tag/u-tag").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-tag/u-tag.vue */ 276))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-tag/u-tag */ "uview-ui/components/u-tag/u-tag").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-tag/u-tag.vue */ 316))
     },
     uActionSheet: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-action-sheet/u-action-sheet */ "uview-ui/components/u-action-sheet/u-action-sheet").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-action-sheet/u-action-sheet.vue */ 283))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-action-sheet/u-action-sheet */ "uview-ui/components/u-action-sheet/u-action-sheet").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-action-sheet/u-action-sheet.vue */ 323))
     }
   }
 } catch (e) {
@@ -202,23 +202,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var _default =
 {
   data: function data() {
@@ -228,10 +211,7 @@ var _default =
         text: '删除',
         color: 'red' }],
 
-      msgNum: {
-        thumb_collect: 0,
-        follow: 0,
-        comment: 0,
+      msgList: {
         article_msg_list: [{
           m_id: 1,
           status: 0,
@@ -257,8 +237,7 @@ var _default =
           create_time: '1天前' }],
 
 
-        chat_msg_list: [
-        {
+        chat_msg_list: [{
           m_id: 1,
           user_info: {
             username: '小明',
@@ -289,7 +268,7 @@ var _default =
 
   },
   onShow: function onShow() {
-    this.getMsgNum();
+    this.getMsgList();
   },
   methods: {
     onPressArticle: function onPressArticle(id, index) {
@@ -303,15 +282,15 @@ var _default =
         // 	id: this.checkedMsgId
         // }).then(res => {
         // 	if (res.code == 200) {
-        // 		this.msgNum.article_msg_list.splice(this.checkedIndex, 1)
+        // 		this.msgList.article_msg_list.splice(this.checkedIndex, 1)
         // 	}
         // })
       }
     },
-    getMsgNum: function getMsgNum() {
+    getMsgList: function getMsgList() {
       // this.$H.post("message/num").then(res => {
 
-      // 	this.msgNum = res.result;
+      // 	this.msgList = res.result;
 
       // 	let num = res.result;
       // 	if (num.all_count > 0) {
@@ -325,13 +304,7 @@ var _default =
       // 		})
       // 	}
       // })
-    }
-    // toNav(e) {
-    // 	uni.navigateTo({
-    // 		url: "/pages/message-list/message-list?type=" + e
-    // 	})
-    // }
-  } };exports.default = _default;
+    } } };exports.default = _default;
 
 /***/ }),
 

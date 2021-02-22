@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "u-tabs": "/uview-ui/components/u-tabs/u-tabs",
+    "post-waterfall": "/components/post-waterfall/post-waterfall",
+    "find-list": "/components/find-list/find-list"
+  }
 }

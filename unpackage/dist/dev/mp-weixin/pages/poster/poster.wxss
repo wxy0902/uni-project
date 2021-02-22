@@ -1,0 +1,11 @@
+
+.poster_canvas.data-v-132a9d26 {
+	width: 100%;
+	min-height: 1300rpx;
+}
+image.data-v-132a9d26 {
+	width: 100%;
+	min-height: 1300rpx;
+	display: block;
+}
+

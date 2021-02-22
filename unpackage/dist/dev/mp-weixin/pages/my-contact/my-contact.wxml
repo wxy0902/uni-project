@@ -1,1 +1,1 @@
-<view class="data-v-6a194c34"><find-list vue-id="d90f3840-1" class="data-v-6a194c34" bind:__l="__l"></find-list></view>
+<view class="data-v-6a194c34"><view class="title data-v-6a194c34">我的有圈</view><find-list vue-id="d90f3840-1" class="data-v-6a194c34" bind:__l="__l"></find-list><go-home vue-id="d90f3840-2" class="data-v-6a194c34" bind:__l="__l"></go-home></view>

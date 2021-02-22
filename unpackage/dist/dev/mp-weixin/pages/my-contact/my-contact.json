@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "find-list": "/components/find-list/find-list"
+    "find-list": "/components/find-list/find-list",
+    "go-home": "/components/go-home/go-home"
   }
 }

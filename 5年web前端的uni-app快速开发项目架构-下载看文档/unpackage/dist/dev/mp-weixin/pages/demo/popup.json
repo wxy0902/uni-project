@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "弹窗",
-  "usingComponents": {
-    "z-popup": "/components/common/popup"
-  }
-}

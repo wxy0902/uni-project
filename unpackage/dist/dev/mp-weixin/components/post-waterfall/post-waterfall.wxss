@@ -230,7 +230,7 @@ page {
 .footer-wrap .money.data-v-d1268eb8 {
 	color: #FF0000;
 }
-.footer-wrap .p-user .distance.data-v-d1268eb8 {
+.footer-wrap .p-user .collect.data-v-d1268eb8 {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;

@@ -10,7 +10,7 @@
 .con-c {
 	padding: 30rpx;
 	position: absolute;
-	top: 300rpx;
+	top: 100rpx;
 	width: 100%;
 }
 
@@ -25,8 +25,6 @@
 .avatar {
 	width: 130rpx;
 	height: 130rpx;
-	border-radius: 50%;
-	border: 2px solid #FFFFFF;
 	z-index: 999;
 }
 
@@ -61,7 +59,7 @@
 }
 
 .user-info .user-c .num-box text {
-	margin-right: 30rpx;
+	margin-right: 5rpx;
 }
 
 .user-info .user-c .desc {

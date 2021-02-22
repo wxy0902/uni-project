@@ -1,6 +1,8 @@
 <template>
 	<view>
-       <post-waterfall></post-waterfall>
+		<view class="title">我的咨询</view>
+		<post-waterfall></post-waterfall>
+		<go-home></go-home>
 	</view>
 </template>
 
@@ -13,6 +15,6 @@
 	}
 </script>
 
-<style>
+<style scoped>
 
 </style>

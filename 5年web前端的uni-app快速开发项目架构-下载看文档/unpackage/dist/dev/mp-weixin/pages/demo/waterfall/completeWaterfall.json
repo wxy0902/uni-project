@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "完全版瀑布流",
-  "usingComponents": {
-    "waterfall-goods": "/components/module/complete_waterfall_goods"
-  }
-}

@@ -91,6 +91,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "recyclableRender", function() { return recyclableRender; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
 var components
+try {
+  components = {
+    uTabs: function() {
+      return Promise.all(/*! import() | uview-ui/components/u-tabs/u-tabs */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uview-ui/components/u-tabs/u-tabs")]).then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-tabs/u-tabs.vue */ 365))
+    },
+    postWaterfall: function() {
+      return __webpack_require__.e(/*! import() | components/post-waterfall/post-waterfall */ "components/post-waterfall/post-waterfall").then(__webpack_require__.bind(null, /*! @/components/post-waterfall/post-waterfall.vue */ 245))
+    },
+    findList: function() {
+      return __webpack_require__.e(/*! import() | components/find-list/find-list */ "components/find-list/find-list").then(__webpack_require__.bind(null, /*! @/components/find-list/find-list.vue */ 254))
+    }
+  }
+} catch (e) {
+  if (
+    e.message.indexOf("Cannot find module") !== -1 &&
+    e.message.indexOf(".vue") !== -1
+  ) {
+    console.error(e.message)
+    console.error("1. 排查组件名称拼写是否正确")
+    console.error(
+      "2. 排查组件是否符合 easycom 规范，文档：https://uniapp.dcloud.net.cn/collocation/pages?id=easycom"
+    )
+    console.error(
+      "3. 若组件不符合 easycom 规范，需手动引入，并在 components 中注册该组件"
+    )
+  } else {
+    throw e
+  }
+}
 var render = function() {
   var _vm = this
   var _h = _vm.$createElement
@@ -128,14 +157,41 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-var _default =
-{};exports.default = _default;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var findList = function findList() {__webpack_require__.e(/*! require.ensure | components/find-list/find-list */ "components/find-list/find-list").then((function () {return resolve(__webpack_require__(/*! ../../components/find-list/find-list.vue */ 254));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var postWaterfall = function postWaterfall() {__webpack_require__.e(/*! require.ensure | components/post-waterfall/post-waterfall */ "components/post-waterfall/post-waterfall").then((function () {return resolve(__webpack_require__(/*! ../../components/post-waterfall/post-waterfall.vue */ 245));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  data: function data() {
+    return {
+      list: [{
+        name: '咨询' },
+      {
+        name: '有圈' }],
+
+      current: 0 };
+
+  },
+  components: {
+    findList: findList,
+    postWaterfall: postWaterfall },
+
+  methods: {
+    change: function change(index) {
+      this.current = index;
+    } } };exports.default = _default;
 
 /***/ })
 

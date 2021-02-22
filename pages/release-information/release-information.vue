@@ -8,25 +8,10 @@
 				<u-form-item label="描述" label-position="top">
 					<u-input type="textarea" v-model="form.description" placeholder="请填写详细描述" />
 				</u-form-item>
-				<!-- <u-form-item label="圈子封面" label-position="top" v-if="form.type == 0">
-					<u-upload ref="uUpload" name="Image" :max-count="9" :header="header" :action="uploadImgUrl" @on-uploaded="submit"
-					 :auto-upload="false"></u-upload>
-				</u-form-item>
-				<u-form-item label="圈子背景" label-position="top" v-if="form.type == 1">
-					<block v-if="form.media.length > 0">
-						<video class="upload-video" :src="form.media[0]"></video>
-					</block>
-					<block v-else>
-						<view @click="chooseVideo" class="upload-wrap">
-							<u-icon name="plus"></u-icon>
-						</view>
-					</block>
-				</u-form-item> -->
 				<u-form-item label="微信" label-position="left">
-					<u-input type="text" v-model="form.description" placeholder="请填写微信号" />
+					<u-input type="text" v-model="form.weChat" placeholder="请填写微信号" />
 				</u-form-item>
-				<u-form-item  label="手机" label-position="left">
-					<!-- <u-input type="textarea" v-model="form.description" placeholder="请填写详细描述" /> -->
+				<u-form-item label="手机" label-position="left">
 					<button size="mini" type="primary" open-type="getPhoneNumber" @getphonenumber="decryptPhoneNumber">获取手机</button>
 				</u-form-item>
 				<upload :form="form"></upload>
@@ -51,15 +36,14 @@
 		data() {
 			return {
 				show: false,
-				cateList: [
+				cateList: [{
+						value: '1',
+						label: '宠物'
+					},
 					{
-											value: '1',
-											label: '宠物'
-										},
-										{
-											value: '2',
-											label: '租房'
-										}
+						value: '2',
+						label: '租房'
+					}
 				],
 				cateName: '',
 				header: {
@@ -72,7 +56,8 @@
 					description: "",
 					cover_image: "",
 					bg_image: "",
-					location:"请选择位置"
+					weChat:'',
+					location: "请选择位置"
 				}
 			};
 		},
@@ -116,27 +101,27 @@
 			},
 			chooseLocation() {
 				uni.getLocation({
-				    type: 'wgs84',
-				    success: function (res) {
-				        console.log('当前位置的经度：' + res.longitude);
-				        console.log('当前位置的纬度：' + res.latitude);
+					type: 'wgs84',
+					success: function(res) {
+						console.log('当前位置的经度：' + res.longitude);
+						console.log('当前位置的纬度：' + res.latitude);
 						uni.chooseLocation({
-							latitude:res.latitude,
-							longitude:res.longitude,
-						    success: function (ress) {
+							latitude: res.latitude,
+							longitude: res.longitude,
+							success: function(ress) {
 								// this.$nextTick(() => {
-									this.form.location = ress.name
+								this.form.location = ress.name
 								// })
-								
-						        console.log('位置名称：' + ress.name);
-						        console.log('详细地址：' + ress.address);
-						        console.log('纬度：' + ress.latitude);
-						        console.log('经度：' + ress.longitude);
-						    }
+
+								console.log('位置名称：' + ress.name);
+								console.log('详细地址：' + ress.address);
+								console.log('纬度：' + ress.latitude);
+								console.log('经度：' + ress.longitude);
+							}
 						});
-				    }
+					}
 				});
-				
+
 			}
 		}
 	}
@@ -146,12 +131,12 @@
 	// page{
 	// 	background-color: #f5f5f5;
 	// }
-	
+
 	.container {
 		padding: 20rpx;
 		background-color: #FFFFFF;
 	}
-	
+
 	// .f-wrap {
 	// 	padding: 20rpx;
 	// 	border-radius: 10rpx;
@@ -159,7 +144,7 @@
 	// 	background-color: #FFFFFF;
 	// 	margin-bottom: 20rpx;
 	// }
-	
+
 	// .f-wrap>.title {
 	// 	font-weight: bold;
 	// 	margin-bottom: 20rpx;

@@ -1,22 +1,5 @@
 <template>
 	<view class="content">
-		<!-- <view class="search-box"> -->
-			<!-- mSearch组件 如果使用原样式，删除组件元素-->
-			<!-- <mSearch class="mSearch-input-box" :mode="2" button="inside" :placeholder="defaultKeyword" @search="doSearch(false)"
-			 @input="inputChange" @confirm="doSearch(false)" v-model="keyword"></mSearch> -->
-			<!-- 原样式 如果使用原样式，恢复下方注销代码 -->
-									
-			<!-- <view class="input-box">
-				<input type="text" :adjust-position="true" :placeholder="defaultKeyword" @input="inputChange" v-model="keyword" @confirm="doSearch(false)"
-				 placeholder-class="placeholder-class" confirm-type="search">
-			</view>
-			<view class="search-btn" @tap="doSearch(false)">搜索</view>
-			 -->
-			<!-- <!-- 原样式 end -->
-			
-			<!-- <u-search placeholder="日照香炉生紫烟" v-model="keyword"></u-search> -->
-			
-		<!-- </view> -->
 		<view class="search-wrap">
 			<u-search :placeholder="defaultKeyword" @change="inputChange" v-model="keyword" @search="doSearch(false)" @custom="doSearch(false)"></u-search>
 		</view>
@@ -66,8 +49,6 @@
 </template>
 
 <script>
-	//引用mSearch组件，如不需要删除即可
-	// import mSearch from '@/components/mehaotian-search-revision/mehaotian-search-revision.vue';
 	export default {
 		data() {
 			return {
@@ -82,10 +63,6 @@
 		},
 		onLoad() {
 			this.init();
-		},
-		components: {
-			//引用mSearch组件，如不需要删除即可
-			// mSearch
 		},
 		methods: {
 			init() {
@@ -233,67 +210,10 @@
 		}
 	}
 </script>
-<style>
-	/* view {
-		display: block;
-	} */
-	
-	.search-wrap{
+<style scoped>
+	.search-wrap {
 		padding: 20rpx;
 		background-color: #FFFFFF;
-	}
-
-	.search-box {
-		width: 95%;
-		background-color: rgb(242, 242, 242);
-		padding: 15upx 2.5%;
-		display: flex;
-		justify-content: space-between;
-		position: sticky;
-		top: 0;
-	}
-
-	.search-box .mSearch-input-box {
-		width: 100%;
-	}
-
-	.search-box .input-box {
-		width: 85%;
-		flex-shrink: 1;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.search-box .search-btn {
-		width: 15%;
-		margin: 0 0 0 2%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-shrink: 0;
-		font-size: 28upx;
-		color: #fff;
-		background: linear-gradient(to right, #ff9801, #ff570a);
-		border-radius: 60upx;
-	}
-
-	.search-box .input-box>input {
-		width: 100%;
-		height: 60upx;
-		font-size: 32upx;
-		border: 0;
-		border-radius: 60upx;
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-		padding: 0 3%;
-		margin: 0;
-		background-color: #ffffff;
-	}
-
-	.placeholder-class {
-		color: #9e9e9e;
 	}
 
 	.search-keyword {

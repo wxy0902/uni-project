@@ -7,7 +7,6 @@
        		<view class="num-box">
        			<text>{{userInfo.follow}} <text class="txt">关注</text></text>
        			<text>{{userInfo.fans}} <text class="txt">粉丝</text></text>
-       			<text>Lv.1</text>
        		</view>
        		<text class="desc">{{userInfo.intro}}</text>
        		<view class="btn-box">
@@ -24,8 +23,6 @@
        		</view>
        	</view>
        </view>
-	   <!-- <u-tabs name="cate_name" count="cate_count" :list="tabs" :is-scroll="false" :current="current" @change="change"></u-tabs> -->
-	   <!-- tab -->
 	   <view class="tab-box">
 	   	<u-tabs bg-color="#f5f5f5" inactive-color="#999" name="tab_name" :list="tabs" active-color="#616161" :is-scroll="false"
 	   	  :current="current" @change="tabChange"></u-tabs>
@@ -52,9 +49,9 @@
 					is_follow: 2
 				},
 				tabs: [{
-						tab_name: '主页'
+						tab_name: '咨询'
 					}, {
-						tab_name: '帖子'
+						tab_name: '有圈'
 					}
 				],
 				current: 0,

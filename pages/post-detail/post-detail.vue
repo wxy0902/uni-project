@@ -9,10 +9,13 @@
 					<text class="user-name">{{postDetail.userInfo.username}}</text>
 					<view class="cxplain">{{postDetail.userInfo.intro}}</view>
 				</view>
+
+				<view class="iconfont icon-gengduo more-item" @click="show = true;showTipOff = true;"></view>
 				<!-- <block v-if="postDetail.is_follow">
 					<u-button size="mini" style="float:right;font-size: 14px;" @click="cancelFollow">已关注</u-button>
-				</block>
-				<block v-else>
+				</block> -->
+				<!-- <block v-else>
+					
 					<u-button type="error" size="mini" style="float:right;font-size: 14px;" @click="follow">关注</u-button>
 				</block> -->
 			</view>
@@ -33,93 +36,59 @@
 			<!-- <block v-if="postDetail.type == 2 && postDetail.media.length > 0">
 				<video :controls="false" :autoplay="true" :src="postDetail.media[0]"></video>
 			</block> -->
+
 			<!--按钮-->
-			<!-- <view class="p-footer"> -->
-				<!-- <view @click.stop="jumpTopic(postDetail.topic_info.id)" class="topic-name">{{postDetail.topic_info.topic_name}}</view> -->
-				<!-- <block v-if="postDetail.is_collection">
-					<view class="btn m-left-auto m-right-20" @click="cancelCollection">
-						<text class="iconfont icon-lujing" style="color: #d81e06;"></text>
-						<text>收藏</text>
-					</view>
-				</block>
-				<block v-else>
-					<view class="btn m-left-auto m-right-20" @click="addCollection">
-						<text class="iconfont icon-shoucang"></text>
-						<text>收藏</text>
-					</view>
-				</block>
-				<block v-if="postDetail.is_thumb">
-					<view class="btn" @click="cancelThumb" type="default">
-						<text class="iconfont icon-dianzan" style="color: #d81e06;"></text>
-						<text>点赞</text>
-					</view>
-				</block>
-				<block v-else>
-					<view class="btn" @click="addThumb" type="default">
-						<text class="iconfont icon-dianzan1"></text>
-						<text>点赞</text>
-					</view>
-				</block>
-			</view> -->
-		</view>
-		<view class="comment-box">
-			<view class="title">评论（{{postDetail.comment_list.length}}）</view>
-			<comment-list :commentList="postDetail.comment_list" @clickPraise="clickPraiseComment" @clickDelete="clickDeleteComment"
-			 @clickDeleteChild="clickDeleteCommentChild" @clickRecomment="clickRecomment" @clickRecommentChild="clickRecommentChild"></comment-list>
-			<!-- <block v-if="postDetail.comment_list.data.length> 0">
-				<view class="comment-item" v-for="(item, index) in postDetail.comment_list.data" :key="index">
-					<image class="avatar" :src="item.userInfo.avatar"></image>
-					<view class="c-content">
-						<text>{{item.userInfo.username}}</text>
-						<text class="c-txt">{{item.content}}</text>
-					</view>
-					<text class="time">{{item.create_time|timeFrom}}</text>
-				</view>
-			</block> -->
-			<!-- <block v-else>
-				<u-empty text="暂无评论" mode="message"></u-empty>
-			</block> -->
-		</view>
-		<view style="height: 100rpx;"></view>
-		<!-- 评论输入框 -->
-		<view class="comment-tool">
 			<view class="p-footer">
-				<!-- <view @click.stop="jumpTopic(postDetail.topic_info.id)" class="topic-name">{{postDetail.topic_info.topic_name}}</view> -->
-				<!-- <block> -->
-					<view class="btn m-right-30" @click="clickComment()">
-						<text class="iconfont icon-pinglun"></text>
-						<text>评论</text>
-					</view>
-				<!-- </block> -->
 				<block v-if="postDetail.is_collection">
-					<view class="btn m-right-30" @click="cancelCollection">
+					<view class="btn m-right-20" @click="cancelCollection">
 						<text class="iconfont icon-shoucang" style="color: #d81e06;"></text>
-						<text>收藏</text>
+						<text>123</text>
 					</view>
 				</block>
 				<block v-else>
-					<view class="btn m-right-30" @click="addCollection">
-						<text class="iconfont icon-icon-test"></text>
-						<text>收藏</text>
+					<view class="btn m-right-20" @click="addCollection">
+						<text class="iconfont  icon-icon-test"></text>
+						<text>123</text>
 					</view>
 				</block>
 				<block v-if="postDetail.is_thumb">
 					<view class="btn" @click="cancelThumb" type="default">
 						<text class="iconfont icon-dianzan3" style="color: #d81e06;"></text>
-						<text>点赞</text>
+						<text>123</text>
 					</view>
 				</block>
 				<block v-else>
 					<view class="btn" @click="addThumb" type="default">
 						<text class="iconfont icon-dianzan2"></text>
-						<text>点赞</text>
+						<text>123</text>
 					</view>
 				</block>
-				<!-- <block> -->
-				  <u-button style="margin: 5rpx 0 0 20rpx;" type="success">获取微信</u-button>
-				  <u-button style="margin: 5rpx 0 0 20rpx;" type="warning" @click="makephonecall">拨打电话</u-button>
-				<!-- </block> -->
+				<!-- <view @click.stop="jumpTopic(postDetail.topic_info.id)" class="topic-name">{{postDetail.topic_info.topic_name}}</view> -->
 			</view>
+		</view>
+		<view class="comment-box">
+			<view>评论（{{postDetail.comment_list.length}}）</view>
+			<comment-list :commentList="postDetail.comment_list" @clickPraise="clickPraiseComment" @clickDelete="clickDeleteComment"
+			 @clickDeleteChild="clickDeleteCommentChild" @clickRecomment="clickRecomment" @clickRecommentChild="clickRecommentChild"></comment-list>
+		</view>
+		<view style="height: 100rpx;"></view>
+		<!-- 评论输入框 -->
+		<view class="tool">
+			<!-- <view class="tool-item"> -->
+			<!-- <view @click.stop="jumpTopic(postDetail.topic_info.id)" class="topic-name">{{postDetail.topic_info.topic_name}}</view> -->
+			<!-- <block> -->
+			<view class="icon-btn m-right-30" @click="clickComment()">
+				<text class="iconfont icon-pinglun"></text>
+				<text>评论</text>
+			</view>
+			<view class="icon-btn m-right-30" @click="show = true;showTipOff = false;">
+				<text class="iconfont icon-zhuanfa"></text>
+				<text>转发</text>
+			</view>
+
+			<u-button type="success">获取微信</u-button>
+			<u-button type="warning" @click="makephonecall">拨打电话</u-button>
+			<!-- </view> -->
 		</view>
 		<!-- 评论输入框 -->
 		<!-- view class="comment-tool" v-if="sendComment">
@@ -127,6 +96,41 @@
 			<u-button type="error" @click="addComment" :disabled="isSubmitD" style="border-radius: 0;">发布</u-button>
 		</view> -->
 		<Comment ref="detailComment" @sendComment="sendComment" :placeholder="placeholder"></Comment>
+		<u-popup v-model="show" mode="bottom" border-radius="14" length="15%" safe-area-inset-bottom closeable>
+			<!-- <view class="uni-share-content-box">
+				<view class="uni-share-content-item" @click.stop="select(item,index)">
+					<image class="uni-share-image" src="../../static/icon-bottom-nav/find_normal.png" mode="aspectFill"></image>
+					<text class="uni-share-text">微信分享</text>
+				</view>
+				<view class="uni-share-content-item" @click.stop="select(item,index)">
+					<image class="uni-share-image" src="../../static/icon-bottom-nav/find_normal.png" mode="aspectFill"></image>
+					<text class="uni-share-text">生成海报</text>
+				</view>
+			    <view class="uni-share-content-item" @click.stop="select(item,index)">
+			    	<image class="uni-share-image" src="../../static/icon-bottom-nav/find_normal.png" mode="aspectFill"></image>
+			    	<text class="uni-share-text">举报</text>
+			    </view>
+			</view> -->
+			<view class="uni-share-content-box">
+				<button open-type="share" plain>
+					<image src="../../static/icon-bottom-nav/find_normal.png" mode="aspectFit"></image>
+					<text>微信分享</text>
+				</button>
+
+				<button class="onSave" @click="createPoster" plain>
+					<image src="../../static/icon-bottom-nav/find_normal.png" mode="aspectFit"></image>
+					<text>生成海报</text>
+				</button>
+
+				<button v-if="showTipOff" class="onSave" @click="toTipOff" plain>
+					<image src="../../static/icon-bottom-nav/find_normal.png" mode="aspectFit"></image>
+					<text>举报</text>
+				</button>
+			</view>
+		</u-popup>
+
+		<!-- 去首页 -->
+		<go-home></go-home>
 		<!-- 提示弹窗 -->
 		<u-toast ref="uToast" />
 	</view>
@@ -135,9 +139,12 @@
 <script>
 	import commentList from '../../components/comment-list/comment-list.vue'
 	import Comment from '../../components/comment/comment.vue'
+
 	export default {
 		data() {
 			return {
+				show: false,
+				showTipOff: false,
 				postId: 0,
 				postDetail: {
 					type: 1,
@@ -147,28 +154,26 @@
 						'https://t7.baidu.com/it/u=2397542458,3133539061&fm=193&f=GIF',
 						// 'https://t7.baidu.com/it/u=2397542458,3133539061&fm=193&f=GIF'
 					],
-					userInfo:{
-						avatar:'https://t7.baidu.com/it/u=2397542458,3133539061&fm=193&f=GIF',
-						username:'老王',
-						intro:'这就是我，哈哈哈'
+					userInfo: {
+						avatar: 'https://t7.baidu.com/it/u=2397542458,3133539061&fm=193&f=GIF',
+						username: '老王',
+						intro: '这就是我，哈哈哈'
 					},
 					create_time: "1分钟前",
-					comment_list: [
-						{
+					comment_list: [{
 							avatar: 'https://t7.baidu.com/it/u=2397542458,3133539061&fm=193&f=GIF',
 							username: '小王',
 							content: "这个宝贝好棒",
 							create_time: "1分钟前",
 							self: 1,
-							child_comment_list:[
-								{
-									username:"小王",
-									other_username:"lala",
+							child_comment_list: [{
+									username: "小王",
+									other_username: "lala",
 									content: "确实很好看",
 									self: 1,
 								},
 								{
-									username:"lala",
+									username: "lala",
 									// other_username:"lala",
 									content: "确实很好看",
 									// create_time: "1分钟前",
@@ -183,12 +188,12 @@
 							create_time: "1分钟前",
 						}
 					],
-					is_thumb:false,
-					is_collection:false
+					is_thumb: false,
+					is_collection: false
 				},
 				cTxt: "",
 				isSubmitD: false,
-				sendComment:false,
+				sendComment: false,
 				//评论组件相关
 				placeholder: '请输入评论内容…',
 				commentParam: {},
@@ -232,7 +237,7 @@
 			}
 		},
 		methods: {
-			Comment(){
+			Comment() {
 				console.log(11111)
 				this.sendComment = true
 			},
@@ -293,7 +298,7 @@
 				});
 			},
 			cancelCollection() {
-				this.is_collection = false
+				this.postDetail.is_collection = false
 				// this.$H.post('post/cancelCollection', {
 				// 	id: this.postId
 				// }).then(res => {
@@ -303,7 +308,7 @@
 				// })
 			},
 			addCollection() {
-				this.is_collection = true
+				this.postDetail.is_collection = true
 				// this.$H.post('post/addCollection', {
 				// 	id: this.postId,
 				// 	uid: this.postDetail.uid
@@ -334,19 +339,24 @@
 				// 	}
 				// })
 			},
+			more() {
+				this.show = true
+				this.showTipOff = true
+			},
 			follow() {
-				this.$H.post('user/addFollow', {
-					id: this.postDetail.uid
-				}).then(res => {
-					if (res.code === 200) {
-						this.postDetail.is_follow = true;
-					} else {
-						this.$refs.uToast.show({
-							title: res.msg,
-							type: 'error'
-						})
-					}
-				})
+				// this.show = true
+				// this.$H.post('user/addFollow', {
+				// 	id: this.postDetail.uid
+				// }).then(res => {
+				// 	if (res.code === 200) {
+				// 		this.postDetail.is_follow = true;
+				// 	} else {
+				// 		this.$refs.uToast.show({
+				// 			title: res.msg,
+				// 			type: 'error'
+				// 		})
+				// 	}
+				// })
 			},
 			cancelFollow() {
 				this.$H.post('user/cancelFollow', {
@@ -361,11 +371,6 @@
 				uni.previewImage({
 					current: e.currentTarget.dataset.current, // 当前显示图片的http链接
 					urls: e.currentTarget.dataset.image // 需要预览的图片http链接列表
-				})
-			},
-			jumpTopic(id) {
-				uni.navigateTo({
-					url: "/pages/topic-detail/topic-detail?id=" + id
 				})
 			},
 			/**
@@ -451,17 +456,29 @@
 				this.commentList.push(this.commentParam);
 			},
 			// 拨打电话
-			makephonecall(){
+			makephonecall() {
 				uni.makePhoneCall({
-				    phoneNumber: '114' //仅为示例
+					phoneNumber: '114' //仅为示例
 				});
+			},
+			// 创建海报
+			createPoster() {
+				uni.navigateTo({
+					url: "/pages/poster/poster?image=" + this.postDetail.media[0]
+				})
+			},
+			// 举报
+			toTipOff() {
+				uni.navigateTo({
+					url: "/pages/tip-off/tip-off"
+				})
 			}
 		},
-		
+
 	}
 </script>
 
-<style>
+<style lang="scss" scoped>
 	page {
 		background-color: #F5F5F5;
 	}
@@ -503,45 +520,16 @@
 		line-height: 100%;
 	}
 
-	/*评论列表*/
-	.divider {
-		margin: 40rpx;
-	}
-
-	.comment-item {
+	.more-item {
 		display: flex;
-		margin-bottom: 40rpx;
+		justify-content: flex-end;
 	}
-
-	.comment-item .c-content {
-		display: flex;
-		flex-direction: column;
-	}
-
-	.comment-item .c-content .c-txt {
-		font-size: 12px;
-		color: #616161;
-	}
-
-	.comment-item .time {
-		margin-left: auto;
-		color: #999;
-		font-size: 10px;
-	}
-
-	.comment-item .avatar {
-		width: 100rpx;
-		height: 100rpx;
-		border-radius: 50%;
-		border: 1px solid #DD524D;
-		margin-right: 20rpx;
-	}
-
 
 	/*底部操作*/
 	.p-footer {
 		margin-top: 20rpx;
 		display: flex;
+		justify-content: flex-end;
 	}
 
 	.p-footer .topic-name {
@@ -556,23 +544,17 @@
 	}
 
 	.p-footer .btn {
-		display: flex;
-		flex-direction: column;
-		padding: 5rpx 10rpx;
+		border: 1px solid #F5F5F5;
+		padding: 10rpx 20rpx;
 		border-radius: 20rpx;
 	}
 
-	.p-footer .btn text:nth-child(1) {
-		font-size: 20px;
-		margin: auto;
-	}
-	
-	.p-footer .btn text:nth-child(2) {
-		font-size: 10px;
+	.p-footer .btn text {
+		margin: 0 5rpx;
 	}
 
-	.m-right-30 {
-		margin-right: 30rpx;
+	.m-right-20 {
+		margin-right: 20rpx;
 	}
 
 	/*评论*/
@@ -580,10 +562,6 @@
 		padding: 20rpx;
 		background-color: #FFFFFF;
 		margin-top: 20rpx;
-	}
-
-	.comment-box>.title {
-		margin-bottom: 20rpx;
 	}
 
 	/*文章图片*/
@@ -619,27 +597,31 @@
 	}
 
 	/* 评论tool */
-	.comment-tool {
+	.tool {
 		position: fixed;
 		bottom: 0;
 		width: 100%;
 		background-color: #fff;
-		padding: 20rpx;
+		padding: 15rpx;
 		display: flex;
-		/* z-index: 999; */
+		justify-content: space-around;
 	}
 
-	.comment-tool textarea {
-		background-color: #f5f5f5;
-		padding: 20rpx;
-		border-radius: 10rpx;
-		min-height: 40rpx;
+	.tool .icon-btn {
+		display: flex;
+		flex-direction: column;
+		// padding: 5rpx 30rpx;
+		color: #666;
 	}
 
-	.comment-tool .u-btn {
-		margin-left: 10rpx;
+
+	.tool .icon-btn text:nth-child(1) {
+		font-size: 20px;
 	}
 
+	.tool .icon-btn text:nth-child(2) {
+		font-size: 10px;
+	}
 
 	video {
 		width: 100%;
@@ -647,5 +629,54 @@
 
 	.post-text {
 		white-space: pre-wrap;
+	}
+
+	.uni-share-content-box {
+		height: 100%;
+		display: flex;
+		justify-content: space-around;
+		background-color: #f5f5f5;
+
+		button {
+			border: none;
+			outline: 0 none !important;
+			// height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: transparent;
+
+			image {
+				width: 60rpx;
+				height: 60rpx;
+			}
+
+			text {
+				font-size: 24rpx;
+				color: #333333;
+			}
+		}
+	}
+
+	.uni-share-content-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.uni-share-content-item:active {
+		background-color: #f5f5f5;
+	}
+
+	.uni-share-image {
+		width: 60rpx;
+		height: 60rpx;
+	}
+
+	.uni-share-text {
+		font-size: 24rpx;
+		color: #333333;
 	}
 </style>

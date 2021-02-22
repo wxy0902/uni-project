@@ -1,0 +1,1 @@
+<view data-event-opts="{{[['tap',[['goHome',['$event']]]]]}}" class="container data-v-43f1a564" bindtap="__e">首页</view>

@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "协议",
-  "usingComponents": {
-    "jyf-parser": "/components/common/jyf-parser/jyf-parser"
-  }
-}

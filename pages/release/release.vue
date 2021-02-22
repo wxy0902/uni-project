@@ -3,18 +3,16 @@
 		<view class="posif posi-all0 posi-lr0 anima-punch-in3 bgwhite-a98"></view>
 		<view class="release-popup">
 			<view class="list-flex2">
-				<!-- <navigator class="item flex-50v" url="/pages/plus-post/plus-post"> -->
 				<view class="item flex-50v" @click="show = true">
 					<image class="item-icon" src="/static/icon-nav-release/send_topic_icon.png" mode="aspectFit"></image>
 					<view class="item-name">发咨询</view>
 				</view>
-				<!-- </navigator> -->
-				<!-- <navigator class="item flex-50v"> -->
+			
 					<view class="item flex-50v" @click="show2 = true">
 					<image class="item-icon" src="/static/icon-nav-release/send_secondhand_icon.png" mode="aspectFit"></image>
 					<view class="item-name">发日常</view>
 					</view>
-				<!-- </navigator> -->
+		
 			</view>
 			<image class="close" src="/static/icon-nav-release/icon_close.png" mode="aspectFit" @tap="$emit('close',false)"></image>
 		</view>

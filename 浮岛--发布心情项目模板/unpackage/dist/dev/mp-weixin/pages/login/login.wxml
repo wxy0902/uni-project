@@ -1,1 +1,0 @@
-<view class="login-wrap flex-center data-v-b237504c"><image class="img data-v-b237504c" src="/static/logo.png" mode="widthFix"></image><button class="login-btn flex-center data-v-b237504c" open-type="getUserInfo" data-event-opts="{{[['getuserinfo',[['getUserInfo',['$event']]]]]}}" bindgetuserinfo="__e">微信一键登录</button></view>

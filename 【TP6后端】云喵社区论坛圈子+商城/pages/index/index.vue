@@ -23,19 +23,6 @@
 					<post-list :list="tabs[current].postList" :loadStatus="loadStatus"></post-list>
 				</scroll-view>
 			</swiper-item>
-			<!-- 视频 -->
-			<swiper-item class="swiper-item">
-				<scroll-view scroll-y class="body-scroll-view" @scrolltolower="onreachBottom">
-					<view class="video-wrap">
-						<swiper class="swiper-video-wrap" :duration="200" :current="videoCurrent" @change="changeSwiperVideo" :vertical="true"
-						 :skip-hidden-item-layout="true">
-							<swiper-item v-for="(item,index) in tabs[2].postList" :key="index">
-								<video class="swiper-video-item" :id="'video' + item.id" :enable-play-gesture="true" :controls="false" :src="item.media[0]"></video>
-							</swiper-item>
-						</swiper>
-					</view>
-				</scroll-view>
-			</swiper-item>
 			<!-- 同城 -->
 			<swiper-item class="swiper-item">
 				<scroll-view scroll-y class="body-scroll-view" @scrolltolower="onreachBottom">
@@ -43,7 +30,7 @@
 						<u-button type="success" shape="circle" @click="getLocation">开启定位</u-button>
 					</view>
 					<view v-else class="post-waterfall">
-						<post-waterfall ref="waterfall" :list="tabs[3].postList" :loadStatus="loadStatus"></post-waterfall>
+						<post-waterfall ref="waterfall" :list="tabs[2].postList" :loadStatus="loadStatus"></post-waterfall>
 					</view>
 				</scroll-view>
 			</swiper-item>
@@ -70,10 +57,6 @@
 						postList: []
 					},
 					{
-						tab_name: '视频',
-						postList: []
-					},
-					{
 						tab_name: uni.getStorageSync("district") || '同城',
 						postList: []
 					}
@@ -86,7 +69,6 @@
 				page: 1,
 				pageNear: 1,
 				pageFllow: 1,
-				pageVideo: 1,
 				shareCover: "",
 				showOpenLocation: false
 			}
@@ -111,19 +93,17 @@
 			this.getSysInfo();
 		},
 		onPullDownRefresh() {
-			if (this.current != 2) {
-				this.page1 = 1;
-				this.page2 = 1;
-				this.page3 = 1;
-
-				this.tabs.postList = [];
-				this.getPostList();
-				uni.stopPullDownRefresh();
-
-				this.$refs.waterfall.clear();
-				this.nearbyPostList = [];
-				this.getNearbyPost();
-			}
+			this.page1 = 1;
+			this.page2 = 1;
+			this.page3 = 1;
+			
+			this.tabs.postList = [];
+			this.getPostList();
+			uni.stopPullDownRefresh();
+			
+			this.$refs.waterfall.clear();
+			this.nearbyPostList = [];
+			this.getNearbyPost();
 		},
 		watch: {
 			showOpenLocation() {
@@ -161,29 +141,9 @@
 					this.getPostList();
 				}
 				if (this.current === 2) {
-					this.pageVideo++
-					this.getPostList();
-				}
-				if (this.current === 3) {
 					this.pageNear++
 					this.getNearbyPost();
 				}
-			},
-			// 视频切换回调
-			changeSwiperVideo(e) {
-				let current = e.detail.current;
-				let postId;
-
-				if (current > this.videoCurrent) {
-					postId = this.tabs[this.current].postList[current - 1].id; //当前播放的上一个视频Id
-				} else {
-					postId = this.tabs[this.current].postList[current + 1].id; //当前播放的下一个视频Id
-				}
-
-				uni.createVideoContext('video' + this.tabs[this.current].postList[current].id).play() //播放当前视频
-
-				uni.createVideoContext('video' + postId).stop()
-				this.videoCurrent = current;
 			},
 			getNearbyPost() {
 				this.loadStatus = "loading";
@@ -194,7 +154,7 @@
 						lng: location.longitude,
 						page: this.pageNear
 					}).then(res => {
-						this.tabs[3].postList = this.tabs[3].postList.concat(res.result.data);
+						this.tabs[2].postList = this.tabs[2].postList.concat(res.result.data);
 						if (res.result.current_page === res.result.last_page || res.result.last_page === 0) {
 							this.loadStatus = "nomore";
 						} else {
@@ -240,25 +200,11 @@
 				if (this.tabs[index].postList.length == 0) {
 					if (index == 0) {
 						this.getFollowPost();
-					} else if (index === 3) {
+					} else if (index === 2) {
 						this.getNearbyPost();
 					} else {
 						this.getPostList();
 					}
-				}
-
-				if (index === 2) {
-					uni.hideTabBar();
-					setTimeout(() => {
-						uni.createVideoContext('video' + this.tabs[2].postList[this.videoCurrent].id).play() //播放上一个视频，没有则播放第一个视频
-					}, 500)
-				} else if (this.tabs[2].postList.length > 0) {
-					uni.createVideoContext('video' + this.tabs[2].postList[this.videoCurrent].id).stop()
-				}
-
-				// 如果不是视频tab则显示导航栏
-				if (index != 2) {
-					uni.showTabBar();
 				}
 			},
 
@@ -268,10 +214,6 @@
 
 				let type = 1;
 				let page = this.page;
-				if (this.current == 2) {
-					type = 2;
-					page = this.pageVideo;
-				}
 
 				this.$H.get('post/list', {
 					type: type,

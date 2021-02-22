@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "模板",
-  "usingComponents": {
-    "z-navigation": "/components/module/navigation"
-  }
-}

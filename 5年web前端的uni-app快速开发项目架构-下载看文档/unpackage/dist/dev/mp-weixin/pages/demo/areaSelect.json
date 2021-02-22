@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "地区选择",
-  "usingComponents": {
-    "address-popup": "/components/common/address-popup",
-    "z-address": "/components/common/address"
-  }
-}

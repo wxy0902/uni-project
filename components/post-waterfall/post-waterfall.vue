@@ -19,9 +19,9 @@
 						<view class="p-user">
 							<u-avatar size="35" :src="item.userInfo.avatar"></u-avatar>
 							<text class="username">{{item.userInfo.username}}</text>
-							<view class="distance">
+							<view class="collect">
 								<!-- <u-icon name="map"></u-icon> -->
-								<text>{{item.distance}}人收藏</text>
+								<text>{{item.collect}}人收藏</text>
 							</view>
 						</view>
 					</view>
@@ -44,9 +44,9 @@
 						<view class="p-user">
 							<u-avatar size="35" :src="item.userInfo.avatar"></u-avatar>
 							<text class="username">{{item.userInfo.username}}</text>
-							<view class="distance">
+							<view class="collect">
 								<!-- <u-icon name="map"></u-icon> -->
-								<text>{{item.distance}}人收藏</text>
+								<text>{{item.collect}}人收藏</text>
 							</view>
 						</view>
 					</view>
@@ -78,7 +78,7 @@
 							username: 'haha',
 						},
 						money:999.00,
-						distance:'2',
+						collect:'2',
 					},
 					{
 						type:1,
@@ -89,7 +89,7 @@
 							username: 'haha',
 						},
 						money:999.00,
-						distance:'2'
+						collect:'2'
 					},
 					{
 						type:1,
@@ -100,7 +100,7 @@
 							username: 'haha',
 						},
 						money:999.00,
-						distance:'2'
+						collect:'2'
 					},
 					{
 						type:1,
@@ -111,7 +111,7 @@
 							username: 'haha',
 						},
 						money:999.00,
-						distance:'2'
+						collect:'2'
 					},
 					{
 						type:1,
@@ -122,7 +122,7 @@
 							username: 'haha',
 						},
 						money:999.00,
-						distance:'2'
+						collect:'2'
 					},
 					{
 						type:1,
@@ -133,7 +133,7 @@
 							username: 'haha',
 						},
 						money:999.00,
-						distance:'2'
+						collect:'2'
 					},
 					{
 						type:1,
@@ -144,7 +144,7 @@
 							username: 'haha',
 						},
 						money:999.00,
-						distance:'2'
+						collect:'2'
 					},
 				]
 			}
@@ -228,7 +228,7 @@
 		color: #FF0000;
 	}
 
-	.footer-wrap .p-user .distance {
+	.footer-wrap .p-user .collect {
 		display: flex;
 		align-items: center;
 		margin-left: 10rpx;

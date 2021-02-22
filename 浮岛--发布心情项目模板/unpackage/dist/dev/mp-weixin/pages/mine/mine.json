@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "我",
-  "usingComponents": {
-    "y-persion-info": "/components/y-PersionInfo/y-PersionInfo"
-  }
-}

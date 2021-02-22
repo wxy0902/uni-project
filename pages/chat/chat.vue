@@ -1,7 +1,8 @@
 <template>
 	<view>
 		<view class="content" @touchstart="hideDrawer">
-			<scroll-view class="msg-list" scroll-y="true" :scroll-with-animation="scrollAnimation" :scroll-top="scrollTop" :scroll-into-view="scrollToView" @scrolltoupper="loadHistory" upper-threshold="50">
+			<scroll-view class="msg-list" scroll-y="true" :scroll-with-animation="scrollAnimation" :scroll-top="scrollTop"
+			 :scroll-into-view="scrollToView" @scrolltoupper="loadHistory" upper-threshold="50">
 				<!-- 加载历史数据waitingUI -->
 				<view class="loading">
 					<view class="spinner">
@@ -14,7 +15,7 @@
 				</view>
 				<view class="row" v-for="(row,index) in msgList" :key="index" :id="'msg'+row.msg.id">
 					<!-- 系统消息 -->
-					<block v-if="row.type=='system'" >
+					<block v-if="row.type=='system'">
 						<view class="system">
 							<!-- 文字消息 -->
 							<view v-if="row.msg.type=='text'" class="text">
@@ -41,7 +42,7 @@
 								<view v-if="row.msg.type=='img'" class="bubble img" @tap="showPic(row.msg)">
 									<image :src="row.msg.content.url" :style="{'width': row.msg.content.w+'px','height': row.msg.content.h+'px'}"></image>
 								</view>
-								
+
 							</view>
 							<!-- 右-头像 -->
 							<view class="right">
@@ -57,7 +58,8 @@
 							<!-- 右-用户名称-时间-消息 -->
 							<view class="right">
 								<view class="username">
-									<view class="name">{{row.msg.userinfo.username}}</view> <view class="time">{{row.msg.time}}</view>
+									<view class="name">{{row.msg.userinfo.username}}</view>
+									<view class="time">{{row.msg.time}}</view>
 								</view>
 								<!-- 文字消息 -->
 								<view v-if="row.msg.type=='text'" class="bubble">
@@ -80,7 +82,7 @@
 		</view>
 		<!-- 抽屉栏 -->
 		<view class="popup-layer" :class="popupLayerClass" @touchmove.stop.prevent="discard">
-			<!-- 表情 --> 
+			<!-- 表情 -->
 			<swiper class="emoji-swiper" :class="{hidden:hideEmoji}" indicator-dots="true" duration="150">
 				<swiper-item v-for="(page,pid) in emojiList" :key="pid">
 					<view v-for="(em,eid) in page" :key="eid" @tap="addEmoji(em)">
@@ -91,8 +93,12 @@
 			<!-- 更多功能 相册-拍照 -->
 			<view class="more-layer" :class="{hidden:hideMore}">
 				<view class="list">
-					<view class="box" @tap="chooseImage"><view class="icon tupian2"></view></view>
-					<view class="box" @tap="camera"><view class="icon paizhao"></view></view>
+					<view class="box" @tap="chooseImage">
+						<view class="icon tupian2"></view>
+					</view>
+					<view class="box" @tap="camera">
+						<view class="icon paizhao"></view>
+					</view>
 				</view>
 			</view>
 		</view>
@@ -110,11 +116,12 @@
 			</view>
 			<!-- #endif -->
 			<view class="textbox">
-				<view class="voice-mode" :class="[isVoice?'':'hidden',recording?'recording':'']" @touchstart="voiceBegin" @touchmove.stop.prevent="voiceIng" @touchend="voiceEnd" @touchcancel="voiceCancel">{{voiceTis}}</view>
-				<view class="text-mode"  :class="isVoice?'hidden':''">
+				<view class="voice-mode" :class="[isVoice?'':'hidden',recording?'recording':'']" @touchstart="voiceBegin"
+				 @touchmove.stop.prevent="voiceIng" @touchend="voiceEnd" @touchcancel="voiceCancel">{{voiceTis}}</view>
+				<view class="text-mode" :class="isVoice?'hidden':''">
 					<view class="box">
-						<textarea auto-height="true" v-model="textMsg" @focus="textareaFocus"/>
-					</view>
+						<textarea auto-height="true" v-model="textMsg" @focus="textareaFocus" />
+						</view>
 					<view class="em" @tap="chooseEmoji">
 						<view class="icon biaoqing"></view>
 					</view>
@@ -308,14 +315,14 @@
 			getMsgList(){
 				// 消息列表
 				let list = [
-					{type:"system",msg:{id:0,type:"text",content:{text:"欢迎进入HM-chat聊天室"}}},
+					{type:"system",msg:{id:0,type:"text",content:{text:"欢迎进入聊天室"}}},
 					{type:"user",msg:{id:1,type:"text",time:"12:56",userinfo:{uid:0,username:"大黑哥",face:"/static/img/face.jpg"},content:{text:"为什么温度会相差那么大？"}}},
 					{type:"user",msg:{id:2,type:"text",time:"12:57",userinfo:{uid:1,username:"售后客服008",face:"/static/img/im/face/face_2.jpg"},content:{text:"这个是有偏差的，两个温度相差十几二十度是很正常的，如果相差五十度，那即是质量问题了。"}}},
 					{type:"user",msg:{id:3,type:"voice",time:"12:59",userinfo:{uid:1,username:"售后客服008",face:"/static/img/im/face/face_2.jpg"},content:{url:"/static/voice/1.mp3",length:"00:06"}}},
 					{type:"user",msg:{id:4,type:"voice",time:"13:05",userinfo:{uid:0,username:"大黑哥",face:"/static/img/face.jpg"},content:{url:"/static/voice/2.mp3",length:"00:06"}}},
 					{type:"user",msg:{id:5,type:"img",time:"13:05",userinfo:{uid:0,username:"大黑哥",face:"/static/img/face.jpg"},content:{url:"/static/img/p10.jpg",w:200,h:200}}},
 					{type:"user",msg:{id:6,type:"img",time:"12:59",userinfo:{uid:1,username:"售后客服008",face:"/static/img/im/face/face_2.jpg"},content:{url:"/static/img/q.jpg",w:1920,h:1080}}},
-					{type:"system",msg:{id:7,type:"text",content:{text:"欢迎进入HM-chat聊天室"}}},
+					{type:"system",msg:{id:7,type:"text",content:{text:"欢迎进入聊天室"}}},
 				]
 				// 获取消息中的图片,并处理显示尺寸
 				for(let i=0;i<list.length;i++){

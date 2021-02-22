@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "关注",
-  "disableScroll": true,
-  "usingComponents": {
-    "mescroll-uni": "/components/mescroll-uni/mescroll-uni",
-    "user-avatar": "/components/user-avatar/user-avatar",
-    "i-icon": "/components/i-icon/i-icon"
-  }
-}

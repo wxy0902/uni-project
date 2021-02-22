@@ -1,6 +1,8 @@
 <template>
 	<view>
-       <find-list></find-list>
+		<view class="title">我的有圈</view>
+		<find-list></find-list>
+		<go-home></go-home>
 	</view>
 </template>
 
@@ -14,5 +16,5 @@
 </script>
 
 <style scoped>
-
+	
 </style>

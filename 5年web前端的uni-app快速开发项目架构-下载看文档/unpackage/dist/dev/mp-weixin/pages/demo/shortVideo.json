@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "防抖音滑动视频",
-  "usingComponents": {
-    "short-video": "/components/module/short_video"
-  }
-}

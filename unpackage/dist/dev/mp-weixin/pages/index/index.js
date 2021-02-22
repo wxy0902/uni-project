@@ -90,7 +90,7 @@ var components
 try {
   components = {
     bottomNav: function() {
-      return __webpack_require__.e(/*! import() | components/bottom-nav/bottom-nav */ "components/bottom-nav/bottom-nav").then(__webpack_require__.bind(null, /*! @/components/bottom-nav/bottom-nav.vue */ 191))
+      return __webpack_require__.e(/*! import() | components/bottom-nav/bottom-nav */ "components/bottom-nav/bottom-nav").then(__webpack_require__.bind(null, /*! @/components/bottom-nav/bottom-nav.vue */ 231))
     }
   }
 } catch (e) {
@@ -187,7 +187,7 @@ var _news = _interopRequireDefault(__webpack_require__(/*! @/pages/news/news */ 
 var _release = _interopRequireDefault(__webpack_require__(/*! @/pages/release/release */ 73));
 
 
-var _MessageServer = __webpack_require__(/*! @/api/MessageServer.js */ 80);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var BottomNav = function BottomNav() {__webpack_require__.e(/*! require.ensure | components/bottom-nav/bottom-nav */ "components/bottom-nav/bottom-nav").then((function () {return resolve(__webpack_require__(/*! @/components/bottom-nav/bottom-nav */ 191));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _MessageServer = __webpack_require__(/*! @/api/MessageServer.js */ 80);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var BottomNav = function BottomNav() {__webpack_require__.e(/*! require.ensure | components/bottom-nav/bottom-nav */ "components/bottom-nav/bottom-nav").then((function () {return resolve(__webpack_require__(/*! @/components/bottom-nav/bottom-nav */ 231));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -222,7 +222,7 @@ var _MessageServer = __webpack_require__(/*! @/api/MessageServer.js */ 80);funct
           "selectedIcon": "/static/icon-bottom-nav/home_select.png" },
 
         {
-          "text": "发现",
+          "text": "有圈",
           "icon": "/static/icon-bottom-nav/find_normal.png",
           "selectedIcon": "/static/icon-bottom-nav/find_select.png" },
 
@@ -420,10 +420,10 @@ var components
 try {
   components = {
     uSearch: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-search/u-search */ "uview-ui/components/u-search/u-search").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-search/u-search.vue */ 198))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-search/u-search */ "uview-ui/components/u-search/u-search").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-search/u-search.vue */ 238))
     },
     postWaterfall: function() {
-      return __webpack_require__.e(/*! import() | components/post-waterfall/post-waterfall */ "components/post-waterfall/post-waterfall").then(__webpack_require__.bind(null, /*! @/components/post-waterfall/post-waterfall.vue */ 205))
+      return __webpack_require__.e(/*! import() | components/post-waterfall/post-waterfall */ "components/post-waterfall/post-waterfall").then(__webpack_require__.bind(null, /*! @/components/post-waterfall/post-waterfall.vue */ 245))
     }
   }
 } catch (e) {
@@ -503,7 +503,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _utils = __webpack_require__(/*! ../../utils/utils.js */ 51);var postWaterfall = function postWaterfall() {__webpack_require__.e(/*! require.ensure | components/post-waterfall/post-waterfall */ "components/post-waterfall/post-waterfall").then((function () {return resolve(__webpack_require__(/*! ../../components/post-waterfall/post-waterfall.vue */ 205));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var _utils = __webpack_require__(/*! ../../utils/utils.js */ 51);var postWaterfall = function postWaterfall() {__webpack_require__.e(/*! require.ensure | components/post-waterfall/post-waterfall */ "components/post-waterfall/post-waterfall").then((function () {return resolve(__webpack_require__(/*! ../../components/post-waterfall/post-waterfall.vue */ 245));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 {
   data: function data() {
     return {
@@ -782,7 +782,7 @@ var components
 try {
   components = {
     findList: function() {
-      return __webpack_require__.e(/*! import() | components/find-list/find-list */ "components/find-list/find-list").then(__webpack_require__.bind(null, /*! @/components/find-list/find-list.vue */ 214))
+      return __webpack_require__.e(/*! import() | components/find-list/find-list */ "components/find-list/find-list").then(__webpack_require__.bind(null, /*! @/components/find-list/find-list.vue */ 254))
     }
   }
 } catch (e) {
@@ -837,7 +837,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var findList = function findList() {__webpack_require__.e(/*! require.ensure | components/find-list/find-list */ "components/find-list/find-list").then((function () {return resolve(__webpack_require__(/*! ../../components/find-list/find-list.vue */ 214));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var findList = function findList() {__webpack_require__.e(/*! require.ensure | components/find-list/find-list */ "components/find-list/find-list").then((function () {return resolve(__webpack_require__(/*! ../../components/find-list/find-list.vue */ 254));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
 
 
 
@@ -1040,22 +1040,22 @@ var components
 try {
   components = {
     uAvatar: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-avatar/u-avatar */ "uview-ui/components/u-avatar/u-avatar").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-avatar/u-avatar.vue */ 223))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-avatar/u-avatar */ "uview-ui/components/u-avatar/u-avatar").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-avatar/u-avatar.vue */ 263))
     },
     uButton: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-button/u-button */ "uview-ui/components/u-button/u-button").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-button/u-button.vue */ 230))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-button/u-button */ "uview-ui/components/u-button/u-button").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-button/u-button.vue */ 270))
     },
     uGrid: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-grid/u-grid */ "uview-ui/components/u-grid/u-grid").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-grid/u-grid.vue */ 237))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-grid/u-grid */ "uview-ui/components/u-grid/u-grid").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-grid/u-grid.vue */ 277))
     },
     uGridItem: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-grid-item/u-grid-item */ "uview-ui/components/u-grid-item/u-grid-item").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-grid-item/u-grid-item.vue */ 244))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-grid-item/u-grid-item */ "uview-ui/components/u-grid-item/u-grid-item").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-grid-item/u-grid-item.vue */ 284))
     },
     uForm: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-form/u-form */ "uview-ui/components/u-form/u-form").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-form/u-form.vue */ 251))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-form/u-form */ "uview-ui/components/u-form/u-form").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-form/u-form.vue */ 291))
     },
     uFormItem: function() {
-      return Promise.all(/*! import() | uview-ui/components/u-form-item/u-form-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uview-ui/components/u-form-item/u-form-item")]).then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-form-item/u-form-item.vue */ 258))
+      return Promise.all(/*! import() | uview-ui/components/u-form-item/u-form-item */[__webpack_require__.e("common/vendor"), __webpack_require__.e("uview-ui/components/u-form-item/u-form-item")]).then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-form-item/u-form-item.vue */ 298))
     }
   }
 } catch (e) {
@@ -1166,19 +1166,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 var _default =
 {
   data: function data() {
     return {
-      hasLogin: true };
+      hasLogin: false };
 
   },
   methods: {
+    toLogin: function toLogin() {
+      uni.navigateTo({
+        url: "/pages/login/login" });
+
+    },
     toNav: function toNav(url) {
-      // console.log("url",url)
       uni.navigateTo({
         url: url });
 
@@ -1306,16 +1307,16 @@ var components
 try {
   components = {
     uBadge: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-badge/u-badge */ "uview-ui/components/u-badge/u-badge").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-badge/u-badge.vue */ 269))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-badge/u-badge */ "uview-ui/components/u-badge/u-badge").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-badge/u-badge.vue */ 309))
     },
     uAvatar: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-avatar/u-avatar */ "uview-ui/components/u-avatar/u-avatar").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-avatar/u-avatar.vue */ 223))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-avatar/u-avatar */ "uview-ui/components/u-avatar/u-avatar").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-avatar/u-avatar.vue */ 263))
     },
     uTag: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-tag/u-tag */ "uview-ui/components/u-tag/u-tag").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-tag/u-tag.vue */ 276))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-tag/u-tag */ "uview-ui/components/u-tag/u-tag").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-tag/u-tag.vue */ 316))
     },
     uActionSheet: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-action-sheet/u-action-sheet */ "uview-ui/components/u-action-sheet/u-action-sheet").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-action-sheet/u-action-sheet.vue */ 283))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-action-sheet/u-action-sheet */ "uview-ui/components/u-action-sheet/u-action-sheet").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-action-sheet/u-action-sheet.vue */ 323))
     }
   }
 } catch (e) {
@@ -1426,23 +1427,6 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 var _default =
 {
   data: function data() {
@@ -1452,10 +1436,7 @@ var _default =
         text: '删除',
         color: 'red' }],
 
-      msgNum: {
-        thumb_collect: 0,
-        follow: 0,
-        comment: 0,
+      msgList: {
         article_msg_list: [{
           m_id: 1,
           status: 0,
@@ -1481,8 +1462,7 @@ var _default =
           create_time: '1天前' }],
 
 
-        chat_msg_list: [
-        {
+        chat_msg_list: [{
           m_id: 1,
           user_info: {
             username: '小明',
@@ -1513,7 +1493,7 @@ var _default =
 
   },
   onShow: function onShow() {
-    this.getMsgNum();
+    this.getMsgList();
   },
   methods: {
     onPressArticle: function onPressArticle(id, index) {
@@ -1527,15 +1507,15 @@ var _default =
         // 	id: this.checkedMsgId
         // }).then(res => {
         // 	if (res.code == 200) {
-        // 		this.msgNum.article_msg_list.splice(this.checkedIndex, 1)
+        // 		this.msgList.article_msg_list.splice(this.checkedIndex, 1)
         // 	}
         // })
       }
     },
-    getMsgNum: function getMsgNum() {
+    getMsgList: function getMsgList() {
       // this.$H.post("message/num").then(res => {
 
-      // 	this.msgNum = res.result;
+      // 	this.msgList = res.result;
 
       // 	let num = res.result;
       // 	if (num.all_count > 0) {
@@ -1549,13 +1529,7 @@ var _default =
       // 		})
       // 	}
       // })
-    }
-    // toNav(e) {
-    // 	uni.navigateTo({
-    // 		url: "/pages/message-list/message-list?type=" + e
-    // 	})
-    // }
-  } };exports.default = _default;
+    } } };exports.default = _default;
 
 /***/ }),
 /* 71 */
@@ -1663,7 +1637,7 @@ var components
 try {
   components = {
     uActionSheet: function() {
-      return __webpack_require__.e(/*! import() | uview-ui/components/u-action-sheet/u-action-sheet */ "uview-ui/components/u-action-sheet/u-action-sheet").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-action-sheet/u-action-sheet.vue */ 283))
+      return __webpack_require__.e(/*! import() | uview-ui/components/u-action-sheet/u-action-sheet */ "uview-ui/components/u-action-sheet/u-action-sheet").then(__webpack_require__.bind(null, /*! @/uview-ui/components/u-action-sheet/u-action-sheet.vue */ 323))
     }
   }
 } catch (e) {
@@ -1728,8 +1702,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
 //
 //
 //

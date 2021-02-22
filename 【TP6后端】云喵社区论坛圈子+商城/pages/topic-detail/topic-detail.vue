@@ -1,11 +1,14 @@
 <template>
 	<view class="wrap">
+		<view style="position: absolute;">
+			<u-navbar :custom-back="onBack" back-icon-color="#fff" :background="background" :border-bottom="false"></u-navbar>
+		</view>
 		<view class="head">
 			<image mode="aspectFill" class="bg" :src="topicInfo.bg_image"></image>
 			<view class="head-c">
 				<text class="name">{{topicInfo.topic_name}}</text>
 				<view class="count">
-					<text>{{topicInfo.user_count}}人已加入</text>·
+					<text>{{topicInfo.user_count}}人已加入</text>
 					<text>{{topicInfo.post_count}}篇内容</text>
 					<u-button class="btn margin-left" :custom-style="btnStyle" @click="jumpAddDis" type="default">创建话题</u-button>
 					<block v-if="topicInfo.is_join">
@@ -109,18 +112,14 @@
 				page1: 1,
 				page2: 1,
 				fabList: [{
-						iconPath: "/static/images/img-icon.png",
-						selectedIconPath: "/static/images/img-icon.png",
-						text: "图文",
-						url: "/pages/plus-post/plus-post?type=1"
-					},
-					{
-						iconPath: "/static/images/video-icon.png",
-						selectedIconPath: "/static/images/video-icon.png",
-						text: "视频",
-						url: "/pages/plus-post/plus-post?type=2"
-					}
-				]
+					iconPath: "/static/images/img-icon.png",
+					selectedIconPath: "/static/images/img-icon.png",
+					text: "图文",
+					url: "/pages/plus-post/plus-post?type=1"
+				}],
+				background: {
+					backgroundColor: 'unset'
+				}
 			};
 		},
 		onLoad(options) {
@@ -182,17 +181,22 @@
 			}
 		},
 		methods: {
+			onBack() {
+				uni.reLaunch({
+					url: "/pages/index/index"
+				})
+			},
 			tabsChange(index) {
 				this.current = index;
 			},
 			onTrigger(e) {
-				if(!this.topicInfo.is_join){
+				if (!this.topicInfo.is_join) {
 					this.$u.toast('请先加入圈子');
 					return;
 				}
-				
-				uni.navigateTo({
-					url: e.item.url + "&topic_id=" + this.topicId
+
+				uni.reLaunch({
+					url: e.item.url + "&topic_id=" + this.topicId + "&topic_name=" + this.topicInfo.topic_name
 				})
 			},
 			jump(uid) {

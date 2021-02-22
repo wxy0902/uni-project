@@ -164,8 +164,7 @@ export default {
 
 .comment-content {
 	color: #000000;
-	font-size: 32rpx;
-	font-weight: 500;
+	font-size: 30rpx;
 }
 .comment-sub {
 	display: flex;

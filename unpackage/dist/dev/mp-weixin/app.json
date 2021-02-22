@@ -19,12 +19,18 @@
     "pages/plus-post/plus-post",
     "pages/ucenter/ucenter",
     "pages/chat/chat",
-    "pages/user-edit/user-edit"
+    "pages/user-edit/user-edit",
+    "pages/login/login",
+    "pages/poster/poster",
+    "pages/tip-off/tip-off"
   ],
   "subPackages": [],
   "window": {
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTextStyle": "black"
   },
-  "usingComponents": {}
+  "usingComponents": {
+    "go-home": "/components/go-home/go-home"
+  },
+  "sitemapLocation": "sitemap44.json"
 }

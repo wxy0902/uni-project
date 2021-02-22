@@ -19,14 +19,26 @@
 	/*每个页面公共css */
 	@import "/style/common.css";
 	@import "/style/relation.css";
-	
+
 	/* 页面底色 */
 	page {
-	  background: #F8F8F8;
+		background: #F8F8F8;
 	}
-	
+
 	.container {
 		padding: 20rpx;
 		background-color: #FFFFFF;
+	}
+
+	.title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 50rpx;
+		padding: 20rpx 0;
+		font-size: 35rpx;
+		font-weight: 500;
+		color: #333;
+		background: #FFFFFF;
 	}
 </style>
